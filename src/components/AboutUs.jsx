@@ -13,6 +13,7 @@ import ogImg from "../assets/images/og.png";
 import rakeshImg from "../assets/images/rakesh.jpeg";
 import ramImg from "../assets/images/ram.jpeg";
 import subashImg from "../assets/images/subash.jpg";
+import PatternImg from "../assets/images/Pattern.png";
 
 const images = [
   aboutusImg,
@@ -53,7 +54,7 @@ const images = [
 					{/* Pattern glow behind cards */}
 					<div className="absolute top-2 -left-12 md:top-3 md:-left-16 w-full h-full z-0 transform -rotate-6">
 						<img 
-							src="src/assets/images/Pattern.png"
+							src={PatternImg}
 							alt="pattern glow" 
 							className="w-full h-full object-cover rounded-2xl md:rounded-3xl"
 						/>
@@ -80,7 +81,7 @@ const images = [
 					{/* Pattern.png glow behind cards */}
 					<div className="absolute -top-[30%] -left-[48%] w-[170%] h-[170%] z-[2]">
 						<img 
-							src="src/assets/images/Pattern.png"
+							src={PatternImg}
 							alt="pattern glow" 
 							className="w-full h-full object-cover rounded-2xl md:rounded-3xl"
 						/>
