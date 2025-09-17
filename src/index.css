@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import "tailwindcss";
+
+
+/* Each font gets its own unique family name! */
+@font-face {
+  font-family: 'NeueHaasBlack';
+  src: url('assets/fonts/NeueHaasDisplayBlack.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeueHaasBlackItalic';
+  src: url('assets/fonts/NeueHaasDisplayBlackItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeueHaasBold';
+  src: url('assets/fonts/NeueHaasDisplayBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeueHaasBoldItalic';
+  src: url('assets/fonts/NeueHaasDisplayBoldItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeueHaasLight';
+  src: url('assets/fonts/NeueHaasDisplayLight.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeueHaasLightItalic';
+  src: url('assets/fonts/NeueHaasDisplayLightItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeueHaasMedium';
+  src: url('assets/fonts/NeueHaasDisplayMedium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeueHaasMediumItalic';
+  src: url('assets/fonts/NeueHaasDisplayMediumItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeueHaasRoman';
+  src: url('assets/fonts/NeueHaasDisplayRoman.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeueHaasRomanItalic';
+  src: url('assets/fonts/NeueHaasDisplayRomanItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeueHaasThin';
+  src: url('assets/fonts/NeueHaasDisplayThin.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeueHaasThinItalic';
+  src: url('assets/fonts/NeueHaasDisplayThinItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeueHaasXThin';
+  src: url('assets/fonts/NeueHaasDisplayXThin.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeueHaasXThinItalic';
+  src: url('assets/fonts/NeueHaasDisplayXThinItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeueHaasXXThin';
+  src: url('assets/fonts/NeueHaasDisplayXXThin.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeueHaasXXThinItalic';
+  src: url('assets/fonts/NeueHaasDisplayXXThinItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body{
+    background-color: black;
+}
+
+
+/* Individual font family utility classes - each font is its own family! */
+.font-neue-black { font-family: 'NeueHaasBlack', sans-serif; }
+.font-neue-black-italic { font-family: 'NeueHaasBlackItalic', sans-serif; }
+.font-neue-bold { font-family: 'NeueHaasBold', sans-serif; }
+.font-neue-bold-italic { font-family: 'NeueHaasBoldItalic', sans-serif; }
+.font-neue-light { font-family: 'NeueHaasLight', sans-serif; }
+.font-neue-light-italic { font-family: 'NeueHaasLightItalic', sans-serif; }
+.font-neue-medium { font-family: 'NeueHaasMedium', sans-serif; }
+.font-neue-medium-italic { font-family: 'NeueHaasMediumItalic', sans-serif; }
+.font-neue-roman { font-family: 'NeueHaasRoman', sans-serif; }
+.font-neue-roman-italic { font-family: 'NeueHaasRomanItalic', sans-serif; }
+.font-neue-thin { font-family: 'NeueHaasThin', sans-serif; }
+.font-neue-thin-italic { font-family: 'NeueHaasThinItalic', sans-serif; }
+.font-neue-xthin { font-family: 'NeueHaasXThin', sans-serif; }
+.font-neue-xthin-italic { font-family: 'NeueHaasXThinItalic', sans-serif; }
+.font-neue-xxthin { font-family: 'NeueHaasXXThin', sans-serif; }
+.font-neue-xxthin-italic { font-family: 'NeueHaasXXThinItalic', sans-serif; }
+
+/* Instrument Sans font */
+.font-instrument-sans { font-family: 'Instrument Sans', sans-serif; }
+
+/* Conic gradient utility - matching design */
+.text-conic-rainbow {
+  background: conic-gradient(from 0deg, #FF315E 3%, #E861FF 20%, #4771FF 33%, #FFFFFF 49%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Linear gradient utility */
+.text-radial-gradient {
+  background: linear-gradient(90deg, #FF315E 3%, #E861FF 20%, #4771FF 33%, #FFFFFF 49%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hero background responsive sizing */
+.hero-bg {
+  /* For all devices - contain to show full image without clipping */
+  background-size: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+/* For larger devices (1024px and up) - same sizing */
+@media (min-width: 1024px) {
+  .hero-bg {
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+}
+
+/* Hero bottom gradient overlay */
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 120vh;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 50%, transparent 100%);
+  pointer-events: none;
+  z-index: 15;
+}
