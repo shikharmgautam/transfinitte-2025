@@ -1,18 +1,31 @@
 
 import React, { useState } from "react";
 
+// Import all card images properly for deployment
+import aboutusImg from "../assets/images/aboutus.jpeg";
+import adwaithImg from "../assets/images/adwaith.jpeg";
+import anandImg from "../assets/images/Anand Kumar.jpg";
+import anirudhImg from "../assets/images/anirudh.jpg";
+import ayushImg from "../assets/images/ayush.jpeg";
+import kumarImg from "../assets/images/kumar.jpg";
+import muditImg from "../assets/images/mudit.jpeg";
+import ogImg from "../assets/images/og.png";
+import rakeshImg from "../assets/images/rakesh.jpeg";
+import ramImg from "../assets/images/ram.jpeg";
+import subashImg from "../assets/images/subash.jpg";
+
 const images = [
-  "src/assets/images/aboutus.jpeg",
-  "src/assets/images/adwaith.jpeg",
-  "src/assets/images/Anand Kumar.jpg",
-  "src/assets/images/anirudh.jpg",
-  "src/assets/images/ayush.jpeg",
-  "src/assets/images/kumar.jpg",
-  "src/assets/images/mudit.jpeg",
-  "src/assets/images/og.png",
-  "src/assets/images/rakesh.jpeg",
-  "src/assets/images/ram.jpeg",
-  "src/assets/images/subash.jpg"
+  aboutusImg,
+  adwaithImg,
+  anandImg,
+  anirudhImg,
+  ayushImg,
+  kumarImg,
+  muditImg,
+  ogImg,
+  rakeshImg,
+  ramImg,
+  subashImg
 ];const AboutUs = () => {
   const [current, setCurrent] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
