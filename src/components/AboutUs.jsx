@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 
 // Import all card images properly for deployment
@@ -14,6 +13,7 @@ import rakeshImg from "../assets/images/rakesh.jpeg";
 import ramImg from "../assets/images/ram.jpeg";
 import subashImg from "../assets/images/subash.jpg";
 import PatternImg from "../assets/images/Pattern.png";
+import { shuffle } from '../assets';
 
 const images = [
   aboutusImg,
@@ -50,7 +50,7 @@ const images = [
 				</p>
 			</div>
 			<div className="flex-1 flex flex-col items-end justify-center mt-12 md:mt-0 md:pr-16">
-				<div className="relative w-[280px] h-[360px] md:w-[350px] md:h-[450px]">
+				<div className="relative w-[280px] h-[360px] md:w-[350px] md:h-[450px] overflow-visible">
 					{/* Pattern glow behind cards */}
 					<div className="absolute top-2 -left-12 md:top-3 md:-left-16 w-full h-full z-0 transform -rotate-6">
 						<img 
@@ -95,6 +95,7 @@ const images = [
 						className="px-6 py-2 md:px-8 md:py-3 bg-black text-white rounded-full border border-white text-base md:text-lg shadow-lg z-50 transition-all duration-200 hover:bg-gray-800 hover:scale-110 active:scale-95"
 						disabled={isAnimating}
 					>
+						<img src={shuffle} alt="shuffle icon" className="inline-block w-5 h-5 mr-2 align-middle" />
 						Shuffle
 					</button>
 				</div>
