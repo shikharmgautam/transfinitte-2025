@@ -4,9 +4,9 @@ import { sponsors } from "../constants";
 const SponsorCategory = memo(({ category }) => (
   <div
     key={category.id}
-    className="flex w-full flex-col items-start gap-[50px]"
+    className="flex w-full flex-col items-start gap-[0px] mb-15"
   >
-    <div className="text-offwhite text-right font-spacegrotesk text-[2rem] not-italic font-normal leading-8 mt-4 mb-2">
+    <div className="text-offwhite text-right font-spacegrotesk text-[2rem] not-italic font-normal leading-8 mt-0 mb-2">
       {category.name}
     </div>
     <div className="hidden sm:grid w-full grid-cols-4 gap-y-8 gap-x-4 place-items-center">
@@ -46,7 +46,7 @@ const SponsorsMobile = memo(() => (
     <div className="flex flex-col justify-center items-start gap-[0.625rem] flex-shrink-0 border-l border-r border-l-edge border-r-edge py-6 px-4">
       <div className="flex h-fit items-start self-stretch">
         <div
-          className="text-radial-gradient font-spacegrotesk text-[2.2rem] font-extrabold not-italic leading-[2.7rem] mt-2 mb-2 text-center w-full"
+          className="text-radial-gradient font-neue-roman text-[2.2rem] font-extrabold not-italic leading-[2.7rem] mt-2 mb-2 text-center w-full"
         >
           Past Sponsors
         </div>
@@ -61,9 +61,9 @@ const SponsorsMobile = memo(() => (
 
 const SponsorsDesktop = memo(() => (
   <div className="hidden sm:block mx-auto bg-black max-w-[93.194%]">
-    <div className="flex py-9 px-[2.875rem] flex-col items-start gap-[2.875rem] bg-black border-r border-l border-r-edge border-l-edge">
+    <div className="flex py-3 px-[2.875rem] flex-col items-start gap-[2.875rem] bg-black border-r border-l border-r-edge border-l-edge">
       <div className="flex justify-center w-full">
-        <div className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF315E] via-[#E861FF] to-[#5e1fff] font-spacegrotesk text-[4rem] font-normal not-italic leading-[3.75rem] mt-2 mb-2 text-center w-full">
+              <div className="text-radial-gradient font-neue-roman text-[4rem] font-normal not-italic leading-[3.75rem] mt-1 mb-1 text-left w-full">
          Past Sponsors
         </div>
       </div>

@@ -8,7 +8,7 @@ export const Accordion = () => {
   }
 
   return (
-    <div className="w-full relative max-w-7xl mx-auto my-12">
+    <div className="w-full relative max-w-7xl mx-auto my-1">
       {/* Top small bar */}
       <div className="w-[9.4%] min-w-[100px] max-w-[126px] h-[39px] bg-black rounded-[9px] border-[3px] border-[rgba(255,49,94,0.45)]" style={{ position: 'relative', zIndex: 2 }} />
 

@@ -2,8 +2,8 @@ import React, { memo, Suspense, useState } from "react";
 import { judges } from "../constants";
 
 const JudgesList = memo(({ judges, hoveredJudge, setHoveredJudge }) => (
-  <div className="flex flex-col items-start gap-10 self-stretch">
-    <div className="flex flex-col items-start gap-10 self-stretch">
+  <div className="flex flex-col items-start gap-8 self-stretch">
+    <div className="flex flex-col items-start gap-8 self-stretch">
       {judges.map((judge) => (
         <div
           key={judge.id}
@@ -32,12 +32,10 @@ const JudgesMobile = memo(({ judges }) => (
         </div>
       </div> */}
       <div className="flex h-fit items-start self-stretch">
-        <div className="text-white font-instrument-sans text-[2rem] font-normal leading-[60px] tracking-[-2.56px] text-radial-gradient">
+        <div className="text-white font-instrument-sans text-[3rem] font-normal leading-[60px] tracking-[-2.56px] text-radial-gradient">
           Judges
         </div>
-        <div className="flex w-auto h-auto flex-col justify-center text-[#A1A1A1] font-neue-roman text-[1.125rem] not-italic font-normal leading-[28px] ">
-          (2)
-        </div>
+        
       </div>
       <div className="flex w-full justify-center items-center gap-[0.625rem] flex-wrap">
         {judges.map((judge) => (
@@ -75,12 +73,10 @@ const JudgesDesktop = memo(({ judges, hoveredJudge, setHoveredJudge }) => (
       <div className="flex w-[86%] justify-start items-start gap-[187.4px] flex-shrink-0 ">
         <div className="flex w-1/4 flex-col justify-start items-start gap-[84px] flex-shrink-0">
           <div className="flex h-fit items-start self-stretch">
-            <div className="text-white font-instrument-sans text-[4rem] font-normal leading-[60px] whitespace-nowrap text-radial-gradient">
+            <div className="text-white font-instrument-sans text-[4.5rem] font-normal leading-[60px] whitespace-nowrap text-radial-gradient">
               Judges
             </div>
-            <div className="flex w-auto h-auto flex-col justify-center text-[#A1A1A1] font-neue-roman text-[1.125rem] not-italic font-normal leading-[28px] ">
-              (2)
-            </div>
+            
           </div>
           <JudgesList
             judges={judges}
@@ -88,7 +84,7 @@ const JudgesDesktop = memo(({ judges, hoveredJudge, setHoveredJudge }) => (
             setHoveredJudge={setHoveredJudge}
           />
         </div>
-        <div className="flex w-3/4 items-start content-start gap-5 flex-shrink-0 flex-wrap">
+        <div className="flex w-3/4 items-start content-start gap-3 flex-shrink-0 flex-wrap">
           {judges.map((judge) => (
             <div
               key={judge.id}

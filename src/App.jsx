@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import Faq from './components/Faq';
 import Header from './components/Header.jsx';
 import Sponsors from './components/Sponsors.jsx';
+import Timeline from './components/timeline.jsx';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
     <>
       <Hero />
       <Header />
+      <Timeline />
       
       <AboutUs />
       <Judges />
