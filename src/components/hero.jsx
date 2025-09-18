@@ -1,10 +1,11 @@
 import React from 'react'
 import { herobg, heroOne, heroTwo } from '../assets'
+import Header from "./Header";
 
 const Hero = () => {
   return (
     <div 
-      className='bg-black w-full h-[200vh] flex flex-col items-center relative overflow-hidden hero-bg'
+      className='bg-black w-full h-[200vh] flex flex-col items-center relative hero-bg'
       style={{
         backgroundImage: `url(${herobg})`,
         backgroundPosition: 'top',
@@ -19,6 +20,7 @@ const Hero = () => {
         style={{ zIndex: 10 }}
       />
       
+      
       {/* Hero image 2 below - absolutely positioned */}
       <img 
         src={heroTwo} 
@@ -26,6 +28,10 @@ const Hero = () => {
         className="absolute top-[35vh] left-1/2 transform -translate-x-1/2 w-auto h-auto max-w-full object-contain"
         style={{ zIndex: 10 }}
       />
+      <div className='absolute top-[75vh] left-1/2 transform -translate-x-1/2 w-auto h-auto max-w-full object-contain' style={{ zIndex: 10 }}>
+
+        
+      </div>
     </div>
   )
 }

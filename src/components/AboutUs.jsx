@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+
 // Import all card images properly for deployment
 import aboutusImg from "../assets/images/aboutus.jpeg";
 import adwaithImg from "../assets/images/adwaith.jpeg";
@@ -31,7 +32,7 @@ const images = [
   const [current, setCurrent] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
-  const shuffle = () => {
+  const shuffleImages = () => {
     if (isAnimating) return;
     setIsAnimating(true);
     setTimeout(() => {
@@ -91,13 +92,14 @@ const images = [
 				{/* Shuffle button below the card stack - centered to cards */}
 				<div className="w-[280px] md:w-[350px] flex justify-center -mt-11">
 					<button 
-						onClick={shuffle} 
+						onClick={shuffleImages} 
 						className="px-6 py-2 md:px-8 md:py-3 bg-black text-white rounded-full border border-white text-base md:text-lg shadow-lg z-50 transition-all duration-200 hover:bg-gray-800 hover:scale-110 active:scale-95"
 						disabled={isAnimating}
 					>
 						<img src={shuffle} alt="shuffle icon" className="inline-block w-5 h-5 mr-2 align-middle" />
 						Shuffle
 					</button>
+					
 				</div>
 			</div>
 		</section>

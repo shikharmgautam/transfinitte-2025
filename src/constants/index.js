@@ -8,6 +8,13 @@ import {
   adwaith,
   subash,
   mudit,
+  gfg,
+  netcon,
+  boeing,
+  tezos,
+  bharatX,
+  pathway,
+  crewsphere,
 } from "../assets";
 
 export const judges = [
@@ -64,5 +71,51 @@ export const judges = [
     name: "Mudit Srivastva",
     imgurl: mudit,
     company: "Pathway",
+  },
+];
+
+export const sponsors = [
+  {
+    id: "0",
+    name: "Past Sponsors",
+    data: [
+      {
+        id: "0",
+        name: "Netcon",
+        imgurl: netcon,
+      },
+      {
+        id: "1",
+        name: "Boeing",
+        imgurl: boeing,
+      },
+      {
+        id: "2",
+        name: "tezos",
+        imgurl: tezos,
+      },
+      ,
+      {
+        id: "3",
+        name: "Geeks For Geeks",
+        imgurl: gfg,
+      },
+      ,
+      {
+        id: "4",
+        name: "Crewsphere",
+        imgurl: crewsphere,
+      },
+      {
+        id: "5",
+        name: "BharatX",
+        imgurl: bharatX,
+      },
+      {
+        id: "6",
+        name: "Pathway",
+        imgurl: pathway,
+      },
+    ],
   },
 ];

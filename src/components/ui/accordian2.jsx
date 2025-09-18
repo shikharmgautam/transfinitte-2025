@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export const Accordion = () => {
+export const Accordion2 = () => {
   const [isExpanded, setIsExpanded] = useState(false)
 
   const handleToggle = () => {
@@ -16,7 +16,24 @@ export const Accordion = () => {
       <div className="w-full max-w-[1342px] h-[62px] bg-black rounded-[9px] border-[3px] border-[rgba(255,49,94,0.45)] mt-[-26px] relative overflow-visible">
         {/* Overlay black patch to cover under small bar */}
         <div className="absolute left-0 top-0 h-full bg-black rounded-tl-[9px]" style={{ width: '9.4%', minWidth: 100, maxWidth: 126, zIndex: 3 }} />
+        
       </div>
+      {/* Accordion content expands ABOVE */}
+        {isExpanded && (
+          <div className="w-[90%] mx-auto flex flex-col gap-2 z-40 transform -translate-y-5">
+            <div
+              className="bg-white rounded-[10px] px-4 py-4 shadow-lg text-black text-2xl md:text-3xl font-neue-roman font-normal"
+              style={{ transform: "rotate(-2deg)" }}
+            >
+              TransfiNITTe is a{" "}
+              <span className="font-bold">42-hour</span> weekend event where
+              students collaborate on innovative{" "}
+              <span className="font-bold">software</span> and{" "}
+              <span className="font-bold">hardware</span> projects.
+            </div>
+          </div>
+        )}
+      
 
       {/* Main content container */}
       <div className="relative w-full max-w-[1342px] bg-black rounded-[10px] px-[15px] py-[19px] mt-[-30px] flex flex-col gap-4">
@@ -38,21 +55,7 @@ export const Accordion = () => {
           }}
         />
 
-        {/* Accordion content expands ABOVE */}
-        {isExpanded && (
-          <div className="w-full flex flex-col gap-2 z-10">
-            <div
-              className="bg-white rounded-[10px] px-8 py-6 shadow-lg text-black text-2xl md:text-3xl font-neue-roman font-normal"
-              style={{ transform: "rotate(-2deg)" }}
-            >
-              TransfiNITTe is a{" "}
-              <span className="font-bold">42-hour</span> weekend event where
-              students collaborate on innovative{" "}
-              <span className="font-bold">software</span> and{" "}
-              <span className="font-bold">hardware</span> projects.
-            </div>
-          </div>
-        )}
+        
 
         {/* Question row always pinned at bottom */}
         <div className="flex flex-row w-full items-center justify-between z-10 mt-auto">
@@ -79,4 +82,4 @@ export const Accordion = () => {
   )
 }
 
-export default Accordion
+export default Accordion2
