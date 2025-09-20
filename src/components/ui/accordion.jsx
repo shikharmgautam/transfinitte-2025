@@ -8,18 +8,61 @@ export const Accordion = () => {
   }
 
   return (
-    <div className="w-full relative max-w-7xl mx-auto my-1">
+    <div className="w-full relative max-w-7xl mx-auto my-4">
       {/* Top small bar */}
-      <div className="w-[9.4%] min-w-[100px] max-w-[126px] h-[39px] bg-black rounded-[9px] border-[3px] border-[rgba(255,49,94,0.45)]" style={{ position: 'relative', zIndex: 2 }} />
+      {/* <div className="w-[9.4%] min-w-[100px] max-w-[126px] h-[39px] bg-black rounded-[9px] border-[3px] border-[rgba(255,49,94,0.45)]" style={{ position: 'relative', zIndex: 2 }} /> */}
 
       {/* Large top bar */}
-      <div className="w-full max-w-[1342px] h-[62px] bg-black rounded-[9px] border-[3px] border-[rgba(255,49,94,0.45)] mt-[-26px] relative overflow-visible">
-        {/* Overlay black patch to cover under small bar */}
-        <div className="absolute left-0 top-0 h-full bg-black rounded-tl-[9px]" style={{ width: '9.4%', minWidth: 100, maxWidth: 126, zIndex: 3 }} />
+      <div style={{
+            background: "linear-gradient(90deg, #FF315E 0%, #E861FF 50%, #5e1fff 75%,#FF315E 100%)",
+            clipPath: "polygon(-3% -3%, 13% -3%, 13% 17%, 103% 17%, 103% 103%, -3% 103%)",
+            height: isExpanded ? "200px" : "62px",
+            padding: "3px"
+      }} 
+      className="w-full max-w-[1342px] bg-[rgba(255,49,94,0.45)] rounded-[9px] mt-[-26px] relative overflow-visible">
+         <div
+          style={{
+
+            clipPath: isExpanded 
+              ? "polygon(0 0, 12.3% 0, 12.3% 18%, 99.3% 18%, 99.3% 100%, 0 100%)"
+              : "polygon(0 0, 12.3% 0, 12.3% 19%, 99.3% 19%, 99.3% 100%, 0 100%)",
+            background: "black",
+            position: "absolute",
+
+          }}
+          className="w-full h-full rounded-[6px]"
+          
+        >
+          <div style={{margin: "20px"}}>{isExpanded && (
+          <div className="w-full flex flex-col gap-2 z-10">
+            <div
+              className="bg-white rounded-[10px] px-8 py-6 shadow-lg text-black text-2xl mt-[46px] md:text-3xl font-neue-roman font-normal"
+              style={{ transform: "rotate(-2deg)" }}
+            >
+              TransfiNITTe is a{" "}
+              <span className="font-bold">42-hour</span> weekend event where
+              students collaborate on innovative{" "}
+              <span className="font-bold">software</span> and{" "}
+              <span className="font-bold">hardware</span> projects.
+            </div>
+          </div>
+        )}
       </div>
+          </div>
+        
+        {/* Overlay black patch to cover under small bar */}
+        {/* <div className="absolute left-0 top-0 h-full bg-black rounded-tl-[9px]" style={{ width: '9.4%', minWidth: 100, maxWidth: 126, zIndex: 3 }} /> */}
+        
+      </div>
+      {/* Accordion content expands ABOVE */}
+        
 
       {/* Main content container */}
-      <div className="relative w-full max-w-[1342px] bg-black rounded-[10px] px-[15px] py-[19px] mt-[-30px] flex flex-col gap-4">
+      <div className="relative w-full max-w-[1342px] bg-black rounded-[10px] px-[15px] py-[19px] 
+       flex flex-col gap-4"
+       style={{
+        marginTop:"-30px" 
+       }} >
         {/* Gradient border overlay */}
         <div
           style={{
@@ -38,21 +81,7 @@ export const Accordion = () => {
           }}
         />
 
-        {/* Accordion content expands ABOVE */}
-        {isExpanded && (
-          <div className="w-full flex flex-col gap-2 z-10">
-            <div
-              className="bg-white rounded-[10px] px-8 py-6 shadow-lg text-black text-2xl md:text-3xl font-neue-roman font-normal"
-              style={{ transform: "rotate(-2deg)" }}
-            >
-              TransfiNITTe is a{" "}
-              <span className="font-bold">42-hour</span> weekend event where
-              students collaborate on innovative{" "}
-              <span className="font-bold">software</span> and{" "}
-              <span className="font-bold">hardware</span> projects.
-            </div>
-          </div>
-        )}
+        
 
         {/* Question row always pinned at bottom */}
         <div className="flex flex-row w-full items-center justify-between z-10 mt-auto">
@@ -74,6 +103,7 @@ export const Accordion = () => {
       </div>
 
       {/* Small black patch */}
+
       <div className="w-[8.9%] min-w-[95px] max-w-[120px] h-[18px] bg-black mt-[-40px] ml-[3px]" />
     </div>
   )
