@@ -22,17 +22,13 @@ export const Accordion = () => {
       className="w-full max-w-[1342px] bg-[rgba(255,49,94,0.45)] rounded-[9px] mt-[-26px] relative overflow-visible">
          <div
           style={{
-            // top : "4px",
-            // left : "4px",
-            // right : "4px",
-            // bottom : "4px",
+
             clipPath: isExpanded 
               ? "polygon(0 0, 12.3% 0, 12.3% 18%, 99.3% 18%, 99.3% 100%, 0 100%)"
               : "polygon(0 0, 12.3% 0, 12.3% 19%, 99.3% 19%, 99.3% 100%, 0 100%)",
             background: "black",
             position: "absolute",
-            // inset: "5px",
-            // borderRadius : "10px"
+
           }}
           className="w-full h-full rounded-[6px]"
           
