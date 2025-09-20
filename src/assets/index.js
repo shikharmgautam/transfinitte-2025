@@ -22,7 +22,8 @@ import herobg1 from './images/hero/herobg1.png';
 import heroOne from './images/hero/one.png';
 import heroTwo from './images/hero/two.png';
 import herox from './images/hero/x.png';
-
+import mobilehero from './images/svg/mobilehero.svg';
+import mobileone from './images/hero/mobileone.svg';
 
 // SVGs (from images/svg)
 import numbersvg from './images/svg/24.svg';
@@ -61,7 +62,7 @@ export {
 	// Other images
 	aboutus, og, pattern, group67,
 	// Hero section
-	herobg, herobgsvg, herobg1, heroOne, heroTwo, herox,
+	 herobg, herobgsvg, herobg1, heroOne, heroTwo, herox, mobilehero, mobileone,
 	// SVGs
 	numbersvg, abhibus, adminblock, arrowblack, arrowwhite, bharatX, boeing, bubble, crewsphere, gfg, groups, icon, instagram, instagramwh, linkedin, linkedinwh, netcon, pathway, prizes, ps, tezos, tfbadge, tffooter, tffootersm, tfgridsm, tfhero, tfherosm, shuffle
 };

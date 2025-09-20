@@ -9,16 +9,12 @@ export const Accordion2 = () => {
 
   return (
     <div className="w-full relative max-w-7xl mx-auto my-12">
-      {/* Top small bar */}
       <div className="w-[9.4%] min-w-[100px] max-w-[126px] h-[39px] bg-black rounded-[9px] border-[3px] border-[rgba(255,49,94,0.45)]" style={{ position: 'relative', zIndex: 2 }} />
 
-      {/* Large top bar */}
       <div className="w-full max-w-[1342px] h-[62px] bg-black rounded-[9px] border-[3px] border-[rgba(255,49,94,0.45)] mt-[-26px] relative overflow-visible">
-        {/* Overlay black patch to cover under small bar */}
         <div className="absolute left-0 top-0 h-full bg-black rounded-tl-[9px]" style={{ width: '9.4%', minWidth: 100, maxWidth: 126, zIndex: 3 }} />
         
       </div>
-      {/* Accordion content expands ABOVE */}
         {isExpanded && (
           <div className="w-[90%] mx-auto flex flex-col gap-2 z-40 transform -translate-y-5">
             <div
@@ -35,9 +31,7 @@ export const Accordion2 = () => {
         )}
       
 
-      {/* Main content container */}
       <div className="relative w-full max-w-[1342px] bg-black rounded-[10px] px-[15px] py-[19px] mt-[-30px] flex flex-col gap-4">
-        {/* Gradient border overlay */}
         <div
           style={{
             position: "absolute",
@@ -57,7 +51,6 @@ export const Accordion2 = () => {
 
         
 
-        {/* Question row always pinned at bottom */}
         <div className="flex flex-row w-full items-center justify-between z-10 mt-auto">
           <div
             className="text-white font-['Neue_Haas_Grotesk_Display_Pro'] italic font-medium break-words"
@@ -76,7 +69,6 @@ export const Accordion2 = () => {
         </div>
       </div>
 
-      {/* Small black patch */}
       <div className="w-[8.9%] min-w-[95px] max-w-[120px] h-[18px] bg-black mt-[-40px] ml-[3px]" />
     </div>
   )

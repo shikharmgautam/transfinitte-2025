@@ -1,10 +1,8 @@
 import React, { useEffect } from 'react';
 
-// CounterStats Component
 const CounterStats = ({ stats }) => {
 
   useEffect(() => {
-    // Counter animation using Intersection Observer to trigger animation when in view
     const animateCounters = () => {
       const counters = document.querySelectorAll('.counting');
 
@@ -14,7 +12,7 @@ const CounterStats = ({ stats }) => {
             const counter = entry.target;
             const target = +counter.getAttribute('data-count');
             let count = 0;
-            const speed = target / 300; // control speed by adjusting this value
+            const speed = target / 300;
 
             const updateCount = () => {
               if (count < target) {
@@ -27,11 +25,10 @@ const CounterStats = ({ stats }) => {
             };
 
             updateCount();
-            // Stop observing after animation starts
             observer.unobserve(counter);
           }
         });
-      }, { threshold: 0.1 }); // Adjust threshold as needed
+  }, { threshold: 0.1 });
 
       counters.forEach(counter => {
         observer.observe(counter);

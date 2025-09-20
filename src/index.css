@@ -188,6 +188,18 @@ body{
   pointer-events: none;
   z-index: 15;
 }
+.mobilehero-bg::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 40vh;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 60%, transparent 100%);
+  pointer-events: none;
+  z-index: 15;
+}
 :root {
   --variable-collection-color: rgba(128, 128, 128, 1);
 }

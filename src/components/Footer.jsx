@@ -39,7 +39,6 @@ const FooterMobile = memo(() => (
               href="https://maps.app.goo.gl/oqqeVqML8Fb2Pdr57"
               text="Locate Us"
             />
-{/*               href="https://drive.google.com/file/d/1jjjwgRhEHz8pLegoh0GjU5KTq7Ni5zAs/view" */}
             <FooterLink
               href="https://drive.google.com/file/d/1kZ9JWKb0OFPmNv4avGa1OEcq8W6-FxjJ/view"
               text="Archive"

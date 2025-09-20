@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 
-// Import all card images properly for deployment
 import aboutusImg from "../assets/images/aboutus.jpeg";
 import adwaithImg from "../assets/images/adwaith.jpeg";
 import anandImg from "../assets/images/Anand Kumar.jpg";

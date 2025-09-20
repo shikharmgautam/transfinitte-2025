@@ -23,7 +23,7 @@ const SponsorCategory = memo(({ category }) => (
         </div>
       ))}
     </div>
-    {/* Mobile fallback: keep flex layout */}
+        
     <div className="flex flex-col sm:hidden items-center justify-center gap-[1.25rem] self-stretch flex-wrap">
       {category.data.map((sponsor) => (
         <div
