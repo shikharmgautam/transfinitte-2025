@@ -19,9 +19,12 @@ function App() {
 
   return (
     <>
+      
       <Hero />
+ 
       <StickyNavbar />
-      {/* <Header /> */}
+
+      
       <Timeline />
       
       <AboutUs />

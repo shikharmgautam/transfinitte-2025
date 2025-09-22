@@ -24,7 +24,7 @@ export const Accordion = () => {
           style={{
 
             clipPath: isExpanded 
-              ? "polygon(0 0, 12.3% 0, 12.3% 18%, 99.3% 18%, 99.3% 100%, 0 100%)"
+              ? "polygon(0 0, 12.1% 0, 12.1% 18%, 99.3% 18%, 99.3% 100%, 0 100%)"
               : "polygon(0 0, 12.3% 0, 12.3% 19%, 99.3% 19%, 99.3% 100%, 0 100%)",
             background: "black",
             position: "absolute",

@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import DaysToGo from "./DaysToGo";
 import icon from "../assets/images/svg/tf-badge.svg";
 import arrowWhite from "../assets/images/svg/arrowwhite.svg";
+import headerSvg from "../assets/images/svg/header.svg";
 
 export default function StickyNavbar() {
   const stickyRef = useRef(null);
@@ -32,19 +33,30 @@ export default function StickyNavbar() {
   }, [originalTop]);
 
   return (
-    <div style={{ height: "200vh", paddingTop: "200px" }}>
+    <div className="h-auto w-full bg-black pt-[200px]">
       <div
         ref={stickyRef}
         className={`sticky-bar ${expanded ? "expanded" : ""}`}
       >
         <div className={`flex items-center gap-6 justify-center sticky-bar-0 ${expanded ? "expanded-level-0" : ""} mx-auto`}>
-            <span className={`relative inline-block overflow-hidden rounded-3xl p-[1px] sticky-bar ${expanded ? "expanded" : ""} mx-auto`}>
-              <span className={`absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FF315E_0%,#E861FF_50%,#5e1fff_75%,#FF315E_90%)] sticky-bar-level-1 ${expanded ? "expanded-level-1" : ""}`} />
-              <div className={`inline-flex h-full w-full cursor-pointer items-center justify-center rounded-3xl bg-gray-950 px-6 py-2 text-xs font-medium text-gray-50 backdrop-blur-3xl gap-x-6 sticky-bar-level-2 ${expanded ? "expanded-level-2" : ""}`}>
+            <span className={`relative inline-block overflow-hidden rounded-xl p-[1px] sticky-bar ${expanded ? "expanded" : ""} mx-auto`}>
+              <span className={`absolute inset-[-1000%] bg-[conic-gradient(from_90deg_at_50%_50%,#FF315E_0%,#E861FF_50%,#5e1fff_75%,#FF315E_90%)] sticky-bar-level-1 ${expanded ? "expanded-level-1" : ""}`} />
+              <div className={`inline-flex h-full w-full cursor-pointer items-center justify-center rounded-xl bg-gray-950 px-6 py-2 text-xs font-medium text-gray-50 backdrop-blur-3xl gap-x-6 sticky-bar-level-2 ${expanded ? "expanded-level-2" : ""}`}>
                 <div className={`text-offwhite text-center font-spacemono text-sm font-bold uppercase tracking-wide sticky-bar-level-3 ${expanded ? "expanded-level-3" : ""}`}>
                   <DaysToGo />
                 </div>
-                <img src={icon} alt="icon" style={{ height: 24 }} />
+                
+                {/* Middle image: show headerSvg only when expanded and md+, otherwise icon */}
+                {expanded ? (
+                  <span className="hidden md:inline">
+                    <img src={headerSvg} alt="header" style={{ height: 24 }} />
+                  </span>
+                ) : null}
+                {!expanded && (
+                  <span className="inline">
+                    <img src={icon} alt="icon" style={{ height: 24 }} />
+                  </span>
+                )}
                 <button className="relative inline-flex h-12 overflow-hidden rounded-xl p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50">
                   <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FF315E_0%,#E861FF_50%,#5e1fff_75%,#FF315E_90%)]" />
                   <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-xl bg-gray-950 px-8 py-1 text-sm font-medium text-gray-50 backdrop-blur-3xl">
@@ -86,12 +98,12 @@ export default function StickyNavbar() {
           left: 0;
           right: 0;
           background: #111;
-          padding: 4px ;
+
           border-radius: 0;
           box-shadow: 0 2px 10px rgba(0,0,0,0.4);
             animation: expandNavbar 0.4s ease-in-out forwards;
 
-          width: 100vw;
+          width: full;
          
         
         }

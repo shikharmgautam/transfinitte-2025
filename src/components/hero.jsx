@@ -21,12 +21,7 @@ const Hero = () => {
           className="absolute top-0 left-1/2 transform -translate-x-1/2 w-auto h-30vh max-w-full object-contain"
           style={{ zIndex: 10 }}
         />
-        <img 
-          src={heroTwo} 
-          alt="Hero Two" 
-          className="absolute top-[35vh] left-1/2 transform -translate-x-1/2 w-auto h-auto max-w-full object-contain"
-          style={{ zIndex: 12 }}
-        />
+        <div ></div>
         <div className='absolute top-[75vh] left-1/2 transform -translate-x-1/2 w-auto h-auto max-w-full object-contain' style={{ zIndex: 10 }}></div>
       </div>
 

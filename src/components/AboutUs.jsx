@@ -73,6 +73,14 @@ const images = [
 
       <div className="flex-1 flex flex-col items-end justify-center mt-12 md:mt-0 md:mr-10 lg:pr-16">
         <div className="relative w-[280px] h-[360px] md:w-[300px] md:h-[410px] lg:w-[350px] lg:h-[450px] overflow-visible">
+          <div className="absolute top-2 -left-12 md:-top-15 md:-left-25 w-[150%] h-[150%] z-0 transform -rotate-6">
+						<img 
+							src={PatternImg}
+							alt="pattern glow" 
+							className="w-full h-full object-cover rounded-2xl md:rounded-3xl"
+						/>
+					</div>
+          
           {imageOrder.map((imageIndex, stackIndex) => {
             const isFirst = stackIndex === 0;
             const rotations = [-8, -3, 2, 7, -5, 1, 6, -2, 4, -6, 3];
@@ -106,7 +114,7 @@ const images = [
                 }}
               >
                 <img
-                  src={images[imageIndex] || "/placeholder.svg"}
+                  src={images[imageIndex]}
                   alt={`team member ${imageIndex + 1}`}
                   className="w-full h-full object-cover rounded-2xl md:rounded-3xl"
                 />
@@ -115,7 +123,7 @@ const images = [
           })}
 
           <div className="absolute -top-[30%] -left-[48%] w-[170%] h-[170%] z-[1] pointer-events-none">
-            <div className="w-full h-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl md:rounded-3xl blur-xl"></div>
+           
           </div>
         </div>
 
