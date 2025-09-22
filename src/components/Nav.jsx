@@ -142,10 +142,17 @@ export default function StickyNavbar() {
 
         @keyframes expandNavbar {
              0% {
-            transform: scaleX(0.6);
+            width: 30vw;
+            overflow: hidden;
+         
+
+            
+
           }
           100% {
-            transform: scaleX(1);
+           width: 100vw;
+            opacity: 1;
+            overflow: hidden;
           }
 
         }
