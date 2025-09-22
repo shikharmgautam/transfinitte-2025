@@ -127,7 +127,7 @@ const images = [
           </div>
         </div>
 
-        <div className="w-[280px] md:w-[350px] flex justify-center -mt-11">
+        <div className="w-[280px] md:w-[350px] flex justify-center -mt-11 z-20">
           <button
             onClick={shuffleImages}
             className="px-6 py-2 md:px-8 md:py-3 bg-black text-white rounded-full border border-white text-base md:text-lg shadow-lg z-50 transition-all duration-200 hover:bg-gray-800 hover:scale-110 active:scale-95 flex items-center gap-2"
