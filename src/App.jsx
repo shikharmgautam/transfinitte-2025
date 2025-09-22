@@ -10,6 +10,8 @@ import Faq from './components/Faq';
 import Header from './components/Header.jsx';
 import Sponsors from './components/Sponsors.jsx';
 import Timeline from './components/timeline.jsx';
+// import StickyNavbar from './components/Navbar.jsx';
+import StickyNavbar from './components/Nav.jsx';
 
 
 function App() {
@@ -18,7 +20,8 @@ function App() {
   return (
     <>
       <Hero />
-      <Header />
+      <StickyNavbar />
+      {/* <Header /> */}
       <Timeline />
       
       <AboutUs />
@@ -26,6 +29,7 @@ function App() {
       <Sponsors />
   <Faq />
       <Footer />
+      
      
     </>
   );
