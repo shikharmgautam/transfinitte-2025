@@ -160,7 +160,7 @@ body{
   background-clip: text;
 }
 .text-conic-gradient {
-  background: conic-gradient(from 90deg at 50% 50%, #ff61c5 0%, #fd2267 50%, #E861FF 100%);
+  background: conic-gradient(from 90deg at 50% 50%, #ff61c5 0%, #fd2267 50%, #E861FF 0%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

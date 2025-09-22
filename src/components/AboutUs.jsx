@@ -57,7 +57,7 @@ const images = [
   return (
     <section className="w-full min-h-[500px] bg-black flex flex-col md:flex-row items-center justify-center py-16 px-6 md:px-24">
       <div className="flex-1 text-left">
-        <div className="text-6xl md:text-6xl lg:7xl mb-8 text-left text-radial-gradient bg-clip-text text-transparent font-bold">
+        <div className="text-6xl md:text-6xl lg:8xl mb-8 text-left text-radial-gradient bg-clip-text text-transparent font-neue-roman">
           About Us
         </div>
         <p className="text-white text-lg md:text-xl mb-6 max-w-2xl leading-relaxed">
