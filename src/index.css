@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 @import "tailwindcss";
 
@@ -114,7 +115,13 @@
   font-weight: normal;
   font-style: normal;
 }
-
+body {
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,0) 80%, #000 100%),
+    url('./assets/images/hero/herobg.png') top center no-repeat;
+  background-size: 100vw auto;
+  background-color: black;
+}
 
 body{
     background-color: black;
@@ -175,13 +182,7 @@ body{
 }
 
 /* For larger devices (1024px and up) - same sizing */
-@media (min-width: 1024px) {
-  .hero-bg {
-    background-size: contain;
-    background-position: center top;
-    background-repeat: no-repeat;
-  }
-}
+
 
 /* Hero bottom gradient overlay */
 .hero-bg::after {
@@ -191,8 +192,10 @@ body{
   left: 0;
   right: 0;
   width: 100%;
-  height: 130vh;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 50%, transparent 100%);
+  height: auto;
+
+
+  
   pointer-events: none;
   z-index: 15;
 }
