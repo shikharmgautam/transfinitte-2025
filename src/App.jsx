@@ -22,7 +22,7 @@ function App() {
       
       <Hero />
  
-      <StickyNavbar />
+      {/* <StickyNavbar /> */}
 
       
       <Timeline />

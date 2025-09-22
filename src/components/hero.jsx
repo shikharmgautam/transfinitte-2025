@@ -10,7 +10,7 @@ const Hero = () => {
   return (
     <>
       <div 
-        className='hidden sm:flex bg-black w-full h-[120vh] flex-col items-center relative hero-bg overflow-hidden'
+        className='hidden sm:flex bg-black w-full h-[130vh] flex-col items-center relative hero-bg overflow-hidden'
         style={{
           backgroundImage: `url(${herobg})`,
           backgroundPosition: 'top',
@@ -25,7 +25,7 @@ const Hero = () => {
           right: 0,
           bottom: 0,
           height: '30vh',
-          background: 'linear-gradient(to bottom, rgba(0,0,0,0) 0%, #000 100%)',
+          background: 'linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%)',
           pointerEvents: 'none',
           zIndex: 30
         }} />
@@ -42,9 +42,10 @@ const Hero = () => {
         </div>
       
         <div className='absolute top-[75vh] left-1/2 transform -translate-x-1/2 w-auto h-auto max-w-full object-contain' style={{ zIndex: 10 }}></div>
+                        <StickyNavbar />
       </div>
 
-      
+
       <div 
         className='flex sm:hidden bg-black w-full h-[85vh] flex-col items-center relative mobile]'
         style={{
@@ -66,9 +67,8 @@ const Hero = () => {
           <span className="text-[90vw] bg-[linear-gradient(-12deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0)_50%),conic-gradient(from_90deg_at_50%_50%,#E861FF_0%,#EF315E_50%,#FF315E_75%,#E861FF_90%)] bg-clip-text text-transparent -rotate-[12.32deg] translate-y-[8vw]">5</span>
         </div>
         
-      </div>
 
-    
+      </div>
       
     </>
   )
