@@ -7,7 +7,7 @@ const Timeline = () => {
       <div className="hidden sm:block w-full h-full">
         
         <div>
-          <div className="App text-white relative bg-black h-[30vh] flex items-center justify-center text-[5rem] z-20 font-neue-roman text-radial-gradient ">
+          <div className="App text-white relative bg-black h-[30vh] flex items-center justify-center text-[3.7rem] z-20 font-neue-roman text-radial-gradient ">
             TIMELINE
           </div>
           <div className="w-[3px] h-full bg-gray-700 absolute left-1/2 -translate-x-1/2 top-0 -z-20 "></div>
@@ -25,7 +25,8 @@ const Timeline = () => {
               <div className="relative flex flex-col items-center h-full min-h-[340px] w-12 z-10">
                 <div className="bg-white border-8 p-2 border-black rounded-full w-6 h-6 -z-11 mb-[0px] sticky top-[50vh] block max-[890px]:hidden"></div>
               </div>
-              <div className="flex flex-col gap-6 text-2xl font-bold flex-1 pl-8 ">
+              <div className="flex flex-col gap-2 md:gap-6 text-2xl font-bold flex-1 pl-8 ">
+                <div className='text-5xl'>DAY-1</div>
                 <div>08:00 AM Breakfast</div>
                 <div>11:00 AM Speaker Session 1</div>
                 <div>12:30 PM Lunch</div>
@@ -88,14 +89,14 @@ const Timeline = () => {
             <div className="content-1 flex flex-row items-center justify-center w-full py-5 gap-8 relative z-10 px-8">
 
               <div className="relative flex flex-col items-start h-full min-h-[340px] w-12 z-10">
-                {/* Dot for <531px and >=sm (mobile and desktop) */}
+              
                 <div className="bg-white border-8 p-2 border-black rounded-full w-6 h-6 -z-11 mb-[0px] left-[calc(9vw+1.5px)] transform -translate-x-1/2 sticky top-[50vh] min-[531px]:max-[639px]:hidden"></div>
-                {/* Dot for 531px to sm (customizable) */}
+
               
               </div>
          
               <div className="flex flex-col gap-6 text-2xl font-bold flex-1 pl-8">
-                <div className='text-4xl'>DAY-1</div>
+                <div className='text-3xl'>DAY-1</div>
 
                 <div>08:00 AM Breakfast</div>
                 <div>11:00 AM Speaker Session 1</div>
@@ -108,9 +109,9 @@ const Timeline = () => {
                <div className="content-1 flex flex-row items-center justify-center w-full py-5 gap-8 relative z-10 px-8">
 
               <div className="relative flex flex-col items-start h-full min-h-[340px] w-12 z-10">
-                {/* Dot for <531px and >=sm (mobile and desktop) */}
+                
                 <div className="bg-white border-8 p-2 border-black rounded-full w-6 h-6 -z-11 mb-[0px] left-[calc(9vw+1.5px)] transform -translate-x-1/2 sticky top-[50vh] min-[531px]:max-[639px]:hidden"></div>
-                {/* Dot for 531px to sm (customizable) */}
+               
               
               </div>
               <div className="flex flex-col gap-6 text-2xl font-bold flex-1 pl-8">
@@ -125,10 +126,9 @@ const Timeline = () => {
                <div className="content-1 flex flex-row items-center justify-center w-full py-5 gap-8 relative z-10 px-8">
 
               <div className="relative flex flex-col items-start h-full min-h-[340px] w-12 z-10">
-                {/* Dot for <531px and >=sm (mobile and desktop) */}
+               
                 <div className="bg-white border-8 p-2 border-black rounded-full w-6 h-6 -z-11 mb-[0px] left-[calc(9vw+1.5px)] transform -translate-x-1/2 sticky top-[50vh] min-[531px]:max-[639px]:hidden"></div>
-                {/* Dot for 531px to sm (customizable) */}
-              
+               
               </div>
               <div className="flex flex-col gap-6 text-2xl font-bold flex-1 pl-8">
                 <div>08:00 AM Breakfast</div>
