@@ -24,7 +24,7 @@ const JudgesMobile = memo(({ judges }) => (
   <div className="block sm:hidden mx-auto bg-black max-w-[91.467%]">
     <div className="flex flex-col justify-center items-start gap-[0.625rem] flex-shrink-0 border-l border-r border-l-edge border-r-edge py-6 px-4 ">
       <div className="flex h-fit items-start self-stretch">
-        <div className="text-white font-instrument-sans text-[3rem] font-normal leading-[60px] tracking-[-2.56px] text-radial-gradient">
+        <div className="text-white font-instrument-sans text-[3rem] font-normal leading-[60px] tracking-[-2.56px] text-conic-gradient">
           Judges
         </div>
         
@@ -65,7 +65,7 @@ const JudgesDesktop = memo(({ judges, hoveredJudge, setHoveredJudge }) => (
       <div className="flex w-[86%] justify-start items-start gap-[187.4px] flex-shrink-0 ">
         <div className="flex w-1/4 flex-col justify-start items-start gap-[84px] flex-shrink-0">
           <div className="flex h-fit items-start self-stretch">
-            <div className="text-white font-instrument-sans text-[4.5rem] font-normal leading-[60px] whitespace-nowrap text-radial-gradient">
+            <div className="text-white font-instrument-sans text-[4.5rem] font-normal leading-[60px] whitespace-nowrap text-conic-gradient">
               Judges
             </div>
             
