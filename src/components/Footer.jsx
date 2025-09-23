@@ -7,7 +7,10 @@ import {
   linkedinwh,
   tffooter,
   tffootersm,
+  email
+
 } from "../assets";
+
 
 const FooterLink = memo(({ href, text }) => (
   <a href={href} target="_blank" rel="noopener noreferrer">
@@ -43,6 +46,10 @@ const FooterMobile = memo(() => (
               href="https://drive.google.com/file/d/1kZ9JWKb0OFPmNv4avGa1OEcq8W6-FxjJ/view"
               text="Archive"
             />
+            <FooterLink
+              href="http://wa.me/+919508363460"
+              text="Contact Us"
+            />
           </div>
         </div>
         <div className="flex justify-center items-start gap-[0.3125rem]">
@@ -76,6 +83,7 @@ const FooterDesktop = memo(() => (
                 <img src={instagramwh} className="max-w-none w-fit" style={{ filter: 'brightness(0.63)' }} />
               </a>
             </div>
+           
             <div>
               <a
                 href="https://in.linkedin.com/company/technical-council-nit-trichy"
@@ -83,6 +91,15 @@ const FooterDesktop = memo(() => (
                 rel="noopener noreferrer"
               >
                 <img src={linkedinwh} className="max-w-none w-fit" style={{ filter: 'brightness(0.63)' }} />
+              </a>
+            </div>
+            <div>
+              <a
+                href="mailto:technicalcouncil@pragyan.org"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={email} className="max-w-none w-[24px]" style={{ filter: 'brightness(0.63)', stroke: 'white' }} />
               </a>
             </div>
           </div>
@@ -98,6 +115,10 @@ const FooterDesktop = memo(() => (
           <FooterLink
             href="https://drive.google.com/file/d/1jjjwgRhEHz8pLegoh0GjU5KTq7Ni5zAs/view"
             text="Archive"
+          />
+          <FooterLink
+            href="http://wa.me/+919508363460"
+            text="Contact Us"
           />
         </div>
       </div>

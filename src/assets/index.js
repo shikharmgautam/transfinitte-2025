@@ -8,6 +8,7 @@ import rakesh from './images/rakesh.jpeg';
 import adwaith from './images/adwaith.jpeg';
 import subash from './images/subash.jpg';
 import mudit from './images/mudit.jpeg';
+import rajan from './images/rajan_pandey.jpeg';
 
 // Other images
 import aboutus from './images/aboutus.jpeg';
@@ -54,6 +55,7 @@ import tfgridsm from './images/svg/tf-grid-sm.svg';
 import tfhero from './images/svg/tf-hero.svg';
 import tfherosm from './images/svg/tf-text-ph.svg';
 import shuffle from './images/svg/shuffle.svg';
+import email from './images/svg/email.svg';
  
 
 export {
@@ -64,5 +66,5 @@ export {
 	// Hero section
 	 herobg, herobgsvg, herobg1, heroOne, heroTwo, herox, mobilehero, mobileone,
 	// SVGs
-	numbersvg, abhibus, adminblock, arrowblack, arrowwhite, bharatX, boeing, bubble, crewsphere, gfg, groups, icon, instagram, instagramwh, linkedin, linkedinwh, netcon, pathway, prizes, ps, tezos, tfbadge, tffooter, tffootersm, tfgridsm, tfhero, tfherosm, shuffle
+	numbersvg, abhibus, adminblock, arrowblack, arrowwhite, bharatX, boeing, bubble, crewsphere, gfg, groups, icon, instagram, instagramwh, linkedin, linkedinwh, netcon, pathway, prizes, ps, tezos, tfbadge, tffooter, tffootersm, tfgridsm, tfhero, tfherosm, shuffle, email
 };
