@@ -11,7 +11,7 @@ const Hero = () => {
   return (
     <>
       <div 
-        className='hidden sm:flex bg-black w-full h-[130vh] flex-col items-center relative hero-bg overflow-hidden'
+        className='hidden sm:flex bg-black w-full md:h-[85vh] lg:h-[130vh] flex-col items-center relative hero-bg overflow-hidden'
         style={{
           backgroundImage: `url(${herobg})`,
           backgroundPosition: 'top',

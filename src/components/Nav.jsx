@@ -106,7 +106,7 @@ export default function StickyNavbar() {
         
         }
           .expanded{
-          padding: 2px;
+          padding: 0px;
           }
           .sticky-bar .sticky-bar-level-1 {
            border-radius: 0px;
