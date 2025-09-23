@@ -59,6 +59,7 @@ const Hero = () => {
           backgroundPosition: 'top',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
+          // minWidth: '400px'
           
         }}
       >

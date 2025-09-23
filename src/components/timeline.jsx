@@ -7,7 +7,7 @@ const Timeline = () => {
       <div className="hidden sm:block w-full h-full">
         
         <div>
-          <div className="App text-white relative bg-black h-[30vh] flex items-center justify-center text-[3.7rem] z-20 font-neue-roman text-radial-gradient ">
+          <div className="App text-white relative bg-black h-[30vh] flex items-center justify-center text-[3.7rem] z-20 font-neue-roman text-radial-gradient overflow-hidden ">
             TIMELINE
           </div>
           <div className="w-[3px] h-full bg-gray-700 absolute left-1/2 -translate-x-1/2 top-0 -z-20 "></div>
@@ -76,7 +76,7 @@ const Timeline = () => {
       <div className="block sm:hidden w-full">
 
         <div>
-          <div className="App text-white relative bg-black h-[30vh] flex items-center justify-center text-[5rem] z-20 font-neue-roman text-radial-gradient mt-20">
+          <div className="App text-white relative bg-black h-[30vh] flex items-center justify-center text-[3.7rem] z-20 font-neue-roman text-radial-gradient mt-20 overflow-hidden">
             TIMELINE
           </div>
           <div className='h-[40vh] bg-black w-full transform -translate-y-[40vh] absolute z-2'></div>
