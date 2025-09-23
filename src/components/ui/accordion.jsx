@@ -14,7 +14,7 @@ export const Accordion = () => {
 
       {/* Large top bar */}
       <div style={{
-            background: "linear-gradient(90deg, #FF315E 0%, #E861FF 50%, #5e1fff 75%,#FF315E 100%)",
+            background: "linear-gradient(90deg, #3d5ec8 0%, #b02240 20%, #9c45ac 63%, #bd09a2 94%)",
             clipPath: "polygon(-3% -3%, 13% -3%, 13% 17%, 103% 17%, 103% 103%, -3% 103%)",
             height: isExpanded ? "200px" : "62px",
             padding: "3px"
@@ -93,7 +93,7 @@ export const Accordion = () => {
           </div>
           <button
             onClick={handleToggle}
-            className="w-[40px] h-[40px] flex items-center justify-center bg-[#1a1a1a] rounded-full border border-[#E861FF]"
+            className="w-[40px] h-[40px] flex items-center justify-center bg-[#1a1a1a] rounded-full border border-[#a244b2]"
           >
             <span className="text-3xl text-white">
               {isExpanded ? "-" : "+"}
