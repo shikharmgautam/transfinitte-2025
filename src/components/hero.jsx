@@ -6,6 +6,7 @@ import StickyNavbar from './Nav.jsx';
 
 
 
+
 const Hero = () => {
   return (
     <>
@@ -43,7 +44,11 @@ const Hero = () => {
       
         <div className='absolute bottom-[0vh] lg:top-[50vh] left-1/2 -translate-x-1/2 w-auto h-auto max-w-full object-contain hidden lg:block' style={{ zIndex: 10 }}></div>
                         <StickyNavbar />
+                         
       </div>
+      
+     
+
 
 
       <div 

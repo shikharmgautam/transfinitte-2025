@@ -101,9 +101,13 @@ export default function StickyNavbar() {
             animation: expandNavbar 0.4s ease-in-out forwards;
 
           width: full;
+          
          
         
         }
+          .expanded{
+          padding: 2px;
+          }
           .sticky-bar .sticky-bar-level-1 {
            border-radius: 0px;
            
@@ -127,6 +131,7 @@ export default function StickyNavbar() {
            }
            .expanded-level-3{
            font-size: 1.25rem;
+          
            }
            .sticky-bar .sticky-bar-level-3 {
            font-size: 0.875rem;
