@@ -26,16 +26,14 @@ function App() {
       <MobileStickyNavbar className="block" />
       <TabStickyNavbar />
 
-      
- 
-      {/* <StickyNavbar /> */}
-
+ <AboutUs />
+  <Sponsors />
       
       <Timeline />
       
-      <AboutUs />
+     
       <Judges />
-      <Sponsors />
+     
   <Faq />
       <Footer />
       

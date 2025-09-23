@@ -116,10 +116,9 @@
   font-style: normal;
 }
 body {
-  background:
-    linear-gradient(to bottom, rgba(0,0,0,0) 80%, #000 100%),
-    url('./assets/images/hero/herobg.png') top center no-repeat;
-  background-size: 100vw auto;
+ 
+  
+
   background-color: black;
   
 }
@@ -194,6 +193,7 @@ body{
   right: 0;
   width: 100%;
   height: auto;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.7) 60%, transparent 100%);
 
 
   
