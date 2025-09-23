@@ -27,12 +27,12 @@ const Timeline = () => {
               </div>
               <div className="flex flex-col gap-2 md:gap-6 text-2xl font-bold flex-1 pl-8 ">
                 <div className='text-5xl'>DAY-1</div>
-                <div>08:00 AM Breakfast</div>
-                <div>11:00 AM Speaker Session 1</div>
-                <div>12:30 PM Lunch</div>
-                <div>02:00 PM Speaker Session 2</div>
-                <div>05:30 PM Review</div>
-                <div>08:00 PM Dinner</div>
+                <div>06:30 PM Inauguration</div>
+                
+                <div>07:00 PM Release of Problem statements</div>
+                <div>07:30 PM Hackathon Begins</div>
+                <div>08:30 PM Dinner</div>
+             
               </div>
             </div>
             <div className="content-2 flex flex-row items-center justify-center w-full py-5 gap-8 relative z-10 px-8">
@@ -41,12 +41,11 @@ const Timeline = () => {
                 <div className="bg-white border-8 p-2 border-black rounded-full w-6 h-6 z-10 mb-[0px] sticky top-[50vh] block max-[890px]:hidden"></div>
               </div>
               <div className="flex flex-col gap-6 text-2xl font-bold flex-1 pl-8">
-                <div>08:00 AM Breakfast</div>
-                <div>11:00 AM Speaker Session 1</div>
-                <div>12:30 PM Lunch</div>
-                <div>02:00 PM Speaker Session 2</div>
-                <div>05:30 PM Review</div>
-                <div>08:00 PM Dinner</div>
+                    <div className='text-5xl'>DAY-2</div>
+                <div>08:30 AM Breakfast</div>
+                <div>01:30 PM Lunch</div>
+                <div>04:00 PM Guidance by Judges</div>
+                <div>08:30 PM Dinner</div>
               </div>
             </div>
             <div className="content-3 flex flex-row items-center justify-center w-full py-5 gap-8 relative z-10 px-8">
@@ -55,12 +54,13 @@ const Timeline = () => {
                 <div className="bg-white border-8 p-2 border-black rounded-full w-6 h-6 z-10 mb-[0px] sticky top-[50vh] block max-[890px]:hidden"></div>
               </div>
               <div className="flex flex-col gap-6 text-2xl font-bold flex-1 pl-8">
-                <div>08:00 AM Breakfast</div>
-                <div>11:00 AM Speaker Session 1</div>
-                <div>12:30 PM Lunch</div>
-                <div>02:00 PM Speaker Session 2</div>
-                <div>05:30 PM Review</div>
-                <div>08:00 PM Dinner</div>
+                    <div className='text-5xl'>DAY-3</div> 
+                <div>08:30 AM Breakfast</div>
+                <div>09:00 AM Guidance by Judges</div>
+                <div>01:30 PM Lunch</div>
+                <div>01:30 PM Hackathon Ends</div>
+                <div>05:00 PM Judging Ends</div>
+                <div>05:30 PM Valediction Ceremony</div>
               </div>
             </div>
             <div className="pointer-events-none absolute left-1/2 -translate-x-1/2 bottom-0 w-full h-16 z-30">
