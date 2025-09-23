@@ -26,7 +26,7 @@ function App() {
       <MobileStickyNavbar className="block" />
       <TabStickyNavbar />
 
- <AboutUs />
+
   <Sponsors />
       
       <Timeline />
