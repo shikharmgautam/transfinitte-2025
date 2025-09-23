@@ -53,13 +53,13 @@ const Hero = () => {
 
 
       <div 
-        className='flex sm:hidden bg-black w-full h-[85vh] flex-col items-center relative mobile'
+        className='flex sm:hidden bg-black w-full h-[85vh] flex-col items-center relative mobile -mt-5 overflow-hidden'
         style={{
           backgroundImage: `url(${mobilehero})`,
           backgroundPosition: 'top',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
-          minWidth: '320px'
+          
         }}
       >
         <img 
