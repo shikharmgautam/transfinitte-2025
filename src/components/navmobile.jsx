@@ -18,7 +18,7 @@ export default function StickyNavbar() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      if (currentScrollY >= originalTop+32) {
+      if (currentScrollY >= originalTop+40) {
         setExpanded(true);
       } else {
         setExpanded(false);
@@ -33,7 +33,7 @@ export default function StickyNavbar() {
   }, [originalTop]);
 
   return (
-    <div className="h-auto w-full bg-black pt-[10vh] block sm:hidden">
+    <div className="h-auto w-full bg-black block sm:hidden">
       <div
         ref={stickyRef}
         className={`sticky-bar ${expanded ? "expanded" : ""}`}
