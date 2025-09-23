@@ -72,7 +72,7 @@ const images = [
       </div>
 
       <div className="flex-1 flex flex-col items-end justify-center mt-12 md:mt-0 md:mr-10 lg:pr-16">
-        <div className="relative w-[60vw] h-[80vw] md:w-[300px] md:h-[410px] lg:w-[350px] lg:h-[450px] overflow-visible">
+        <div className="relative w-[60vw] h-[80vw] md:w-[300px] md:h-[410px] lg:w-[350px] lg:h-[450px] transform -translate-x-[30px] md:translate-x-[0px] overflow-visible">
           <div className="absolute -top-20 -left-20 md:-top-15 md:-left-25 w-full h-full md:w-[150%] md:h-[150%] z-0 transform -rotate-6">
 						<img 
 							src={PatternImg}
