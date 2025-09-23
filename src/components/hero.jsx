@@ -57,7 +57,8 @@ const Hero = () => {
           backgroundImage: `url(${mobilehero})`,
           backgroundPosition: 'top',
           backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover'
+          backgroundSize: 'cover',
+          minWidth: '400px'
         }}
       >
         <img 
