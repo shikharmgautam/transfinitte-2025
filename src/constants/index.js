@@ -15,20 +15,25 @@ import {
   bharatX,
   pathway,
   crewsphere,
+  rajan,
+  indresh,
+  kshitiz,
+  aswin,
+
 } from "../assets";
 
 export const judges = [
   {
     id: "0",
-    name: "Anand Kumar",
-    imgurl: anand,
-    company: "Intel",
+    name: "Rajan Pandey",
+    imgurl: rajan,
+    company: "IIFL group",
   },
   {
     id: "1",
-    name: "Anirudh R",
-    imgurl: anirudh,
-    company: "Oracle",
+    name: "Indresh",
+    imgurl: indresh,
+    company: "Wells Fargo",
   },
   {
     id: "2",
@@ -38,15 +43,15 @@ export const judges = [
   },
   {
     id: "3",
-    name: "Ram Sreevaths",
-    imgurl: ram,
-    company: "Oracle",
+    name: "Kshitiz",
+    imgurl: kshitiz,
+    company: "Texas Instruments",
   },
   {
     id: "4",
-    name: "Kumar Nandan",
-    imgurl: kumar,
-    company: "Intel",
+    name: "Aswin",
+    imgurl: aswin,
+    company: "Qualcomm",
   },
   {
     id: "5",

@@ -18,7 +18,7 @@ export default function tabStickyNavbar() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      if (currentScrollY >= originalTop+48) {
+      if (currentScrollY >= originalTop+36) {
         setExpanded(true);
       } else {
         setExpanded(false);

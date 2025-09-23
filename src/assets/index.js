@@ -9,6 +9,10 @@ import adwaith from './images/adwaith.jpeg';
 import subash from './images/subash.jpg';
 import mudit from './images/mudit.jpeg';
 import rajan from './images/rajan_pandey.jpeg';
+import indresh from './images/indresh.jpeg';
+import kshitiz from './images/kshitiz.jpeg';
+import aswin from './images/aswin.jpeg';
+
 
 // Other images
 import aboutus from './images/aboutus.jpeg';
@@ -60,7 +64,7 @@ import email from './images/svg/email.svg';
 
 export {
 	// Judges
-	anand, anirudh, ayush, ram, kumar, rakesh, adwaith, subash, mudit,
+	anand, anirudh, ayush, ram, kumar, rakesh, adwaith, subash, mudit, indresh, kshitiz, aswin, rajan,
 	// Other images
 	aboutus, og, pattern, group67,
 	// Hero section
