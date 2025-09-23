@@ -13,6 +13,7 @@ import Timeline from './components/timeline.jsx';
 // import StickyNavbar from './components/Navbar.jsx';
 import StickyNavbar from './components/Nav.jsx';
 import MobileStickyNavbar from './components/navmobile.jsx';
+import TabStickyNavbar from './components/navTab.jsx';
 
 
 function App() {
@@ -22,8 +23,11 @@ function App() {
     <>
       
       <Hero />
-    
-   <MobileStickyNavbar className="block sm:hidden" />
+      <MobileStickyNavbar className="block" />
+      <TabStickyNavbar />
+
+      
+ 
       {/* <StickyNavbar /> */}
 
       

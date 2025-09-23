@@ -4,7 +4,7 @@ import icon from "../assets/images/svg/tf-badge.svg";
 import arrowWhite from "../assets/images/svg/arrowwhite.svg";
 import headerSvg from "../assets/images/svg/header.svg";
 
-export default function StickyNavbar() {
+export default function tabStickyNavbar() {
   const stickyRef = useRef(null);
   const [expanded, setExpanded] = useState(false);
   const [originalTop, setOriginalTop] = useState(0);
@@ -18,7 +18,7 @@ export default function StickyNavbar() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      if (currentScrollY >= originalTop+45) {
+      if (currentScrollY >= originalTop+32) {
         setExpanded(true);
       } else {
         setExpanded(false);
@@ -33,7 +33,7 @@ export default function StickyNavbar() {
   }, [originalTop]);
 
   return (
-    <div className="h-auto w-full bg-transparent pt-[44%] hidden lg:block">
+    <div className="h-auto w-full bg-black hidden sm:block lg:hidden">
       <div
         ref={stickyRef}
         className={`sticky-bar ${expanded ? "expanded" : ""}`}
@@ -146,8 +146,8 @@ export default function StickyNavbar() {
 
           }
           100% {
-           width: 100vw;
-            opacity: 1;
+           width: 100%;
+          
             
           }
 

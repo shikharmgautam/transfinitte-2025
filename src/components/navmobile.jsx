@@ -33,7 +33,7 @@ export default function StickyNavbar() {
   }, [originalTop]);
 
   return (
-    <div className="h-auto w-full bg-black pt-[10vh]">
+    <div className="h-auto w-full bg-black pt-[10vh] block sm:hidden">
       <div
         ref={stickyRef}
         className={`sticky-bar ${expanded ? "expanded" : ""}`}
