@@ -161,7 +161,7 @@ body{
 
 /* Linear gradient utility */
 .text-radial-gradient {
-  background: linear-gradient(90deg, #4771FF 0%,#FF315E 20%, #E861FF 63%, #fc08d8 94%);
+  background: linear-gradient(90deg, #4c75fc 0%, #e72c55 20%, #c454d8 63%, #ea0ac8 94%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

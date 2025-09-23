@@ -24,7 +24,7 @@ export const Accordion = () => {
           style={{
 
             clipPath: isExpanded 
-              ? "polygon(0 0, 12.1% 0, 12.1% 18%, 99.3% 18%, 99.3% 100%, 0 100%)"
+              ? "polygon(0 0, 12.3% 0, 12.3% 18%, 99.3% 18%, 99.3% 100%, 0 100%)"
               : "polygon(0 0, 12.3% 0, 12.3% 19%, 99.3% 19%, 99.3% 100%, 0 100%)",
             background: "black",
             position: "absolute",
@@ -36,7 +36,7 @@ export const Accordion = () => {
           <div style={{margin: "20px"}}>{isExpanded && (
           <div className="w-full flex flex-col gap-2 z-10">
             <div
-              className="bg-white rounded-[10px] px-3 py-6 shadow-lg text-black text-l mt-[46px] md:text-3xl font-neue-roman font-normal"
+              className="bg-white rounded-[10px] px-3 py-6 shadow-lg text-black text-l mt-[40px] md:text-3xl font-neue-roman font-normal"
               style={{ transform: "rotate(-2deg)" }}
             >
               TransfiNITTe is a{" "}

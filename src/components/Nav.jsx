@@ -41,7 +41,7 @@ export default function StickyNavbar() {
         <div className={`flex items-center gap-6 justify-center sticky-bar-0 ${expanded ? "expanded-level-0" : ""} mx-auto`}>
             <span className={`relative inline-block overflow-hidden rounded-xl p-[1px] sticky-bar ${expanded ? "expanded" : ""} mx-auto`}>
               <span className={`absolute inset-[-1000%] bg-[conic-gradient(from_90deg_at_50%_50%,#FF315E_0%,#E861FF_50%,#5e1fff_75%,#FF315E_90%)] sticky-bar-level-1 ${expanded ? "expanded-level-1" : ""}`} />
-              <div className={`inline-flex h-full w-full cursor-pointer items-center justify-center rounded-xl bg-gray-950 px-6 py-2 text-xs font-medium text-gray-50 backdrop-blur-3xl gap-x-6 sticky-bar-level-2 ${expanded ? "expanded-level-2" : ""}`}>
+              <div className={`inline-flex h-full w-full cursor-pointer items-center justify-center rounded-xl bg-black px-6 py-2 text-xs font-medium text-gray-50 backdrop-blur-3xl gap-x-6 sticky-bar-level-2 ${expanded ? "expanded-level-2" : ""}`}>
                 <div className={`text-offwhite text-center font-spacemono text-sm font-bold uppercase tracking-wide sticky-bar-level-3 ${expanded ? "expanded-level-3" : ""}`}>
                   <DaysToGo />
                 </div>
@@ -107,6 +107,7 @@ export default function StickyNavbar() {
         }
           .expanded{
           padding: 0px;
+          background: transparent;
           }
           .sticky-bar .sticky-bar-level-1 {
            border-radius: 0px;
