@@ -71,7 +71,7 @@ export const Accordion = () => {
             borderRadius: "10px",
             border: "3px solid transparent",
             background:
-              "linear-gradient(90deg, #FF315E 0%, #E861FF 50%, #5e1fff 75%,#FF315E 100%)",
+              "linear-gradient(90deg, #3d5ec8 0%, #b02240 20%, #9c45ac 63%, #bd09a2 94%)",
             WebkitMask:
               "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
             WebkitMaskComposite: "xor",

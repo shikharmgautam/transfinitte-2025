@@ -76,9 +76,9 @@ const Timeline = () => {
       <div className="block sm:hidden w-full">
 
         <div>
-          <div className="App text-white relative bg-black h-[30vh] flex items-center justify-center text-[3rem] z-20 font-neue-roman text-radial-gradient mt-20 overflow-hidden">
+          <span className="App text-white relative bg-black h-[30vh] flex items-center justify-center text-[3rem] z-20 font-neue-roman text-radial-gradient mt-20 overflow-hidden">
             TIMELINE
-          </div>
+          </span>
           <div className='h-[40vh] bg-black w-full transform -translate-y-[40vh] absolute z-2'></div>
           <div className="w-[3px] h-[50vh] bg-gradient-to-b from-[#ff7448] via-[#c04892] to-[#6348ff] fixed top-0 left-[9vw] -z-10"></div>
          <div className="wrapper text-white flex flex-col align-center gap-30 relative min-h-screen">
