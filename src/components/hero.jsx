@@ -41,7 +41,7 @@ const Hero = () => {
           <span className="text-[60vw] lg:text-[75vh] bg-[linear-gradient(-12deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0)_50%),conic-gradient(from_90deg_at_50%_50%,#E861FF_0%,#EF315E_50%,#FF315E_75%,#E861FF_90%)] bg-clip-text text-transparent -rotate-[12.32deg] translate-y-[5vw] lg:translate-y-[5vh]">5</span>
         </div>
       
-        <div className='absolute top-[75vh] left-1/2 transform -translate-x-1/2 w-auto h-auto max-w-full object-contain' style={{ zIndex: 10 }}></div>
+        <div className='absolute bottom-[0vh] lg:top-[50vh] left-1/2 -translate-x-1/2 w-auto h-auto max-w-full object-contain' style={{ zIndex: 10 }}></div>
                         <StickyNavbar />
       </div>
 
