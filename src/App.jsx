@@ -18,27 +18,23 @@ import TabStickyNavbar from "./components/navTab.jsx";
 
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [expandedCard, setExpandedCard] = useState(null);
 
   return (
     <>
-      
-      <Hero1 />
-      <MobileStickyNavbar className="block" />
-      <TabStickyNavbar />
-
- <AboutUs />
-  <Sponsors />
-      
-      <Timeline />
-      
-     
-      <Judges />
-     
-  <Faq />
-      <Footer />
-      
-     
+      <Hero1 expandedCard={expandedCard} setExpandedCard={setExpandedCard} />
+      {!(expandedCard === 'play' || expandedCard === 'merch') && (
+        <>
+          <MobileStickyNavbar className="block" />
+          <TabStickyNavbar />
+          <AboutUs />
+          <Sponsors />
+          <Timeline />
+          <Judges />
+          <Faq />
+          <Footer />
+        </>
+      )}
     </>
   );
 }

@@ -1,21 +1,109 @@
-﻿
+﻿import React, { useState } from "react";
 import dino from "../assets/images/dino.png";
 import tiltT from "../assets/images/svg/tiltT.svg";
 
-const Hero1 = () => {
+
+const Hero1 = ({ expandedCard, setExpandedCard }) => {
+  const handleCardClick = (cardType) => {
+    setExpandedCard(cardType);
+  };
+  const handleClose = () => {
+    setExpandedCard(null);
+  };
+
+  // If a card is expanded, show the full-screen version
+//   if (expandedCard) {
+//     return (
+//       <div className="fixed inset-0 bg-black z-50 flex items-center justify-center p-8">
+//         <button
+//           onClick={handleClose}
+//           className="absolute top-8 right-8 text-white text-2xl hover:text-gray-300 transition-colors z-60"
+//         >
+          
+//         </button>
+        
+//         {expandedCard === 'left' && (
+//           <div className="max-w-4xl mx-auto text-center">
+//             <div className="mb-6">
+//               <span className="bg-white text-black px-4 py-2 rounded-full text-lg">
+//                 Registrations opening in 10 days
+//               </span>
+//             </div>
+//             <h1 className="text-8xl font-bold text-white leading-tight mb-8">
+//               Ready to hack?
+//             </h1>
+//             <p className="text-gray-300 text-2xl mb-12">
+//               Kickstart your next project and ship faster with our comprehensive hackathon platform.
+//             </p>
+//             <button className="bg-white text-black px-8 py-4 rounded-full text-xl font-semibold hover:bg-gray-200 transition-colors">
+//               Get Updates 
+//             </button>
+//           </div>
+//         )}
+
+//         {expandedCard === 'play' && (
+//           <div className="max-w-6xl mx-auto">
+//             <div className="grid grid-cols-2 gap-12 items-center">
+//               <div>
+//                 <div className="mb-6">
+//                   <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-lg">
+//                     New
+//                   </span>
+//                 </div>
+//                 <h2 className="text-6xl font-bold text-white mb-6">Play to win</h2>
+//                 <p className="text-pink-400 text-xl mb-8">View leaderboard</p>
+//                 <p className="text-gray-300 text-lg mb-8">
+//                   Compete in our exciting games and climb the leaderboard to win amazing prizes!
+//                 </p>
+//                 <button className="bg-white text-black px-8 py-4 rounded-full text-xl font-semibold hover:bg-gray-200 transition-colors">
+//                   Open Game 
+//                 </button>
+//               </div>
+//               <div className="flex justify-center">
+//                 <img src={dino} alt="dino" className="w-full max-w-md h-auto" />
+//               </div>
+//             </div>
+//           </div>
+//         )}
+
+//         {expandedCard === 'merch' && (
+//           <div className="max-w-6xl mx-auto">
+//             <div className="grid grid-cols-2 gap-12 items-center">
+//               <div>
+//                 <h2 className="text-6xl font-bold text-white mb-6">Get your Merch</h2>
+//                 <p className="text-gray-300 text-xl mb-8">
+//                   Limited drop available now! Grab exclusive gear and show your support for the community.
+//                 </p>
+//                 <button className="bg-white text-black px-8 py-4 rounded-full text-xl font-semibold hover:bg-gray-200 transition-colors">
+//                   Register For Merch 
+//                 </button>
+//               </div>
+//               <div className="flex justify-center">
+//                 <img src={tiltT} alt="tilted T logo" className="w-full max-w-md h-auto" />
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </div>
+//     );
+//   }
+
   return (
-    <div className="min-h-screen bg-transparent ">
+    <div className="min-h-screen bg-transparent relative z-10">
       {/* Main Content */}
-      <div className="flex h-screen p-8 gap-6 ">
+  <div className={`flex h-screen relative z-20${expandedCard==='left' ? ' pl-6 pr-0 py-0 gap-0' : ' p-8 gap-6'}`}>
         {/* Left Hero Section */}
-        <div className="flex-1 bg-transparent border border-gray-200 rounded-2xl p-8 flex flex-col justify-center overflow-hidden relative">
+        <div 
+          className={`flex-1 bg-transparent rounded-2xl flex flex-col justify-start overflow-hidden p-4 relative z-30 cursor-pointer hover:border-white transition-all duration-300${expandedCard && expandedCard !== 'left' ? ' hidden' : ''} ${expandedCard==='left' ? '' : 'border border-gray-200 p-8'}`}
+          onClick={() => handleCardClick('left')}
+          style={expandedCard==='left' ? { border: 0, margin: 0, } : {}}
+        >
           {/* Info Tag */}
-          <div className="mb-6">
-            <span className="bg-white text-black px-3 py-1 rounded-full text-sm">
+          <div className="mb-6 mt-2">
+            <span className={`bg-white text-black rounded-full   px-3 py-1 ${expandedCard==='left' ? '  text-xl' : ' text-sm'}`}>
               Registrations opening in 10 days
             </span>
           </div>
-          
           {/* Main Heading */}
           <h1 className="text-6xl font-bold text-white leading-tight">
             Ready to hack?
@@ -27,16 +115,29 @@ const Hero1 = () => {
             Get Updates
           </button>
 
-           <div className="hidden sm:flex items-center justify-center gap-1 absolute -right-[30%] -bottom-[60%] -translate-y-[10vh] -translate-x-1/2 z-20 font-neue-xxthin m-0 p-0 overflow-hidden">
-          <span className="text-[60vw]  lg:text-[75vh] bg-[linear-gradient(-12deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0)_50%),conic-gradient(from_90deg_at_50%_50%,#E861FF_0%,#EF315E_50%,#FF315E_75%,#E861FF_90%)] bg-clip-text text-transparent -rotate-[12.32deg]">2</span>
-          <span className="text-[60vw] lg:text-[75vh] bg-[linear-gradient(-12deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0)_50%),conic-gradient(from_90deg_at_50%_50%,#E861FF_0%,#EF315E_50%,#FF315E_75%,#E861FF_90%)] bg-clip-text text-transparent -rotate-[12.32deg] translate-y-[5vw] lg:translate-y-[5vh]">5</span>
+           <div className={`hidden sm:flex items-center justify-center gap-1 absolute  -translate-x-1/2 z-20 font-neue-xxthin m-0 p-0 overflow-hidden ${expandedCard==='left' ? '  -right-[26vw] -bottom-[23vw] ' : ' -right-[20vw] -bottom-[18vw]'}`}>
+          <span className={`   bg-[linear-gradient(-12deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0)_50%),conic-gradient(from_90deg_at_50%_50%,#E861FF_0%,#EF315E_50%,#FF315E_75%,#E861FF_90%)] bg-clip-text text-transparent -rotate-[12.32deg] ${expandedCard==='left' ? '  text-[45vw]' : ' text-[37vw]'}`}>2</span>
+          <span className={`  bg-[linear-gradient(-12deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0)_50%),conic-gradient(from_90deg_at_50%_50%,#E861FF_0%,#EF315E_50%,#FF315E_75%,#E861FF_90%)] bg-clip-text text-transparent -rotate-[12.32deg] translate-y-[5vw] lg:translate-y-[5vh] ${expandedCard==='left' ? '  text-[45vw] ' : ' text-[37vw]'}`}>5</span>
         </div>
         </div>
 
         {/* Right Side - Two Components */}
-        <div className="w-96 flex flex-col gap-6">
+  <div className={`w-96 flex flex-col gap-6 relative z-20${expandedCard && expandedCard === 'left' ? ' hidden' : ''}`}> 
           {/* Top Component - Play to win (Bigger) */}
-          <div className="flex-[3] bg-black border border-gray-200 rounded-2xl p-6 relative">
+          <div 
+            className={`flex-[3] bg-black border border-gray-200 rounded-2xl p-6 cursor-pointer hover:border-white transition-all duration-500 ease-in-out${expandedCard && expandedCard !== 'play' ? ' hidden' : ''}`}
+              onClick={() => handleCardClick('play')}
+              style={expandedCard==='play' ? {
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                width: '100vw',
+                height: '100vh',
+                zIndex: 50,
+                borderRadius: '32px',
+                transition: 'all 0.5s cubic-bezier(0.4,0.2,0.2,1)',
+              } : {}}
+            >
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-4xl font-bold text-white">Play to win</h2>
              
@@ -50,7 +151,21 @@ const Hero1 = () => {
           </div>
 
           {/* Bottom Component - Get our Merch (Smaller) */}
-          <div className="flex-[1] bg-black border border-gray-200 rounded-2xl p-6 overflow-hidden relative">
+          <div 
+            className={`flex-[1] bg-black border border-gray-200 relative rounded-2xl p-6 overflow-hidden cursor-pointer hover:border-white transition-all duration-500 overflow:hidden ease-in-out${expandedCard && expandedCard !== 'merch' ? ' hidden' : ''}`}
+            onClick={() => handleCardClick('merch')}
+            style={expandedCard==='merch' ? {
+              position: 'fixed',
+              top: 0,
+              left: 0,
+              width: '100vw',
+              height: '100vh',
+              zIndex: 50,
+              borderRadius: '32px',
+              transition: 'all 0.5s cubic-bezier(0.4,0.2,0.2,1)',
+              overflow: 'hidden',
+            } : {}}
+          >
             <h2 className="text-2xl font-bold text-white mb-4">Get your Merch</h2>
 
             <button
