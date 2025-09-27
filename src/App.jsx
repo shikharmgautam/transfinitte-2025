@@ -23,15 +23,13 @@ function App() {
   return (
     <>
       <Hero1 expandedCard={expandedCard} setExpandedCard={setExpandedCard} />
-      {!(expandedCard === 'play' || expandedCard === 'merch') && (
+      {expandedCard === 'left' && (
         <>
           <MobileStickyNavbar className="block" />
-        
           <TabStickyNavbar />
           <AboutUs />
-              <Timeline />
+          <Timeline />
           <Sponsors />
-      
           <Judges />
           <Faq />
           <Footer />

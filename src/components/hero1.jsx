@@ -2,6 +2,8 @@
 import dino from "../assets/images/dino.png";
 import tiltT from "../assets/images/svg/tiltT.svg";
 import StickyNavbar from './Nav.jsx';
+import arrowWhite from "../assets/images/svg/arrowwhite.svg";
+import tfBadge from "../assets/images/svg/tf-badge.svg";
 
 
 const Hero1 = ({ expandedCard, setExpandedCard }) => {
@@ -98,7 +100,32 @@ const Hero1 = ({ expandedCard, setExpandedCard }) => {
         </div>
       )}
       {/* Main Content */}
-      <div className={`flex h-screen relative z-20${expandedCard==='left' ? ' pl-6 pr-0 py-0 gap-0' : ' p-8 gap-6'}`}>
+            <div className="h-screen">  
+                  {expandedCard === null && (
+                    <div className="h-[7vh] w-full flex items-center px-8 bg-transparent">
+                      <div className="flex items-center justify-between w-full h-full">
+                          {/* Logo - T 25 */}
+          <div className="flex items-center h-full">
+            <img src={tfBadge} alt="TF 25 logo" className="h-8 w-auto" />
+          </div>
+                
+                          {/* Navigation Links */}
+          <div className="hidden md:flex items-center gap-8 h-full">
+            <a href="#" className="text-white hover:text-gray-300 transition-colors flex items-center h-full">Website</a>
+            <a href="#" className="text-white hover:text-gray-300 transition-colors flex items-center h-full">Play & Win</a>
+            <a href="#" className="text-white hover:text-gray-300 transition-colors flex items-center h-full">Goodies & Merch</a>
+          </div>
+                
+                          {/* Register Button */}
+          <button className="flex items-center gap-2 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-300 transition-colors h-full">
+            <span className="text-sm font-medium">Register</span>
+            <img src={arrowWhite} alt="arrow" className="w-4 h-4 filter brightness-0" />
+          </button>
+        </div>
+      </div>
+                  )}
+      <div className={`flex h-[93vh] relative z-20${expandedCard==='left' ? ' pl-6 pr-0 py-0 gap-0' : ' p-8 gap-6'}`}>
+
         {/* Left Hero Section */}
         <div 
           className={`flex-1 bg-transparent rounded-2xl flex flex-col justify-start overflow-hidden p-4 relative z-30 cursor-pointer hover:border-white transition-all duration-300${expandedCard && expandedCard !== 'left' ? ' hidden' : ''} ${expandedCard==='left' ? ' animate-expandleft' : 'border border-gray-200 p-8'}`}
@@ -187,6 +214,7 @@ const Hero1 = ({ expandedCard, setExpandedCard }) => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

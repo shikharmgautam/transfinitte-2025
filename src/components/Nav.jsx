@@ -50,7 +50,7 @@ export default function StickyNavbar() {
                   <img src={icon} alt="icon" style={{ height: 24 }} />
                 </span>
                 {expanded && (
-                  <span className="hidden md:inline align-middle ml-2">
+                  <span className="hidden md:inline align-middle ml-2 relative z-50">
                     <img src={headerSvg} alt="header" style={{ height: 24 }} />
                   </span>
                 )}

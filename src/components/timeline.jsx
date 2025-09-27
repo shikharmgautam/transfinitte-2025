@@ -4,7 +4,7 @@ const Timeline = () => {
   const [showLines, setShowLines] = useState(false);
   useEffect(() => {
     const onScroll = () => {
-      setShowLines(window.scrollY >= 2 * window.innerHeight);
+      setShowLines(window.scrollY >=  window.innerHeight);
     };
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
