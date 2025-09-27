@@ -7,9 +7,10 @@ import tfBadge from "../assets/images/svg/tf-badge.svg";
 
 
 const Hero1 = ({ expandedCard, setExpandedCard }) => {
+  // Unified handler for both button and card clicks
   const handleCardClick = (cardType) => {
     setExpandedCard(cardType);
-  };
+  } 
   const handleClose = () => {
     setExpandedCard(null);
   };
@@ -111,9 +112,9 @@ const Hero1 = ({ expandedCard, setExpandedCard }) => {
                 
                           {/* Navigation Links */}
           <div className="hidden md:flex items-center gap-8 h-full">
-            <a href="#" className="text-white hover:text-gray-300 transition-colors flex items-center h-full">Website</a>
-            <a href="#" className="text-white hover:text-gray-300 transition-colors flex items-center h-full">Play & Win</a>
-            <a href="#" className="text-white hover:text-gray-300 transition-colors flex items-center h-full">Goodies & Merch</a>
+            <button type="button" className="text-white hover:text-gray-300 transition-colors flex items-center h-full bg-transparent border-none p-0 m-0 cursor-pointer" onClick={() => handleCardClick('left')}>Website</button>
+            <button type="button" className="text-white hover:text-gray-300 transition-colors flex items-center h-full bg-transparent border-none p-0 m-0 cursor-pointer" onClick={() => handleCardClick('play')}>Play & Win</button>
+            <button type="button" className="text-white hover:text-gray-300 transition-colors flex items-center h-full bg-transparent border-none p-0 m-0 cursor-pointer" onClick={() => handleCardClick('merch')}>Goodies & Merch</button>
           </div>
                 
                           {/* Register Button */}
@@ -128,7 +129,7 @@ const Hero1 = ({ expandedCard, setExpandedCard }) => {
 
         {/* Left Hero Section */}
         <div 
-          className={`flex-1 bg-transparent rounded-2xl flex flex-col justify-start overflow-hidden p-4 relative z-30 cursor-pointer hover:border-white transition-all duration-300${expandedCard && expandedCard !== 'left' ? ' hidden' : ''} ${expandedCard==='left' ? ' animate-expandleft' : 'border border-gray-200 p-8'}`}
+          className={`flex-1 bg-transparent rounded-2xl flex flex-col justify-start overflow-hidden p-4 relative z-30 cursor-pointer hover:border-white ${expandedCard && expandedCard !== 'left' ? ' hidden' : ''} ${expandedCard==='left' ? ' animate-expandleft' : 'border border-gray-200 p-8'}`}
           onClick={() => handleCardClick('left')}
           style={expandedCard==='left' ? { border: 0, margin: 0 } : {}}
         >
@@ -151,7 +152,7 @@ const Hero1 = ({ expandedCard, setExpandedCard }) => {
         {/* ...existing code... */}
           
 
-           <div className={`hidden sm:flex items-center justify-center gap-1 absolute  -translate-x-1/2 z-20 font-neue-xxthin m-0 p-0 overflow-hidden ${expandedCard==='left' ? '  -right-[26vw] -bottom-[23vw] ' : ' -right-[20vw] -bottom-[18vw]'}`}>
+           <div className={`hidden sm:flex items-center justify-center gap-1 absolute  -translate-x-1/2 z-20 font-neue-xxthin m-0 p-0 overflow-hidden  -right-[20vw] -bottom-[18vw] ${expandedCard==='left' ? '   ' : ''}`}>
    {/* Sticky Navbar - Only show when left card is expanded */}
       
           <span className={`   bg-[linear-gradient(-12deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0)_50%),conic-gradient(from_90deg_at_50%_50%,#E861FF_0%,#EF315E_50%,#FF315E_75%,#E861FF_90%)] bg-clip-text text-transparent -rotate-[12.32deg] ${expandedCard==='left' ? '  text-[45vw]' : ' text-[37vw]'}`}>2</span>
@@ -167,12 +168,10 @@ const Hero1 = ({ expandedCard, setExpandedCard }) => {
               onClick={() => handleCardClick('play')}
               style={expandedCard==='play' ? {
                 position: 'fixed',
-               
                 width: '100vw',
                 height: '100vh',
                 zIndex: 50,
                 borderRadius: '0px',
-              
                 animation: 'expanddino 1.2s ease-in-out forwards',
               } : {}}
             >
@@ -196,7 +195,6 @@ const Hero1 = ({ expandedCard, setExpandedCard }) => {
               position: 'fixed',
               zIndex: 50,
               borderRadius: '32px',
-           
               overflow: 'hidden',
               animation: 'expandmerch 1.2s ease-in-out forwards',
             } : {}}

@@ -33,6 +33,9 @@ export default function StickyNavbar() {
   }, [originalTop]);
 
   return (
+    <div>
+ 
+
     <div className="h-auto w-full bg-transparent pt-[89vh] hidden lg:block z-50">
       <div
         ref={stickyRef}
@@ -232,6 +235,7 @@ export default function StickyNavbar() {
         //   }
         // }
       `}</style>
+    </div>
     </div>
   );
 }

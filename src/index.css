@@ -243,9 +243,10 @@ body {
 @keyframes expanddino{
   from{
     width: 20vw;
-    height: 30vh;
+    height: 50vh;
     top: 20vh;
       right: 0px;
+      border-radius: 20px;
  
   }
   to{
@@ -261,21 +262,23 @@ body {
 }
 @keyframes expandleft{
   from{
+    width: 0vw;
+    height: 80vh;
+    border-radius: 24px;
   
   
  
   }
   to{
-   
-   
-  top:0vh;
-  bottom:0vw;
-  
-    border-radius: 0px;
-  
-   
-  }
-}
+
+
+  top: 0vh;
+  left: 0vw;
+ 
+  width: 100vw;
+  height: 100vh;
+  border-radius: 0px;
+}}
 .animate-expandleft {
   animation: expandleft 1s ease forwards;
 }
@@ -395,4 +398,83 @@ animation: appear linear;
 animation-timeline: view();
 animation-range: entry 0%;
 color: white;
+}
+
+/* Glass Navigation Container */
+.glass-nav {
+  --bg-color: rgba(255, 255, 255, 0.25);
+  --highlight: rgba(255, 255, 255, 0.75);
+  --text: #ffffff;
+  
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: transparent;
+}
+
+.glass-filter,
+.glass-overlay,
+.glass-specular {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.glass-filter {
+  z-index: 1;
+  backdrop-filter: blur(4px);
+  filter: url(#glass-distortion) saturate(120%) brightness(1.15);
+}
+
+.glass-overlay {
+  z-index: 2;
+  background: var(--bg-color);
+}
+
+.glass-specular {
+  z-index: 3;
+  box-shadow: inset 1px 1px 1px var(--highlight);
+}
+
+.glass-content {
+  position: relative;
+  z-index: 4;
+  padding: 16px;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.nav-item {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-item.active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  .glass-nav {
+    --bg-color: rgba(0, 0, 0, 0.25);
+    --highlight: rgba(255, 255, 255, 0.15);
+  }
 }
