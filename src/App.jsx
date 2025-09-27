@@ -30,7 +30,7 @@ function App() {
           <AboutUs />
           <Timeline />
           <Sponsors />
-          <Judges />
+          {/* <Judges /> */}
           <Faq />
           <Footer />
         </>

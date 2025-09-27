@@ -1,112 +1,41 @@
-import { useState } from "react"
+import * as React from "react"
+import * as AccordionPrimitive from "@radix-ui/react-accordion"
+import { ChevronDown } from "lucide-react"
 
-export const Accordion = () => {
-  const [isExpanded, setIsExpanded] = useState(false)
+import { cn } from "@/lib/utils"
 
-  const handleToggle = () => {
-    setIsExpanded((prev) => !prev)
-  }
+const Accordion = AccordionPrimitive.Root
 
-  return (
-    <div className="w-full relative max-w-7xl mx-auto my-4">
-      {/* Top small bar */}
-      {/* <div className="w-[9.4%] min-w-[100px] max-w-[126px] h-[39px] bg-black rounded-[9px] border-[3px] border-[rgba(255,49,94,0.45)]" style={{ position: 'relative', zIndex: 2 }} /> */}
+const AccordionItem = React.forwardRef(({ className, ...props }, ref) => (
+  <AccordionPrimitive.Item ref={ref} className={cn("border-b", className)} {...props} />
+))
+AccordionItem.displayName = "AccordionItem"
 
-      {/* Large top bar */}
-      <div style={{
-            background: "linear-gradient(90deg, #3d5ec8 0%, #b02240 30%, #9c45ac 73%, #bd09a2 94%)",
-            clipPath: "polygon(-3% -3%, 13% -3%, 13% 17%, 103% 17%, 103% 103%, -3% 103%)",
-            height: isExpanded ? "200px" : "62px",
-            padding: "3px"
-      }} 
-      className="w-full max-w-[1342px] bg-[rgba(255,49,94,0.45)] rounded-[9px] mt-[-26px] relative overflow-visible">
-         <div
-          style={{
+const AccordionTrigger = React.forwardRef(({ className, children, ...props }, ref) => (
+  <AccordionPrimitive.Header className="flex">
+    <AccordionPrimitive.Trigger
+      ref={ref}
+      className={cn(
+        "flex flex-1 items-center justify-between py-4 text-sm font-medium transition-all hover:underline text-left [&[data-state=open]>svg]:rotate-180",
+        className
+      )}
+      {...props}>
+      {children}
+      <ChevronDown
+        className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200" />
+    </AccordionPrimitive.Trigger>
+  </AccordionPrimitive.Header>
+))
+AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
 
-            clipPath: isExpanded 
-              ? "polygon(0 0, 12.3% 0, 12.3% 18%, 99.3% 18%, 99.3% 100%, 0 100%)"
-              : "polygon(0 0, 12.3% 0, 12.3% 19%, 99.3% 19%, 99.3% 100%, 0 100%)",
-            background: "black",
-            position: "absolute",
+const AccordionContent = React.forwardRef(({ className, children, ...props }, ref) => (
+  <AccordionPrimitive.Content
+    ref={ref}
+    className="overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+    {...props}>
+    <div className={cn("pb-4 pt-0", className)}>{children}</div>
+  </AccordionPrimitive.Content>
+))
+AccordionContent.displayName = AccordionPrimitive.Content.displayName
 
-          }}
-          className="w-full h-full rounded-[6px]"
-          
-        >
-          <div style={{margin: "20px"}}>{isExpanded && (
-          <div className="w-full flex flex-col gap-2 z-10">
-            <div
-              className="bg-white rounded-[10px] px-3 py-6 shadow-lg text-black text-l mt-[40px] md:text-3xl font-neue-roman font-normal"
-              style={{ transform: "rotate(-2deg)" }}
-            >
-              TransfiNITTe is a{" "}
-              <span className="font-bold">42-hour</span> weekend event where
-              students collaborate on innovative{" "}
-              <span className="font-bold">software</span> and{" "}
-              <span className="font-bold">hardware</span> projects.
-            </div>
-          </div>
-        )}
-      </div>
-          </div>
-        
-        {/* Overlay black patch to cover under small bar */}
-        {/* <div className="absolute left-0 top-0 h-full bg-black rounded-tl-[9px]" style={{ width: '9.4%', minWidth: 100, maxWidth: 126, zIndex: 3 }} /> */}
-        
-      </div>
-      {/* Accordion content expands ABOVE */}
-        
-
-      {/* Main content container */}
-      <div className="relative w-full max-w-[1342px] bg-black rounded-[10px] px-[15px] py-[19px] 
-       flex flex-col gap-4"
-       style={{
-        marginTop:"-30px" 
-       }} >
-        {/* Gradient border overlay */}
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            borderRadius: "10px",
-            border: "3px solid transparent",
-            background:
-              "linear-gradient(90deg, #3d5ec8 0%, #b02240 20%, #9c45ac 63%, #bd09a2 94%)",
-            WebkitMask:
-              "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-            WebkitMaskComposite: "xor",
-            maskComposite: "exclude",
-            pointerEvents: "none",
-            zIndex: 5,
-          }}
-        />
-
-        
-
-        {/* Question row always pinned at bottom */}
-        <div className="flex flex-row w-full items-center justify-between z-10 mt-auto">
-          <div
-            className="text-white font-['Neue_Haas_Grotesk_Display_Pro'] italic font-medium break-words"
-            style={{ fontSize: "clamp(20px, 4vw, 35px)" }}
-          >
-            What is TransfiNITTe?
-          </div>
-          <button
-            onClick={handleToggle}
-            className="w-[40px] h-[40px] flex items-center justify-center bg-[#1a1a1a] rounded-full border border-[#a244b2]"
-          >
-            <span className="text-3xl text-white transform -translate-y-[3px]">
-              {isExpanded ? "-" : "+"}
-            </span>
-          </button>
-        </div>
-      </div>
-
-      {/* Small black patch */}
-
-      <div className="w-[8.9%] min-w-[95px] max-w-[120px] h-[18px] bg-black mt-[-40px] ml-[3px]" />
-    </div>
-  )
-}
-
-export default Accordion
+export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }

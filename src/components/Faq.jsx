@@ -1,26 +1,41 @@
-import Accordion from "./ui/accordion";
-import Accordion2 from "./ui/accordian2";
+import React, { memo, Suspense } from "react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { faqs } from "@/constants";
 
+const FaqAccordion = memo(() => (
+  <Accordion type="single" className="w-full text-red-50 " collapsible>
+    {faqs.map((item) => (
+      <AccordionItem key={item.id} value={`item-${item.id}`} className="w-full border-b-0 relative after:block after:h-[1px] after:w-full after:bg-gradient-to-r after:from-purple-500 after:via-red-500 after:to-red-500" >
+        <AccordionTrigger className="w-full text-[1.25rem] sm:text-[1.75rem] font-spacegrotesk text-left">
+          {item.question}
+        </AccordionTrigger>
+        <AccordionContent className="w-full text-[1rem] sm:text-[1.4rem] text-[#A0A0A0] font-spacemono text-left">
+          {item.answer}
+        </AccordionContent>
+      </AccordionItem>
+    ))}
+  </Accordion>
+));
 const Faq = () => {
   return (
-    <div>
-         
-    <section className="w-full flex flex-col items-center justify-center py-16 px-4 gap-8 bg-black">
-        <div className="text-4xl md:text-6xl mb-2 font-neue-roman text-radial-gradient text-start">Frequently Asked Questions</div>
-     
-      <div className="w-full max-w-5xl flex flex-col gap-8">
-        
-        <Accordion />
-       
-        <Accordion />
-        <Accordion />
-        <Accordion />
-        
+    <Suspense fallback={<div>Loading...</div>}>
+      <div className="mx-auto bg-black max-w-[91.467%] sm:max-w-[93.194%] select-none">
+        <div className="flex py-9 px-4 sm:px-[46px] justify-between items-end border-r border-l border-r-edge border-l-edge">
+          <div className="flex w-full h-auto flex-col items-start gap-[37px] flex-shrink-0">
+          <div className="text-4xl md:text-6xl mb-2 font-neue-roman text-radial-gradient text-start">Frequently Asked Questions</div>
+            <div className="w-full text-[#A0A0A0] font-spacemono text-[1rem]">
+              <FaqAccordion />
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
-    </div>
+    </Suspense>
   );
 };
 
 export default Faq;
-//0 0, 10% 0, 10% 10%, 100% 10%, 100% 100%, 0% 100%//path('M 0.33% 4% Q 0.33% 2% 0.4% 2% L 9.5% 2% Q 9.67% 2% 9.67% 4% L 9.67% 20% Q 9.67% 22% 9.8% 22% L 99% 22% Q 99.67% 22% 99.67% 24% L 99.67% 99% L 0.33% 99% Z')"
