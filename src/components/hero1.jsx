@@ -94,9 +94,9 @@ const Hero1 = ({ expandedCard, setExpandedCard }) => {
   <div className={`flex h-screen relative z-20${expandedCard==='left' ? ' pl-6 pr-0 py-0 gap-0' : ' p-8 gap-6'}`}>
         {/* Left Hero Section */}
         <div 
-          className={`flex-1 bg-transparent rounded-2xl flex flex-col justify-start overflow-hidden p-4 relative z-30 cursor-pointer hover:border-white transition-all duration-300${expandedCard && expandedCard !== 'left' ? ' hidden' : ''} ${expandedCard==='left' ? '' : 'border border-gray-200 p-8'}`}
+          className={`flex-1 bg-transparent rounded-2xl flex flex-col justify-start overflow-hidden p-4 relative z-30 cursor-pointer hover:border-white transition-all duration-300${expandedCard && expandedCard !== 'left' ? ' hidden' : ''} ${expandedCard==='left' ? ' animate-expandleft' : 'border border-gray-200 p-8'}`}
           onClick={() => handleCardClick('left')}
-          style={expandedCard==='left' ? { border: 0, margin: 0, } : {}}
+          style={expandedCard==='left' ? { border: 0, margin: 0 } : {}}
         >
           {/* Info Tag */}
           <div className="mb-6 mt-2">
@@ -129,13 +129,13 @@ const Hero1 = ({ expandedCard, setExpandedCard }) => {
               onClick={() => handleCardClick('play')}
               style={expandedCard==='play' ? {
                 position: 'fixed',
-                top: 0,
-                left: 0,
+               
                 width: '100vw',
                 height: '100vh',
                 zIndex: 50,
-                borderRadius: '32px',
-                transition: 'all 0.5s cubic-bezier(0.4,0.2,0.2,1)',
+                borderRadius: '0px',
+              
+                animation: 'expanddino 1.2s ease-in-out forwards',
               } : {}}
             >
             <div className="flex items-center justify-between mb-4">
@@ -145,7 +145,7 @@ const Hero1 = ({ expandedCard, setExpandedCard }) => {
 
             <p className="text-radial-gradient text-sm mb-4">View leaderboard</p>
 
-            <img src={dino} alt="dino" className="relative w-full h-auto top-40" />
+            <img src={dino} alt="dino" className={`relative  ${expandedCard && expandedCard === 'play' ? ' w-full h-auto bottom-0' : 'w-full h-auto top-40'}`} />
             
            
           </div>
@@ -156,27 +156,24 @@ const Hero1 = ({ expandedCard, setExpandedCard }) => {
             onClick={() => handleCardClick('merch')}
             style={expandedCard==='merch' ? {
               position: 'fixed',
-              top: 0,
-              left: 0,
-              width: '100vw',
-              height: '100vh',
               zIndex: 50,
               borderRadius: '32px',
-              transition: 'all 0.5s cubic-bezier(0.4,0.2,0.2,1)',
+           
               overflow: 'hidden',
+              animation: 'expandmerch 1.2s ease-in-out forwards',
             } : {}}
           >
-            <h2 className="text-2xl font-bold text-white mb-4">Get your Merch</h2>
-
-            <button
-              className="text-black text-sm mb-4 bg-white border-none p-3 mt-3 text-bold rounded-2xl hover:underline focus:outline-none cursor-pointer text-left w-fit"
-              type="button"
-            >
-              Register For Merch
-            </button>
-
-            {/* Placeholder Image Area */}
-            <img src={tiltT} alt="tilted T logo" className="absolute w-[60%] h-auto mx-auto -bottom-12 -right-12" />
+            {/* T logo behind content */}
+            <img src={tiltT} alt="tilted T logo" className="absolute w-[60%] h-auto mx-auto -bottom-12 -right-12 z-0 pointer-events-none select-none" style={{filter:'brightness(0.7)'}} />
+            <div className="relative z-10">
+              <h2 className="text-4xl font-bold text-white mb-4">Get our Merch</h2>
+              <button
+                className="text-black text-sm mb-4 bg-white border-none p-3 mt-3 text-bold rounded-lg hover:underline focus:outline-none cursor-pointer text-left w-fit"
+                type="button"
+              >
+                Register For Merch
+              </button>
+            </div>
           </div>
         </div>
       </div>

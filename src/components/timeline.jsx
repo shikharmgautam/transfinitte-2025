@@ -1,24 +1,36 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Timeline = () => {
+  const [showLines, setShowLines] = useState(false);
+  useEffect(() => {
+    const onScroll = () => {
+      setShowLines(window.scrollY >= window.innerHeight);
+    };
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
   return (
     <>
       
       <div className="hidden sm:block w-full h-full">
-        
         <div>
           <div className="App text-white relative bg-black h-[30vh] flex items-center justify-center text-[3.7rem] z-20 font-neue-roman text-radial-gradient overflow-hidden ">
             TIMELINE
           </div>
-          <div className="w-[3px] h-full bg-gray-700 absolute left-1/2 -translate-x-1/2 top-0 -z-20 "></div>
-           <div className="w-[3px] h-full bg-gray-700 fixed top-0 left-1/2 -translate-x-1/2 -z-20"></div>
+          {/* Grey and gradient lines, only show after 100vh scroll */}
+          {showLines && <>
+            <div className="w-[3px] h-full bg-gray-700 absolute left-1/2 -translate-x-1/2 top-0 -z-20 "></div>
+            <div className="w-[3px] h-full bg-gray-700 fixed top-0 left-1/2 -translate-x-1/2 -z-20"></div>
+            <div className="w-[3px] h-[50vh] bg-gradient-to-b from-[#ff7448] via-[#c04892] to-[#6348ff] fixed top-0 left-1/2 -translate-x-1/2 -z-10"></div>
+          </>}
           <div className='h-[40vh] bg-black w-full transform -translate-y-[40vh] absolute z-2'></div>
-           
-          <div className="w-[3px] h-[50vh] bg-gradient-to-b from-[#ff7448] via-[#c04892] to-[#6348ff] fixed top-0 left-1/2 -translate-x-1/2 -z-10"></div>
-         <div className="wrapper text-white flex flex-col align-center gap-30 relative min-h-screen">
-            <div className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-0 w-full h-16 z-30">
-              <div className="w-full h-full bg-gradient-to-b from-black to-transparent"></div>
-            </div>
+          <div className="wrapper text-white flex flex-col align-center gap-30 relative min-h-screen">
+            {/* Top gradient overlay, only show after 100vh scroll */}
+            {showLines && (
+              <div className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-0 w-full h-16 z-30">
+                <div className="w-full h-full bg-gradient-to-b from-black to-transparent"></div>
+              </div>
+            )}
            
             <div className="content-1 flex flex-row items-center justify-center w-full py-5 gap-8 relative z-10 px-8">
               <div className="text-3xl font-bold flex-1 flex justify-end pr-8 sticky top-[50vh] self-start">Day 1 — Oct 18</div>
@@ -63,9 +75,12 @@ const Timeline = () => {
                 <div>05:30 PM Valediction Ceremony</div>
               </div>
             </div>
-            <div className="pointer-events-none absolute left-1/2 -translate-x-1/2 bottom-0 w-full h-16 z-30">
-              <div className="w-full h-full bg-gradient-to-t from-black to-transparent"></div>
-            </div>
+            {/* Bottom gradient overlay, only show after 100vh scroll */}
+            {showLines && (
+              <div className="pointer-events-none absolute left-1/2 -translate-x-1/2 bottom-0 w-full h-16 z-30">
+                <div className="w-full h-full bg-gradient-to-t from-black to-transparent"></div>
+              </div>
+            )}
           </div>
           <div className="App text-white relative bg-black h-[50vh] flex items-center justify-center text-[5rem] z-20">
           </div>
@@ -74,18 +89,23 @@ const Timeline = () => {
 
       
       <div className="block sm:hidden w-full">
-
         <div>
           <span className="App text-white relative bg-black h-[30vh] flex items-center justify-center text-[3rem] z-20 font-neue-roman text-radial-gradient mt-20 overflow-hidden">
             TIMELINE
           </span>
-          <div className='h-[40vh] bg-black w-full transform -translate-y-[40vh] absolute z-2'></div>
-          <div className="w-[3px] h-[50vh] bg-gradient-to-b from-[#ff7448] via-[#c04892] to-[#6348ff] fixed top-0 left-[9vw] -z-10"></div>
-         <div className="wrapper text-white flex flex-col align-center gap-30 relative min-h-screen">
-            <div className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-0 w-full h-16 z-30">
-              <div className="w-full h-full bg-gradient-to-b from-black to-transparent"></div>
-            </div>
+          {/* Grey and gradient lines, only show after 100vh scroll */}
+          {showLines && <>
+            <div className="w-[3px] h-[50vh] bg-gradient-to-b from-[#ff7448] via-[#c04892] to-[#6348ff] fixed top-0 left-[9vw] -z-10"></div>
             <div className="w-[3px] h-full bg-gray-700 absolute left-[9vw] top-0 -z-20 "></div>
+          </>}
+          <div className='h-[40vh] bg-black w-full transform -translate-y-[40vh] absolute z-2'></div>
+          <div className="wrapper text-white flex flex-col align-center gap-30 relative min-h-screen">
+            {/* Top gradient overlay, only show after 100vh scroll */}
+            {showLines && (
+              <div className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-0 w-full h-16 z-30">
+                <div className="w-full h-full bg-gradient-to-b from-black to-transparent"></div>
+              </div>
+            )}
             <div className="content-1 flex flex-row items-center justify-center w-full py-5 gap-8 relative z-10 px-8">
 
               <div className="relative flex flex-col items-start h-full min-h-[340px] w-12 z-10">

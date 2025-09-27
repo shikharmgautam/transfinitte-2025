@@ -213,6 +213,73 @@ body {
   animation: var(--animate-spin);
 }
 
+.animate-expand25 {
+  animation: expand 1s ease forwards;
+}
+
+@keyframes expand {
+  to {
+    
+  }
+}
+@keyframes expandmerch{
+  from{
+    width: 20vw;
+    height: 30vh;
+      bottom: 0;
+      right: 0;
+ 
+  }
+  to{
+    width: 95vw;
+    height: 90vh;
+    top:50vh;
+    left:50vw;
+    transform: translate(-50%,-50%);
+  
+   
+  }
+}
+@keyframes expanddino{
+  from{
+    width: 20vw;
+    height: 30vh;
+    top: 20vh;
+      right: 0px;
+ 
+  }
+  to{
+    width: 100vw;
+    height: 100vh;
+    top:50vh;
+    left:50vw;
+    transform: translate(-50%,-50%);
+    border-radius: 0px;
+  
+   
+  }
+}
+@keyframes expandleft{
+  from{
+  
+  
+ 
+  }
+  to{
+   
+   
+  top:0vh;
+  bottom:0vw;
+  
+    border-radius: 0px;
+  
+   
+  }
+}
+.animate-expandleft {
+  animation: expandleft 1s ease forwards;
+}
+
 @keyframes spin {
   to {
     transform: rotate(1turn);
