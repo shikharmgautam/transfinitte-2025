@@ -74,6 +74,7 @@ const JudgesDesktop = memo(({ judges, hoveredJudge, setHoveredJudge }) => (
       backgroundImage: "url('/src/assets/images/hero/herobg.png')",
       backgroundSize: 'cover',
       backgroundPosition: 'center',
+      backgroundColor: 'black',
       backgroundRepeat: 'no-repeat',
       minHeight: '100vh',
     }}
@@ -82,37 +83,36 @@ const JudgesDesktop = memo(({ judges, hoveredJudge, setHoveredJudge }) => (
       <div className="text-[2.5rem] md:text-[3.5rem] font-neue-roman font-normal leading-tight mb-8 px-2 text-left" style={{color: 'rgba(221, 99, 255, 1)'}}>
         Judges
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-12 overflow-hidden">
+      <div className="grid grid-cols-1 sm:grid-cols-4 gap-2 w-[100%] mr-10">
         {judges.map((judge) => (
-            
-          <span key={judge.id}>
-            <LiquidGlass   displacementScale={10}
-  blurAmount={0}
-  saturation={130}
-  aberrationIntensity={14}
-  elasticity={0}
-  cornerRadius={10}
-  padding="10px 10px">
-          
-            <div className="flex flex-col items-start justify-between h-full w-full rounded-2xl overflow-hidden" style={{minHeight: '300px', background: 'rgba(30,30,0,0)', boxShadow: '0 4px 32px 0 rgba(0,0,0,0.12)'}}>
-              <div className="w-full aspect-[3/4] bg-gray-200 rounded-xl mb-2 flex items-center justify-center overflow-hidden">
-                {judge.imgurl ? (
-                  <img src={judge.imgurl} alt={judge.name} className="object-cover w-full h-full rounded-xl" />
-                ) : (
-                  <div className="w-full h-full rounded-xl" />
-                )}
-              </div>
-              <div className="w-full px-3 pb-2 pt-1">
-                <div className="flex items-center justify-between w-full">
-                  <span className="font-neue-roman text-base text-white">{judge.name}</span>
-                  <span className="text-xs text-[#dd63ff] font-mono font-bold">@{judge.name.replace(/\s/g, '').toLowerCase()}</span>
+          <div key={judge.id} className="w-full">
+            <LiquidGlass 
+              displacementScale={10}
+              blurAmount={0}
+              saturation={130}
+              aberrationIntensity={14}
+              elasticity={0}
+              cornerRadius={10}
+              padding="10px 10px"
+            >
+              <div className="flex flex-col items-start justify-between rounded-2xl overflow-hidden w-full" style={{minHeight: '300px', background: 'rgba(30,30,0,0)', boxShadow: '0 4px 32px 0 rgba(0,0,0,0.12)'}}>
+                <div className="w-full aspect-[3/4] bg-gray-200 rounded-xl mb-2 flex items-center justify-center overflow-hidden">
+                  {judge.imgurl ? (
+                    <img src={judge.imgurl} alt={judge.name} className="object-cover w-full h-full rounded-xl" />
+                  ) : (
+                    <div className="w-full h-full rounded-xl" />
+                  )}
                 </div>
-                <div className="text-xs text-gray-300 font-neue-roman mt-1">{judge.company}<br /><span className="text-gray-400">Design Lead</span></div>
+                <div className="w-full px-3 pb-2 pt-1">
+                  <div className="flex items-center justify-between w-full">
+                    <span className="font-neue-roman text-base text-white">{judge.name}</span>
+                    <span className="text-xs text-[#dd63ff] font-mono font-bold">@{judge.name.replace(/\s/g, '').toLowerCase()}</span>
+                  </div>
+                  <div className="text-xs text-gray-300 font-neue-roman mt-1">{judge.company}<br /><span className="text-gray-400">Design Lead</span></div>
+                </div>
               </div>
-            </div>
             </LiquidGlass>
-           
-          </span>
+          </div>
           
         ))}
       </div>

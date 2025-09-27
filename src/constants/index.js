@@ -71,12 +71,7 @@ export const judges = [
     imgurl: subash,
     company: "Goldman Sachs",
   },
-  {
-    id: "8",
-    name: "Mudit Srivastva",
-    imgurl: mudit,
-    company: "Pathway",
-  },
+
 ];
 
 export const sponsors = [
