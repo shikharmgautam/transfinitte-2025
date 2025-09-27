@@ -401,19 +401,20 @@ color: white;
 }
 
 /* Glass Navigation Container */
-.glass-nav {
+/* Glass Wrapper Container */
+.glass-wrapper {
   --bg-color: rgba(255, 255, 255, 0.25);
   --highlight: rgba(255, 255, 255, 0.75);
   --text: #ffffff;
-  
+
   position: relative;
-  width: 100%;
-  max-width: 600px;
+  display: inline-block; /* adjusts to content */
   border-radius: 12px;
   overflow: hidden;
   background: transparent;
 }
 
+/* Shared layers */
 .glass-filter,
 .glass-overlay,
 .glass-specular {
@@ -442,38 +443,12 @@ color: white;
   position: relative;
   z-index: 4;
   padding: 16px;
-}
-
-.nav-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-}
-
-.nav-item {
   color: var(--text);
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 16px;
-  padding: 8px 16px;
-  border-radius: 8px;
-  transition: background-color 0.2s ease;
 }
 
-.nav-item:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.nav-item.active {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-/* Dark mode styles */
+/* Dark Mode Support */
 @media (prefers-color-scheme: dark) {
-  .glass-nav {
+  .glass-wrapper {
     --bg-color: rgba(0, 0, 0, 0.25);
     --highlight: rgba(255, 255, 255, 0.15);
   }

@@ -3,6 +3,7 @@ import DaysToGo from "./DaysToGo";
 import icon from "../assets/images/svg/tf-badge.svg";
 import arrowWhite from "../assets/images/svg/arrowwhite.svg";
 import headerSvg from "../assets/images/svg/header.svg";
+import GlassWrapper from "./ui/glasswrapper.jsx";
 
 export default function StickyNavbar() {
   const stickyRef = useRef(null);
@@ -34,6 +35,7 @@ export default function StickyNavbar() {
 
   return (
     <div>
+     
  
 
     <div className="h-auto w-full bg-transparent pt-[89vh] hidden lg:block z-50">
@@ -41,10 +43,14 @@ export default function StickyNavbar() {
         ref={stickyRef}
         className={`sticky-bar ${expanded ? "expanded" : ""}`}
       >
-        <div className={`flex items-center gap-6 justify-center sticky-bar-0 ${expanded ? "expanded-level-0" : ""} mx-auto`}>
+        <div className={`flex items-center gap-6 justify-center sticky-bar-0 ${expanded ? "expanded-level-0 " : ""} mx-auto`}>
             <span className={`relative inline-block overflow-hidden rounded-xl p-[1px] sticky-bar ${expanded ? "expanded" : ""} mx-auto`}>
-              <span className={`absolute inset-[-1000%] bg-[conic-gradient(from_90deg_at_50%_50%,#FF315E_0%,#E861FF_50%,#5e1fff_75%,#FF315E_90%)] sticky-bar-level-1 ${expanded ? "expanded-level-1" : ""}`} />
-              <div className={`inline-flex h-full w-full cursor-pointer items-center justify-center rounded-xl bg-black px-6 py-2 text-xs font-medium text-gray-50 backdrop-blur-3xl gap-x-6 sticky-bar-level-2 ${expanded ? "expanded-level-2" : ""}`}>
+              <span className={`absolute inset-[-1000%] sticky-bar-level-1 ${expanded ? "expanded-level-1" : ""}`} />
+              <div className={`relative width-[100%] height-[100%] rounded-xl border-white bg-white pointer-events-none`} />
+              <div
+                className={`inline-flex h-full w-full cursor-pointer items-center justify-center rounded-xl  px-6 py-2 text-xs font-medium text-gray-50 backdrop-blur-3xl gap-x-6 sticky-bar-level-2 ${expanded ? "expanded-level-2" : "backdrop-blur-lg"}`}
+                style={!expanded ? { background: "rgba(0,0,0,0)" } : { background: "#000" }}
+              >
                 <div className={`text-offwhite text-center font-spacemono text-sm font-bold uppercase tracking-wide sticky-bar-level-3 ${expanded ? "expanded-level-3" : ""}`}>
                   <DaysToGo />
                 </div>

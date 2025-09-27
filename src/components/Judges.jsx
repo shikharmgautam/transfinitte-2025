@@ -1,5 +1,11 @@
 import React, { memo, Suspense, useState } from "react";
 import { judges } from "../constants";
+import LiquidGlass from 'liquid-glass-react'
+
+
+import GlassWrapper from "./ui/glasswrapper.jsx";
+
+import { herobg } from '../assets';
 
 const JudgesList = memo(({ judges, hoveredJudge, setHoveredJudge }) => (
   <div className="flex flex-col items-start gap-8 self-stretch">
@@ -21,7 +27,7 @@ const JudgesList = memo(({ judges, hoveredJudge, setHoveredJudge }) => (
 ));
 
 const JudgesMobile = memo(({ judges }) => (
-  <div className="block sm:hidden mx-auto bg-black max-w-[91.467%]">
+  <div className="block sm:hidden mx-auto bg-black max-w-[91.467%] z-10">
     <div className="flex flex-col justify-center items-start gap-[0.625rem] flex-shrink-0 border-l border-r border-l-edge border-r-edge py-20 px-4 ">
       <div className="flex h-fit items-start self-stretch">
         <div className="text-white font-instrument-sans text-[3rem] font-normal leading-[60px] tracking-[-2.56px] text-conic-gradient">
@@ -29,7 +35,9 @@ const JudgesMobile = memo(({ judges }) => (
         </div>
         
       </div>
+      
       <div className="flex w-full justify-center items-center gap-[0.625rem] flex-wrap">
+
         {judges.map((judge) => (
           <div
             key={judge.id}
@@ -60,52 +68,53 @@ const JudgesMobile = memo(({ judges }) => (
 ));
 
 const JudgesDesktop = memo(({ judges, hoveredJudge, setHoveredJudge }) => (
-  <div className="hidden sm:block mx-auto bg-black max-w-[93.194%]">
-    <div className="flex h-full py-[70px] px-[46px] justify-between items-start content-start gap-y-[92px] flex-wrap border-r border-l border-r-edge border-l-edge bg-black">
-      <div className="flex w-[86%] justify-start items-start gap-[187.4px] flex-shrink-0 ">
-        <div className="flex w-1/4 flex-col justify-start items-start gap-[84px] flex-shrink-0">
-          <div className="flex h-fit items-start self-stretch">
-            <div className="text-white font-instrument-sans text-[4.5rem] font-normal leading-[60px] whitespace-nowrap text-conic-gradient">
-              Judges
-            </div>
+  <div
+    className="hidden sm:block mx-auto max-w-[95%] py-8"
+    style={{
+      backgroundImage: "url('/src/assets/images/hero/herobg.png')",
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      minHeight: '100vh',
+    }}
+  >
+    <div className="w-full">
+      <div className="text-[2.5rem] md:text-[3.5rem] font-neue-roman font-normal leading-tight mb-8 px-2 text-left" style={{color: 'rgba(221, 99, 255, 1)'}}>
+        Judges
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-12 overflow-hidden">
+        {judges.map((judge) => (
             
-          </div>
-          <JudgesList
-            judges={judges}
-            hoveredJudge={hoveredJudge}
-            setHoveredJudge={setHoveredJudge}
-          />
-        </div>
-        <div className="flex w-3/4 items-start content-start gap-3 flex-shrink-0 flex-wrap">
-          {judges.map((judge) => (
-            <div
-              key={judge.id}
-              className="flex content-center items-center w-[30%] aspect-square overflow-hidden object-cover relative border border-dashed border-[#454545] cursor-default"
-              onMouseEnter={() => setHoveredJudge(judge.id)}
-              onMouseLeave={() => setHoveredJudge(null)}
-            >
-              <img
-                src={judge.imgurl}
-                alt={judge.name}
-                width="100%"
-                height="100%"
-                className={`object-cover w-full h-full grayscale transition-transform duration-300 ${
-                  hoveredJudge === judge.id
-                    ? "grayscale-0 scale-105"
-                    : "grayscale"
-                }`}
-              />
-              <div
-                className={`absolute inset-0 bg-gradient-to-b from-transparent to-black transition-opacity duration-300 ${
-                  hoveredJudge === judge.id ? "opacity-0" : "opacity-70"
-                }`}
-              />
-              <div className="hidden sm:block text-white font-neue-roman text-[0.813rem] font-normal uppercase absolute bottom-0 right-[5px] text-right bg-transparent select-none cursor-default">
-                {`${judge.name} | ${judge.company}`}
+          <span key={judge.id}>
+            <LiquidGlass   displacementScale={10}
+  blurAmount={0}
+  saturation={130}
+  aberrationIntensity={14}
+  elasticity={0}
+  cornerRadius={10}
+  padding="10px 10px">
+          
+            <div className="flex flex-col items-start justify-between h-full w-full rounded-2xl overflow-hidden" style={{minHeight: '300px', background: 'rgba(30,30,0,0)', boxShadow: '0 4px 32px 0 rgba(0,0,0,0.12)'}}>
+              <div className="w-full aspect-[3/4] bg-gray-200 rounded-xl mb-2 flex items-center justify-center overflow-hidden">
+                {judge.imgurl ? (
+                  <img src={judge.imgurl} alt={judge.name} className="object-cover w-full h-full rounded-xl" />
+                ) : (
+                  <div className="w-full h-full rounded-xl" />
+                )}
+              </div>
+              <div className="w-full px-3 pb-2 pt-1">
+                <div className="flex items-center justify-between w-full">
+                  <span className="font-neue-roman text-base text-white">{judge.name}</span>
+                  <span className="text-xs text-[#dd63ff] font-mono font-bold">@{judge.name.replace(/\s/g, '').toLowerCase()}</span>
+                </div>
+                <div className="text-xs text-gray-300 font-neue-roman mt-1">{judge.company}<br /><span className="text-gray-400">Design Lead</span></div>
               </div>
             </div>
-          ))}
-        </div>
+            </LiquidGlass>
+           
+          </span>
+          
+        ))}
       </div>
     </div>
   </div>

@@ -3,6 +3,8 @@ import React from 'react'
 import { herobg, heroOne, heroTwo, mobilehero, mobileone } from '../assets';
 import Header from "./Header";
 import StickyNavbar from './Nav.jsx';
+import GlassWrapper from './ui/glasswrapper.jsx';
+
 
 
 
@@ -44,8 +46,11 @@ const Hero = () => {
         </div>
       
         <div className='absolute bottom-[0vh] lg:top-[50vh] left-1/2 -translate-x-1/2 w-auto h-auto max-w-full object-contain hidden lg:block' style={{ zIndex: 10 }}></div>
+                
                         <StickyNavbar />
-                         
+
+
+                   
       </div>
       
      
