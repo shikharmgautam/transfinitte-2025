@@ -1,6 +1,7 @@
 ﻿import React, { useState } from "react";
 import dino from "../assets/images/dino.png";
 import tiltT from "../assets/images/svg/tiltT.svg";
+import StickyNavbar from './Nav.jsx';
 
 
 const Hero1 = ({ expandedCard, setExpandedCard }) => {
@@ -90,8 +91,14 @@ const Hero1 = ({ expandedCard, setExpandedCard }) => {
 
   return (
     <div className="min-h-screen bg-transparent relative z-10">
+      {/* StickyNavbar at top of hero section when left card expanded */}
+      {expandedCard === 'left' && (
+        <div className="w-full z-50 flex justify-center items-end absolute left-0 bottom-0">
+          <StickyNavbar />
+        </div>
+      )}
       {/* Main Content */}
-  <div className={`flex h-screen relative z-20${expandedCard==='left' ? ' pl-6 pr-0 py-0 gap-0' : ' p-8 gap-6'}`}>
+      <div className={`flex h-screen relative z-20${expandedCard==='left' ? ' pl-6 pr-0 py-0 gap-0' : ' p-8 gap-6'}`}>
         {/* Left Hero Section */}
         <div 
           className={`flex-1 bg-transparent rounded-2xl flex flex-col justify-start overflow-hidden p-4 relative z-30 cursor-pointer hover:border-white transition-all duration-300${expandedCard && expandedCard !== 'left' ? ' hidden' : ''} ${expandedCard==='left' ? ' animate-expandleft' : 'border border-gray-200 p-8'}`}
@@ -114,8 +121,12 @@ const Hero1 = ({ expandedCard, setExpandedCard }) => {
           >
             Get Updates
           </button>
+        {/* ...existing code... */}
+          
 
            <div className={`hidden sm:flex items-center justify-center gap-1 absolute  -translate-x-1/2 z-20 font-neue-xxthin m-0 p-0 overflow-hidden ${expandedCard==='left' ? '  -right-[26vw] -bottom-[23vw] ' : ' -right-[20vw] -bottom-[18vw]'}`}>
+   {/* Sticky Navbar - Only show when left card is expanded */}
+      
           <span className={`   bg-[linear-gradient(-12deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0)_50%),conic-gradient(from_90deg_at_50%_50%,#E861FF_0%,#EF315E_50%,#FF315E_75%,#E861FF_90%)] bg-clip-text text-transparent -rotate-[12.32deg] ${expandedCard==='left' ? '  text-[45vw]' : ' text-[37vw]'}`}>2</span>
           <span className={`  bg-[linear-gradient(-12deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0)_50%),conic-gradient(from_90deg_at_50%_50%,#E861FF_0%,#EF315E_50%,#FF315E_75%,#E861FF_90%)] bg-clip-text text-transparent -rotate-[12.32deg] translate-y-[5vw] lg:translate-y-[5vh] ${expandedCard==='left' ? '  text-[45vw] ' : ' text-[37vw]'}`}>5</span>
         </div>

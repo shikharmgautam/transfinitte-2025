@@ -26,10 +26,12 @@ function App() {
       {!(expandedCard === 'play' || expandedCard === 'merch') && (
         <>
           <MobileStickyNavbar className="block" />
+        
           <TabStickyNavbar />
           <AboutUs />
+              <Timeline />
           <Sponsors />
-          <Timeline />
+      
           <Judges />
           <Faq />
           <Footer />
