@@ -83,19 +83,11 @@ const JudgesDesktop = memo(({ judges, hoveredJudge, setHoveredJudge }) => (
       <div className="text-[2.5rem] md:text-[3.5rem] font-neue-roman font-normal leading-tight mb-8 px-2 text-left" style={{color: 'rgba(221, 99, 255, 1)'}}>
         Judges
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-4 gap-2 w-[100%] mr-10">
+      <div className="grid grid-cols-1 sm:grid-cols-4 gap-5 w-[100%] mr-10">
         {judges.map((judge) => (
           <div key={judge.id} className="w-full">
-            <LiquidGlass 
-              displacementScale={10}
-              blurAmount={0}
-              saturation={130}
-              aberrationIntensity={14}
-              elasticity={0}
-              cornerRadius={10}
-              padding="10px 10px"
-            >
-              <div className="flex flex-col items-start justify-between rounded-2xl overflow-hidden w-full" style={{minHeight: '300px', background: 'rgba(30,30,0,0)', boxShadow: '0 4px 32px 0 rgba(0,0,0,0.12)'}}>
+
+              <div className="flex flex-col items-start justify-between rounded-2xl overflow-hidden w-full p-5 backdrop-blur-[2px]" style={{minHeight: '300px',backgroundColor: 'rgba(255,255,255,0.08)',boxShadow: '0 4px 32px 0 rgba(0,0,0,0.12)'}}>
                 <div className="w-full aspect-[3/4] bg-gray-200 rounded-xl mb-2 flex items-center justify-center overflow-hidden">
                   {judge.imgurl ? (
                     <img src={judge.imgurl} alt={judge.name} className="object-cover w-full h-full rounded-xl" />
@@ -111,7 +103,7 @@ const JudgesDesktop = memo(({ judges, hoveredJudge, setHoveredJudge }) => (
                   <div className="text-xs text-gray-300 font-neue-roman mt-1">{judge.company}<br /><span className="text-gray-400">Design Lead</span></div>
                 </div>
               </div>
-            </LiquidGlass>
+            
           </div>
           
         ))}
