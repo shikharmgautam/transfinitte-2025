@@ -93,7 +93,7 @@ const Hero1 = ({ expandedCard, setExpandedCard }) => {
 //   }
 
   return (
-    <div className="min-h-screen bg-transparent relative z-10 hidden sm:block">
+    <div className="min-h-screen hero1-bg relative z-10 hidden sm:block">
       {/* StickyNavbar at top of hero section when left card expanded */}
       {expandedCard === 'left' && (
         <div className="w-full z-50 flex justify-center items-end absolute left-0 bottom-0">
@@ -125,13 +125,23 @@ const Hero1 = ({ expandedCard, setExpandedCard }) => {
         </div>
       </div>
                   )}
-      <div className={`flex h-[93vh] relative z-20${expandedCard==='left' ? ' pl-6 pr-0 py-0 gap-0' : ' p-8 gap-6'}`}>
+  <div className={`flex h-[93vh] relative z-20${expandedCard==='left' ? ' pr-0 py-0 gap-0' : ' p-8 gap-6'}`} style={expandedCard==='left' ? {marginLeft: 0, paddingLeft: 0} : {}}>
 
         {/* Left Hero Section */}
         <div 
-          className={`flex-1 bg-transparent rounded-2xl flex flex-col justify-start overflow-hidden p-4 relative z-30 cursor-pointer hover:border-white ${expandedCard && expandedCard !== 'left' ? ' hidden' : ''} ${expandedCard==='left' ? ' animate-expandleft' : 'border border-gray-200 p-8'}`}
+          className={`rounded-2xl flex flex-col justify-start overflow-hidden relative z-30 cursor-pointer hover:border-white bg-black${expandedCard && expandedCard !== 'left' ? ' hidden' : ''}${expandedCard==='left' ? ' animate-expandleft' : ' flex-1 border border-gray-200'}`}
           onClick={() => handleCardClick('left')}
-          style={expandedCard==='left' ? { border: 0, margin: 0 } : {}}
+          style={{
+            ...(expandedCard==='left'
+              ? { border: 0, margin: 0, marginLeft: 0, paddingLeft: 0 }
+              : {}),
+            backgroundImage: "url('/src/assets/images/hero/hero-bg.png')",
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: '140% 140%',
+            backgroundColor: 'black',
+            overflow: 'hidden',
+          }}
         >
           {/* Info Tag */}
           <div className="mb-6 mt-2">

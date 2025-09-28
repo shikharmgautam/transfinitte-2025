@@ -119,14 +119,23 @@
 }
 
 body {
-  background-image: url('/src/assets/images/hero/herobg.png');
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: 100vw auto;
+  /* background-image removed, now handled by .hero1-bg class */
   background-color: black;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+
+  position: static;
+/* Hero1 background utility class */
+.hero1-bg {
+  background-image: url('/src/assets/images/hero/hero-bg.png');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  background-color: #2a2a2a80;
+}
+
+
 
 }
 
@@ -293,19 +302,26 @@ body {
 }
 @keyframes expandleft{
   from{
-    width: 0vw;
-    height: 80vh;
-    border-radius: 24px;
+ 
+   width: 70vw;
+height: 87vh;
+border-radius: 24px;
+top: 10vh;
+left: 2vw;
+border: 2px solid white;
 
   }
   to{
 
   top: 0vh;
   left: 0vw;
+  padding-right: 0vh;
+  border: 0px;
 
   width: 100vw;
   height: 100vh;
   border-radius: 0px;
+  border: 0; margin: 0; margin-left: 0; padding-left: 0;
 }}
 .animate-expandleft {
   animation: expandleft 1s ease forwards;
