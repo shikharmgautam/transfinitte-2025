@@ -31,7 +31,7 @@ const FooterLink = memo(({ href, text }) => (
 
 const FooterMobile = memo(() => (
   <div className="block sm:hidden mx-auto bg-black max-w-full">
-    <div className="max-h-screen flex flex-col justify-center items-start flex-shrink-0 border-l border-r border-b border-l-edge border-r-edge border-b-edge w-[91.467%] mx-auto mb-4 py-[0.625rem] px-0 gap-4">
+    <div className="max-h-screen flex flex-col justify-center items-start flex-shrink-0 border-b border-b-edge w-[91.467%] mx-auto mb-4 py-[0.625rem] px-0 gap-4">
       <div className="flex justify-center items-center self-stretch py-[0.15rem] select-none pointer-events-none">
         <img src={tffootersm} />
       </div>
@@ -64,7 +64,7 @@ const FooterMobile = memo(() => (
 
 const FooterDesktop = memo(() => (
   <div className="hidden sm:block mx-auto bg-black max-w-[93.194%]">
-    <div className="flex h-auto py-9 px-0 flex-col items-start gap-[36px] border-r border-l border-r-edge border-l-edge bg-black">
+    <div className="flex h-auto py-9 px-0 flex-col items-start gap-[36px] bg-black">
       <div className="flex justify-center items-center self-stretch tf-footer select-none pointer-events-none">
         <img src={tffooter} />
       </div>

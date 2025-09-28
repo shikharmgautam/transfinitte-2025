@@ -43,7 +43,7 @@ const SponsorCategory = memo(({ category }) => (
 
 const SponsorsMobile = memo(() => (
   <div className="block sm:hidden mx-auto bg-black max-w-[91.467%]">
-    <div className="flex flex-col justify-center items-start gap-[0.625rem] flex-shrink-0 border-l border-r border-l-edge border-r-edge py-6 px-4">
+    <div className="flex flex-col justify-center items-start gap-[0.625rem] flex-shrink-0 py-6 px-4">
       <div className="flex h-fit items-start self-stretch">
         <div
           className="text-radial-gradient font-neue-roman text-[2.2rem] font-extrabold not-italic leading-[2.7rem] mt-2 mb-2 text-center w-full"
@@ -61,7 +61,7 @@ const SponsorsMobile = memo(() => (
 
 const SponsorsDesktop = memo(() => (
   <div className="hidden sm:block mx-auto bg-black max-w-[93.194%]">
-    <div className="flex py-3 px-[2.875rem] flex-col items-start gap-[2.875rem] bg-black border-r border-l border-r-edge border-l-edge">
+    <div className="flex py-3 px-[2.875rem] flex-col items-start gap-[2.875rem] bg-black">
       <div className="flex justify-center w-full">
               <div className="text-radial-gradient font-neue-roman text-[4rem] font-normal not-italic leading-[3.75rem] mt-1 mb-1 text-left w-full">
          Past Sponsors

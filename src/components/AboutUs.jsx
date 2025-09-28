@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 
 import aboutusImg from "../assets/images/aboutus.jpeg";
@@ -12,7 +12,6 @@ import ogImg from "../assets/images/og.png";
 import rakeshImg from "../assets/images/rakesh.jpeg";
 import ramImg from "../assets/images/ram.jpeg";
 import subashImg from "../assets/images/subash.jpg";
-import PatternImg from "../assets/images/Pattern.png";
 import { shuffle } from '../assets';
 
 const images = [
@@ -27,40 +26,51 @@ const images = [
   rakeshImg,
   ramImg,
   subashImg
-];const AboutUs = () => {
-  const [isAnimating, setIsAnimating] = useState(false);
-  const [imageOrder, setImageOrder] = useState(images.map((_, index) => index));
-  const [animationStage, setAnimationStage] = useState("idle");
 
-  const shuffleImages = () => {
-    if (isAnimating) return;
-    setIsAnimating(true);
+];
 
-    setAnimationStage("moving-right");
+// FadeCarousel component for infinite fade in/out
+const FadeCarousel = ({ images }) => {
+  const [current, setCurrent] = useState(0);
+  const [fade, setFade] = useState(true);
 
-    setTimeout(() => {
-      setAnimationStage("returning-center");
-    }, 300);
+  useEffect(() => {
+    const fadeOutTimeout = setTimeout(() => setFade(false), 2500); // fade out after 2.5s
+    const nextTimeout = setTimeout(() => {
+      setCurrent((prev) => (prev + 1) % images.length);
+      setFade(true);
+    }, 3000); // switch image every 3s
+    return () => {
+      clearTimeout(fadeOutTimeout);
+      clearTimeout(nextTimeout);
+    };
+  }, [current, images.length]);
 
-    setTimeout(() => {
-      setImageOrder((prev) => {
-        const newOrder = [...prev];
-        const firstImage = newOrder.shift();
-        newOrder.push(firstImage);
-        return newOrder;
-      });
-      setAnimationStage("idle");
-      setIsAnimating(false);
-    }, 600);
-  };
+  return (
+    <div className="relative w-[60vw] h-[80vw] md:w-[300px] md:h-[410px] lg:w-[450px] lg:h-[400px] transform -translate-x-[30px] md:translate-x-[0px] -translate-y-[5px] overflow-visible">
+      <div className="absolute w-full h-full flex items-center justify-center">
+        <div className="p-[3px] rounded-2xl md:rounded-3xl bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 w-full h-full">
+          <div className="w-full h-full rounded-2xl md:rounded-3xl bg-black flex items-center justify-center">
+            <img
+              src={images[current]}
+              alt={`team member ${current + 1}`}
+              className={`w-full h-full object-cover rounded-2xl md:rounded-3xl transition-opacity duration-700 ${fade ? 'opacity-100' : 'opacity-0'}`}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
+const AboutUs = () => {
   return (
     <section className="w-full min-h-[500px] bg-black flex flex-col md:flex-row items-center justify-center pb-16 pt-6 px-6 md:px-24">
       <div className="flex-1 text-left">
         <div className="text-6xl md:text-6xl lg:8xl mb-8 text-left text-radial-gradient bg-clip-text text-transparent font-neue-roman">
           About Us
         </div>
-        <p className="text-white text-lg md:text-xl mb-6 max-w-2xl leading-relaxed">
+        <p className="text-white text-lg md:text-2xl mb-6 max-w-2xl leading-relaxed">
           Welcome to TransfiNITTe'25, NIT Trichy's premiere hackathon, hosted by the Technical Council and SCIENT. This
           is where innovation meets action.
         </p>
@@ -71,79 +81,8 @@ const images = [
         </p>
       </div>
 
-      <div className="flex-1 flex flex-col items-end justify-center mt-12 md:mt-0 md:mr-10 lg:pr-16">
-        <div className="relative w-[60vw] h-[80vw] md:w-[300px] md:h-[410px] lg:w-[350px] lg:h-[450px] transform -translate-x-[30px] md:translate-x-[0px] overflow-visible">
-          <div className="absolute -top-20 -left-20 md:-top-15 md:-left-25 w-full h-full md:w-[150%] md:h-[150%] z-0 transform -rotate-6">
-						<img 
-							src={PatternImg}
-							alt="pattern glow" 
-							className="w-full h-full object-cover rounded-2xl md:rounded-3xl"
-						/>
-					</div>
-          
-          {imageOrder.map((imageIndex, stackIndex) => {
-            const isFirst = stackIndex === 0;
-            const rotations = [-8, -3, 2, 7, -5, 1, 6, -2, 4, -6, 3];
-            const rotation = rotations[stackIndex] || 0;
-            const leftOffset = -(stackIndex * 3);
-            const topOffset = stackIndex * 1;
-            const zIndex = images.length - stackIndex;
-
-            let transformClass = "";
-            let currentZIndex = zIndex;
-
-            if (isFirst && isAnimating) {
-              if (animationStage === "moving-right") {
-                transformClass = "translate-x-[120%]";
-                currentZIndex = zIndex;
-              } else if (animationStage === "returning-center") {
-                transformClass = "translate-x-0";
-                currentZIndex = 0;
-              }
-            }
-
-            return (
-              <div
-                key={`${imageIndex}-${stackIndex}`}
-                className={`absolute w-full h-full rounded-2xl md:rounded-3xl bg-white flex items-center justify-center overflow-hidden transition-all duration-300 ease-out ${transformClass}`}
-                style={{
-                  transform: `rotate(${rotation}deg)`,
-                  left: `${leftOffset}px`,
-                  top: `${topOffset}px`,
-                  zIndex: currentZIndex,
-                }}
-              >
-                <img
-                  src={images[imageIndex]}
-                  alt={`team member ${imageIndex + 1}`}
-                  className="w-full h-full object-cover rounded-2xl md:rounded-3xl"
-                />
-              </div>
-            );
-          })}
-
-          <div className="absolute -top-[30%] -left-[48%] w-[170%] h-[170%] z-[1] pointer-events-none">
-           
-          </div>
-        </div>
-
-        <div className="w-[280px] md:w-[350px] flex justify-center -mt-11 z-20">
-          <button
-            onClick={shuffleImages}
-            className="px-6 py-2 md:px-8 md:py-3 bg-black text-white rounded-full border border-white text-base md:text-lg shadow-lg z-50 transition-all duration-200 hover:bg-gray-800 hover:scale-110 active:scale-95 flex items-center gap-2"
-            disabled={isAnimating}
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
-              />
-            </svg>
-            Shuffle
-          </button>
-        </div>
+      <div className="flex-1 flex flex-col items-end justify-center mt-12 md:mt-0 md:mr-0 lg:pr-2">
+        <FadeCarousel images={images} />
       </div>
     </section>
   );
