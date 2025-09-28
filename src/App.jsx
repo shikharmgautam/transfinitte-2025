@@ -70,16 +70,7 @@ function App() {
           <Footer />
         </div>
       )}
-      <div className="block sm:hidden">
-        <MobileStickyNavbar className="block" />
-        <TabStickyNavbar />
-        <AboutUs />
-        <Timeline />
-        <Sponsors />
-        <Judges />
-        <Faq />
-        <Footer />
-      </div>
+     
     </>
   );
 }
