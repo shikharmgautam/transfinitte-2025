@@ -167,10 +167,10 @@ const Hero1 = ({ expandedCard, setExpandedCard }) => {
         {/* ...existing code... */}
           
 
-           <div className={`hidden sm:flex items-center justify-center gap-1 absolute  -translate-x-1/2 z-20 font-neue-xxthin m-0 p-0 overflow-hidden   ${expandedCard==='left' ? ' -right-[24.2vw] -bottom-[23.5vw]  ' : ' -right-[24.2vw] -bottom-[23.5vw]'}`}>
+           <div className={`hidden sm:flex items-center justify-center gap-1 absolute  -translate-x-1/2 z-20 font-neue-xxthin m-0 p-0 overflow-hidden   ${expandedCard==='left' ? ' -bottom-[28.5vw] -right-[38.2vw] lg:-right-[24.2vw] lg:-bottom-[23.5vw]  ' : ' -bottom-[28.5vw] -right-[38.2vw] lg:-right-[24.2vw] lg:-bottom-[23.5vw]'}`}>
    {/* Sticky Navbar - Only show when left card is expanded */}
       
-          <span className={`   bg-[linear-gradient(-12deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0)_50%),conic-gradient(from_90deg_at_50%_50%,#E861FF_0%,#EF315E_50%,#FF315E_75%,#E861FF_90%)] bg-clip-text text-transparent -rotate-[12.32deg] ${expandedCard==='left' ? ' lg:text-[45vw] text-[60vh]' : ' text-[45vw]'}`}>2</span>
+          <span className={`   bg-[linear-gradient(-12deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0)_50%),conic-gradient(from_90deg_at_50%_50%,#E861FF_0%,#EF315E_50%,#FF315E_75%,#E861FF_90%)] bg-clip-text text-transparent -rotate-[12.32deg] ${expandedCard==='left' ? ' lg:text-[45vw] text-[60vh]' : ' lg:text-[45vw] text-[60vh]'}`}>2</span>
           <span className={`  bg-[linear-gradient(-12deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0)_50%),conic-gradient(from_90deg_at_50%_50%,#E861FF_0%,#EF315E_50%,#FF315E_75%,#E861FF_90%)] bg-clip-text text-transparent -rotate-[12.32deg] translate-y-[5vw] lg:translate-y-[5vh] ${expandedCard==='left' ? ' lg:text-[45vw] text-[60vh]' : 'lg:text-[45vw] text-[60vh]'}`}>5</span>
         </div>
         </div>
@@ -196,7 +196,7 @@ const Hero1 = ({ expandedCard, setExpandedCard }) => {
         </div> */}
 
         {/* Right Side - Two Components */}
-  <div className={`w-96 flex flex-col gap-6 relative z-20${expandedCard && expandedCard === 'left' ? ' hidden' : ''}`}> 
+  <div className={`lg:w-96 w-70 flex flex-col gap-6 relative z-20${expandedCard && expandedCard === 'left' ? ' hidden' : ''}`}> 
           {/* Top Component - Play to win (Bigger) */}
           <div 
             className={`flex-[3] bg-black rounded-2xl p-6 cursor-pointer transition-all duration-500 ease-in-out${expandedCard && expandedCard !== 'play' ? ' hidden' : ''}`}
