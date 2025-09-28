@@ -267,17 +267,17 @@ body {
 @keyframes expandmerch{
   from{
     width: 20vw;
-    height: 30vh;
-      bottom: 0;
-      right: 0;
+    height: 20vh;
+      top:70vh;
+      left:77vw
 
   }
   to{
     width: 95vw;
     height: 90vh;
-    top:50vh;
-    left:50vw;
-    transform: translate(-50%,-50%);
+    top:5vh;
+    left:2.5vw;
+    
 
   }
 }

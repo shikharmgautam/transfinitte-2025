@@ -38,18 +38,18 @@ export default function StickyNavbar() {
      
  
 
-    <div className="h-auto w-full bg-transparent pt-[89vh] hidden lg:block z-50">
+    <div className="relative h-auto w-full bg-transparent pt-[89vh] hidden lg:block z-[60]">
       <div
         ref={stickyRef}
         className={`sticky-bar ${expanded ? "expanded" : ""}`}
       >
-        <div className={`flex items-center gap-6 justify-center sticky-bar-0 ${expanded ? "expanded-level-0 " : ""} mx-auto`}>
-            <span className={`relative inline-block overflow-hidden rounded-xl p-[1px] sticky-bar ${expanded ? "expanded" : ""} mx-auto`}>
-              <span className={`absolute inset-[-1000%] sticky-bar-level-1 ${expanded ? "expanded-level-1" : ""}`} />
-              <div className={`relative width-[100%] height-[100%] rounded-xl border-white bg-white pointer-events-none`} />
+        <div className={`flex relative items-center gap-6 justify-center sticky-bar-0 ${expanded ? "expanded-level-0 z-[60]" : ""} mx-auto`}>
+            <span className={`relative inline-block overflow-hidden rounded-xl p-[1px] sticky-bar ${expanded ? "expanded z-[60]" : ""} mx-auto`}>
+              <span className={`absolute inset-[-1000%] sticky-bar-level-1 ${expanded ? "expanded-level-1 z-[60]" : ""}`} />
+              <div className={`relative width-[100%] height-[100%] rounded-xl bg-white pointer-events-none`} />
               <div
-                className={`inline-flex h-full w-full cursor-pointer items-center justify-center rounded-xl  px-6 py-2 text-xs font-medium text-gray-50 backdrop-blur-3xl gap-x-6 sticky-bar-level-2 ${expanded ? "expanded-level-2" : "backdrop-blur-lg"}`}
-                style={!expanded ? { background: "rgba(0,0,0,0)" } : { background: "#000" }}
+                className={`inline-flex h-full w-full cursor-pointer items-center justify-center rounded-xl px-6 py-2 text-xs font-medium text-gray-50 backdrop-blur-3xl gap-x-6 sticky-bar-level-2 ${expanded ? "expanded-level-2" : "backdrop-blur-lg"}`}
+                style={!expanded ? { background: "rgba(0,0,0,0)", border: "1px solid #EF315E" } : { background: "#000", border: "none" }}
               >
                 <div className={`text-offwhite text-center font-spacemono text-sm font-bold uppercase tracking-wide sticky-bar-level-3 ${expanded ? "expanded-level-3" : ""}`}>
                   <DaysToGo />
@@ -83,17 +83,22 @@ export default function StickyNavbar() {
       .expanded-level-0{
       display: flex;
      justify-content: space-between;
+     position: relative;
+      z-index: 60;
       }
      .sticky-bar-0{
       border-radius: 0px;
       padding: 10px 0px;
+      position: relative;
+      z-index: 60;
       }
         .sticky-bar {
           position: sticky;
           top: 0;
            animation: expandNavbar 0.4s ease-in-out forwards;
-
           z-index: 50;
+          
+
          
           opacity: 1;
         }

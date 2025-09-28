@@ -4,7 +4,7 @@ import tiltT from "../assets/images/svg/tiltT.svg";
 import StickyNavbar from './Nav.jsx';
 import arrowWhite from "../assets/images/svg/arrowwhite.svg";
 import tfBadge from "../assets/images/svg/tf-badge.svg";
-
+import tabStickyNavbar from "./navTab";
 
 const Hero1 = ({ expandedCard, setExpandedCard }) => {
   // Unified handler for both button and card clicks
@@ -98,6 +98,7 @@ const Hero1 = ({ expandedCard, setExpandedCard }) => {
       {expandedCard === 'left' && (
         <div className="w-full z-50 flex justify-center items-end absolute left-0 bottom-0">
           <StickyNavbar />
+          <tabStickyNavbar />
         </div>
       )}
       {/* Main Content */}
