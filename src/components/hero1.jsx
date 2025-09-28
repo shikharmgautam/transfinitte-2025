@@ -52,7 +52,15 @@ const Hero1 = ({ expandedCard, setExpandedCard, onMainCardClick }) => {
           style={{ height: '40vh', minHeight: 220 }}
           onClick={onMainCardClick}
         >
-          <img src={mobilehero} alt="mobile hero bg" className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none select-none" draggable="false" />
+          <div
+            className="absolute inset-0 z-0 pointer-events-none select-none"
+            style={{
+              backgroundImage: `url(${mobilehero})`,
+              backgroundSize: '550% 550%',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+            }}
+          />
           <span className="absolute top-4 left-4 bg-white text-black rounded-full px-3 py-1 text-xs font-semibold z-10">Registrations start in 10 days</span>
           <div className="mt-10 mb-2 z-10 relative">
             <h1 className="text-white text-4xl font-bold leading-tight mb-2">Ready to Hack?</h1>
