@@ -5,6 +5,7 @@ import StickyNavbar from './Nav.jsx';
 import arrowWhite from "../assets/images/svg/arrowwhite.svg";
 import tfBadge from "../assets/images/svg/tf-badge.svg";
 import tabStickyNavbar from "./navTab";
+import whitearrow from "../assets/images/svg/whitearrow.svg";
 
 const Hero1 = ({ expandedCard, setExpandedCard }) => {
   // Unified handler for both button and card clicks
@@ -105,7 +106,7 @@ const Hero1 = ({ expandedCard, setExpandedCard }) => {
             <div className="h-screen">  
                   {expandedCard === null && (
                     <div className="h-[7vh] w-full flex items-center px-8 bg-transparent">
-                      <div className="flex items-center justify-between w-full h-full">
+                      <div className="flex items-center justify-between w-full h-full mt-9">
                           {/* Logo - T 25 */}
           <div className="flex items-center h-full">
             <img src={tfBadge} alt="TF 25 logo" className="h-8 w-auto" />
@@ -119,9 +120,9 @@ const Hero1 = ({ expandedCard, setExpandedCard }) => {
           </div>
                 
                           {/* Register Button */}
-          <button className="flex items-center gap-2 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-300 transition-colors h-full">
+          <button className="flex items-center gap-2 bg-gray-200 text-gray-800 px-4 py-[-2] rounded-lg border border-gray-300 hover:bg-gray-300 transition-colors h-full">
             <span className="text-sm font-medium">Register</span>
-            <img src={arrowWhite} alt="arrow" className="w-4 h-4 filter brightness-0" />
+            <img src={whitearrow} alt="arrow" className="w-4 h-4 filter brightness-0" />
           </button>
         </div>
       </div>
@@ -130,11 +131,11 @@ const Hero1 = ({ expandedCard, setExpandedCard }) => {
 
         {/* Left Hero Section */}
         <div 
-          className={`rounded-2xl flex flex-col justify-start overflow-hidden relative z-30 cursor-pointer hover:border-white bg-black${expandedCard && expandedCard !== 'left' ? ' hidden' : ''}${expandedCard==='left' ? ' animate-expandleft' : ' flex-1 border border-gray-200'}`}
+          className={`rounded-2xl flex flex-col justify-start overflow-hidden relative z-30 cursor-pointer bg-black${expandedCard && expandedCard !== 'left' ? ' hidden' : ''}${expandedCard==='left' ? ' animate-expandleft' : ' flex-1'}`}
           onClick={() => handleCardClick('left')}
           style={{
             ...(expandedCard==='left'
-              ? { border: 0, margin: 0, marginLeft: 0, paddingLeft: 0 }
+              ? { margin: 0, marginLeft: 0, paddingLeft: 0 }
               : {}),
             backgroundImage: "url('/src/assets/images/hero/hero-bg.png')",
             backgroundPosition: 'center',
@@ -145,29 +146,31 @@ const Hero1 = ({ expandedCard, setExpandedCard }) => {
           }}
         >
           {/* Info Tag */}
-          <div className="mb-6 mt-2">
-            <span className={`bg-white text-black rounded-full   px-3 py-1 ${expandedCard==='left' ? '  text-xl' : ' text-sm'}`}>
+          <div className="mb-6 mt-10 ml-6">
+            <span className={`bg-white text-black rounded-lg font-bold px-5 py-2 inline-flex items-center gap-2 ${expandedCard==='left' ? 'text-sm' : 'text-sm'}`}>
               Registrations opening in 10 days
+              <img src={whitearrow} alt="arrow" className="w-4 h-4 filter brightness-0 ml-2 align-middle" style={{marginTop: '-2px'}} />
             </span>
           </div>
           {/* Main Heading */}
-          <h1 className="text-6xl font-bold text-white leading-tight">
+          <h1 className="text-8xl font-bold text-white leading-tight ml-6">
             Ready to hack?
           </h1>
           <button
-            className="text-white text-lg mt-2 bg-transparent border-none p-0 m-0 hover:underline focus:outline-none cursor-pointer text-left w-fit"
+            className="text-white flex text-4xl font-bold mt-2 bg-transparent border-none p-0 m-0 hover:underline focus:outline-none cursor-pointer text-left w-fit ml-8"
             type="button"
           >
             Get Updates
+            <img src={whitearrow} alt="arrow" className="w-10 h-6 ml-4 mt-3" />
           </button>
         {/* ...existing code... */}
           
 
-           <div className={`hidden sm:flex items-center justify-center gap-1 absolute  -translate-x-1/2 z-20 font-neue-xxthin m-0 p-0 overflow-hidden  -right-[20vw] -bottom-[18vw] ${expandedCard==='left' ? '   ' : ''}`}>
+           <div className={`hidden sm:flex items-center justify-center gap-1 absolute  -translate-x-1/2 z-20 font-neue-xxthin m-0 p-0 overflow-hidden   ${expandedCard==='left' ? ' -right-[24.2vw] -bottom-[23.5vw]  ' : ' -right-[24.2vw] -bottom-[23.5vw]'}`}>
    {/* Sticky Navbar - Only show when left card is expanded */}
       
-          <span className={`   bg-[linear-gradient(-12deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0)_50%),conic-gradient(from_90deg_at_50%_50%,#E861FF_0%,#EF315E_50%,#FF315E_75%,#E861FF_90%)] bg-clip-text text-transparent -rotate-[12.32deg] ${expandedCard==='left' ? '  text-[45vw]' : ' text-[37vw]'}`}>2</span>
-          <span className={`  bg-[linear-gradient(-12deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0)_50%),conic-gradient(from_90deg_at_50%_50%,#E861FF_0%,#EF315E_50%,#FF315E_75%,#E861FF_90%)] bg-clip-text text-transparent -rotate-[12.32deg] translate-y-[5vw] lg:translate-y-[5vh] ${expandedCard==='left' ? '  text-[45vw] ' : ' text-[37vw]'}`}>5</span>
+          <span className={`   bg-[linear-gradient(-12deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0)_50%),conic-gradient(from_90deg_at_50%_50%,#E861FF_0%,#EF315E_50%,#FF315E_75%,#E861FF_90%)] bg-clip-text text-transparent -rotate-[12.32deg] ${expandedCard==='left' ? '  text-[45vw]' : ' text-[45vw]'}`}>2</span>
+          <span className={`  bg-[linear-gradient(-12deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0)_50%),conic-gradient(from_90deg_at_50%_50%,#E861FF_0%,#EF315E_50%,#FF315E_75%,#E861FF_90%)] bg-clip-text text-transparent -rotate-[12.32deg] translate-y-[5vw] lg:translate-y-[5vh] ${expandedCard==='left' ? '  text-[45vw] ' : ' text-[45vw]'}`}>5</span>
         </div>
         </div>
 
@@ -175,7 +178,7 @@ const Hero1 = ({ expandedCard, setExpandedCard }) => {
   <div className={`w-96 flex flex-col gap-6 relative z-20${expandedCard && expandedCard === 'left' ? ' hidden' : ''}`}> 
           {/* Top Component - Play to win (Bigger) */}
           <div 
-            className={`flex-[3] bg-black border border-gray-200 rounded-2xl p-6 cursor-pointer hover:border-white transition-all duration-500 ease-in-out${expandedCard && expandedCard !== 'play' ? ' hidden' : ''}`}
+            className={`flex-[3] bg-black rounded-2xl p-6 cursor-pointer transition-all duration-500 ease-in-out${expandedCard && expandedCard !== 'play' ? ' hidden' : ''}`}
               onClick={() => handleCardClick('play')}
               style={expandedCard==='play' ? {
                 position: 'fixed',
@@ -200,7 +203,7 @@ const Hero1 = ({ expandedCard, setExpandedCard }) => {
 
           {/* Bottom Component - Get our Merch (Smaller) */}
           <div 
-            className={`flex-[1] bg-black border border-gray-200 relative rounded-2xl p-6 overflow-hidden cursor-pointer hover:border-white transition-all duration-500 overflow:hidden ease-in-out${expandedCard && expandedCard !== 'merch' ? ' hidden' : ''}`}
+            className={`flex-[1] bg-black relative rounded-2xl p-6 overflow-hidden cursor-pointer transition-all duration-500 overflow:hidden ease-in-out${expandedCard && expandedCard !== 'merch' ? ' hidden' : ''}`}
             onClick={() => handleCardClick('merch')}
             style={expandedCard==='merch' ? {
               position: 'fixed',

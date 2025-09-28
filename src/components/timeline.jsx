@@ -14,7 +14,7 @@ const Timeline = () => {
       
       <div className="hidden sm:block w-full h-full">
         <div>
-          <div className="App text-white relative bg-black h-[30vh] flex items-center justify-center text-[3.7rem] z-20 font-neue-roman text-radial-gradient overflow-hidden ">
+          <div className="App text-white relative bg-black h-[30vh] flex items-center justify-center text-[3.7rem] font-neue-roman text-radial-gradient overflow-hidden ">
             TIMELINE
           </div>
           {/* Grey and gradient lines, only show after 100vh scroll */}
@@ -23,7 +23,7 @@ const Timeline = () => {
             <div className="w-[3px] h-full bg-gray-700 fixed top-0 left-1/2 -translate-x-1/2 -z-20"></div>
             <div className="w-[3px] h-[50vh] bg-gradient-to-b from-[#ff7448] via-[#c04892] to-[#6348ff] fixed top-0 left-1/2 -translate-x-1/2 -z-10"></div>
           </>}
-          <div className='h-[40vh] bg-black w-full transform -translate-y-[40vh] absolute z-2'></div>
+          <div className='h-[40vh] bg-black w-full transform -translate-y-[40vh] absolute z-[-1]'></div>
           <div className="wrapper text-white flex flex-col align-center gap-30 relative min-h-screen">
             {/* Top gradient overlay, only show after 100vh scroll */}
             {showLines && (
@@ -32,9 +32,9 @@ const Timeline = () => {
               </div>
             )}
            
-            <div className="content-1 flex flex-row items-center justify-center w-full py-5 gap-8 relative z-10 px-8">
+            <div className="content-1 flex flex-row items-center justify-center w-full py-5 gap-8 relative z-1 px-8">
               <div className="text-3xl font-bold flex-1 flex justify-end pr-8 sticky top-[50vh] self-start">Day 1 — Oct 18</div>
-              <div className="relative flex flex-col items-center h-full min-h-[340px] w-12 z-10">
+              <div className="relative flex flex-col items-center h-full min-h-[340px] w-12 z-1">
                 <div className="bg-white border-8 p-2 border-black rounded-full w-6 h-6 -z-11 mb-[0px] sticky top-[50vh] block max-[890px]:hidden"></div>
               </div>
               <div className="flex flex-col gap-2 md:gap-6 text-2xl font-bold flex-1 pl-8 ">
@@ -47,10 +47,10 @@ const Timeline = () => {
              
               </div>
             </div>
-            <div className="content-2 flex flex-row items-center justify-center w-full py-5 gap-8 relative z-10 px-8">
+            <div className="content-2 flex flex-row items-center justify-center w-full py-5 gap-8 relative z-1 px-8">
               <div className="text-3xl font-bold flex-1 flex justify-end pr-8 sticky top-[50vh] self-start">Day 1 — Oct 18</div>
-              <div className="relative flex flex-col items-center h-full min-h-[340px] w-12 z-10">
-                <div className="bg-white border-8 p-2 border-black rounded-full w-6 h-6 z-10 mb-[0px] sticky top-[50vh] block max-[890px]:hidden"></div>
+              <div className="relative flex flex-col items-center h-full min-h-[340px] w-12 z-1">
+                <div className="bg-white border-8 p-2 border-black rounded-full w-6 h-6 -z-10 mb-[0px] sticky top-[50vh] block max-[890px]:hidden"></div>
               </div>
               <div className="flex flex-col gap-6 text-2xl font-bold flex-1 pl-8">
                     <div className='text-5xl'>DAY-2</div>
@@ -60,12 +60,12 @@ const Timeline = () => {
                 <div>08:30 PM Dinner</div>
               </div>
             </div>
-            <div className="content-3 flex flex-row items-center justify-center w-full py-5 gap-8 relative z-10 px-8">
+            <div className="content-3 flex flex-row items-center justify-center w-full py-5 gap-8 relative z-1 px-8">
               <div className="text-3xl font-bold flex-1 flex justify-end pr-8 sticky top-[50vh] self-start">Day 1 — Oct 18</div>
               <div className="relative flex flex-col items-center h-full min-h-[340px] w-12 z-10">
-                <div className="bg-white border-8 p-2 border-black rounded-full w-6 h-6 z-10 mb-[0px] sticky top-[50vh] block max-[890px]:hidden"></div>
+                <div className="bg-white border-8 p-2 border-black rounded-full w-6 h-6 -z-11 mb-[0px] sticky top-[50vh] block max-[890px]:hidden"></div>
               </div>
-              <div className="flex flex-col gap-6 text-2xl font-bold flex-1 pl-8">
+              <div className="flex flex-col gap-6 text-2xl font-bold flex-1 pl-8 z-[-2]">
                     <div className='text-5xl'>DAY-3</div> 
                 <div>08:30 AM Breakfast</div>
                 <div>09:00 AM Guidance by Judges</div>
@@ -77,12 +77,12 @@ const Timeline = () => {
             </div>
             {/* Bottom gradient overlay, only show after 100vh scroll */}
             {showLines && (
-              <div className="pointer-events-none absolute left-1/2 -translate-x-1/2 bottom-0 w-full h-16 z-30">
-                <div className="w-full h-full bg-gradient-to-t from-black to-transparent"></div>
+              <div className="pointer-events-none absolute left-1/2 -translate-x-1/2 bottom-0 w-full h-16 z-20">
+                <div className="w-full h-full bg-gradient-to-t from-black to-transparent "></div>
               </div>
             )}
           </div>
-          <div className="App text-white relative bg-black h-[50vh] flex items-center justify-center text-[5rem] z-20">
+          <div className="App text-white relative bg-black h-[50vh] flex items-center justify-center text-[5rem]">
           </div>
         </div>
       </div>

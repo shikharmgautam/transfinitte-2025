@@ -47,7 +47,7 @@ const FadeCarousel = ({ images }) => {
   }, [current, images.length]);
 
   return (
-    <div className="relative w-[80vw] h-[70vw] md:w-[400px] md:h-[390px] lg:w-[450px] lg:h-[400px] transform md:translate-x-[40px] overflow-visible z-40">
+    <div className="relative w-[80vw] h-[70vw] md:w-[400px] md:h-[390px] lg:w-[450px] lg:h-[400px] transform md:translate-x-[40px] overflow-visible z-1">
       <div className="absolute w-full h-full flex items-center justify-center">
         <div className="p-[3px] rounded-2xl md:rounded-3xl bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 w-full h-full">
           <div className="w-full h-full rounded-2xl md:rounded-3xl bg-black flex items-center justify-center">
