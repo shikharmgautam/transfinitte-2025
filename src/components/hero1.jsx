@@ -146,7 +146,7 @@ const Hero1 = ({ expandedCard, setExpandedCard }) => {
           }}
         >
           {/* Info Tag */}
-          <div className="mb-6 mt-10 ml-6">
+          <div className="mb-0 mt-10 ml-6">
             <span className={`bg-white text-black rounded-lg font-bold px-5 py-2 inline-flex items-center gap-2 ${expandedCard==='left' ? 'text-sm' : 'text-sm'}`}>
               Registrations opening in 10 days
               <img src={whitearrow} alt="arrow" className="w-4 h-4 filter brightness-0 ml-2 align-middle" style={{marginTop: '-2px'}} />
