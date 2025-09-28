@@ -6,6 +6,7 @@ import arrowWhite from "../assets/images/svg/arrowwhite.svg";
 import tfBadge from "../assets/images/svg/tf-badge.svg";
 import tabStickyNavbar from "./navTab";
 import whitearrow from "../assets/images/svg/whitearrow.svg";
+import herobg from "../assets/images/hero/hero-bg.png";
 
 const Hero1 = ({ expandedCard, setExpandedCard }) => {
   // Unified handler for both button and card clicks
@@ -137,7 +138,7 @@ const Hero1 = ({ expandedCard, setExpandedCard }) => {
             ...(expandedCard==='left'
               ? { margin: 0, marginLeft: 0, paddingLeft: 0 }
               : {}),
-            backgroundImage: "url('/src/assets/images/hero/hero-bg.png')",
+            backgroundImage: `url(${herobg})`,
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
             backgroundSize: '140% 140%',

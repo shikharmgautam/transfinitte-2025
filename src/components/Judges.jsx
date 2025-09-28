@@ -71,7 +71,7 @@ const JudgesDesktop = memo(({ judges, hoveredJudge, setHoveredJudge }) => (
   <div
     className="hidden sm:block mx-auto max-w-[95%] py-8"
     style={{
-      backgroundImage: "url('/src/assets/images/hero/herobg.png')",
+      backgroundImage: "url('/src/assets/images/hero/hero-bg.png')",
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundColor: 'black',
