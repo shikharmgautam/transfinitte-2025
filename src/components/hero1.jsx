@@ -154,7 +154,7 @@ const Hero1 = ({ expandedCard, setExpandedCard }) => {
             </span>
           </div>
           {/* Main Heading */}
-          <h1 className="text-8xl font-bold text-white leading-tight ml-6">
+          <h1 className="lg:text-8xl text-6xl font-bold text-white leading-tight ml-6 font-neue-display z-21">
             Ready to hack?
           </h1>
           <button
@@ -170,10 +170,30 @@ const Hero1 = ({ expandedCard, setExpandedCard }) => {
            <div className={`hidden sm:flex items-center justify-center gap-1 absolute  -translate-x-1/2 z-20 font-neue-xxthin m-0 p-0 overflow-hidden   ${expandedCard==='left' ? ' -right-[24.2vw] -bottom-[23.5vw]  ' : ' -right-[24.2vw] -bottom-[23.5vw]'}`}>
    {/* Sticky Navbar - Only show when left card is expanded */}
       
-          <span className={`   bg-[linear-gradient(-12deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0)_50%),conic-gradient(from_90deg_at_50%_50%,#E861FF_0%,#EF315E_50%,#FF315E_75%,#E861FF_90%)] bg-clip-text text-transparent -rotate-[12.32deg] ${expandedCard==='left' ? '  text-[45vw]' : ' text-[45vw]'}`}>2</span>
-          <span className={`  bg-[linear-gradient(-12deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0)_50%),conic-gradient(from_90deg_at_50%_50%,#E861FF_0%,#EF315E_50%,#FF315E_75%,#E861FF_90%)] bg-clip-text text-transparent -rotate-[12.32deg] translate-y-[5vw] lg:translate-y-[5vh] ${expandedCard==='left' ? '  text-[45vw] ' : ' text-[45vw]'}`}>5</span>
+          <span className={`   bg-[linear-gradient(-12deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0)_50%),conic-gradient(from_90deg_at_50%_50%,#E861FF_0%,#EF315E_50%,#FF315E_75%,#E861FF_90%)] bg-clip-text text-transparent -rotate-[12.32deg] ${expandedCard==='left' ? ' lg:text-[45vw] text-[60vh]' : ' text-[45vw]'}`}>2</span>
+          <span className={`  bg-[linear-gradient(-12deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0)_50%),conic-gradient(from_90deg_at_50%_50%,#E861FF_0%,#EF315E_50%,#FF315E_75%,#E861FF_90%)] bg-clip-text text-transparent -rotate-[12.32deg] translate-y-[5vw] lg:translate-y-[5vh] ${expandedCard==='left' ? ' lg:text-[45vw] text-[60vh]' : 'lg:text-[45vw] text-[60vh]'}`}>5</span>
         </div>
         </div>
+
+           {/* <div className={`hidden sm:flex items-center justify-center gap-1 absolute  -translate-x-1/2 z-20 font-neue-xxthin m-0 p-0 overflow-hidden   ${expandedCard==='left' ? ' -right-[24.2vw] -bottom-[23.5vw]  ' : ' -right-[24.2vw] -bottom-[23.5vw]'}`}>
+
+      
+          <span className={`bg-[linear-gradient(-12deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0)_50%),conic-gradient(from_90deg_at_50%_50%,#E861FF_0%,#EF315E_50%,#FF315E_75%,#E861FF_90%)] bg-clip-text text-transparent -rotate-[12.32deg]
+            text-[22vw] sm:text-[18vw] md:text-[600px] lg:text-[600px] xl:text-[700px]
+            `}>2</span>
+          <span className={`bg-[linear-gradient(-12deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0)_50%),conic-gradient(from_90deg_at_50%_50%,#E861FF_0%,#EF315E_50%,#FF315E_75%,#E861FF_90%)] bg-clip-text text-transparent -rotate-[12.32deg] translate-y-[5vw] md:translate-y-[40px] lg:translate-y-[60px]
+            text-[30vw] sm:text-[24vw] md:text-[600px] lg:text-[600px] xl:text-[700px]
+            `}>5</span>
+        </div>
+        </div> */}
+
+        {/* <div className={`hidden sm:flex items-center justify-center gap-1 absolute  -translate-x-1/2 z-20 font-neue-xxthin m-0 p-0 overflow-hidden   ${expandedCard==='left' ? ' -right-[28.2vw] -bottom-[25.5vw]  ' : ' -right-[24.2vw] -bottom-[23.5vw]'}`}>
+
+      
+          <span className={`   bg-[linear-gradient(-12deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0)_50%),conic-gradient(from_90deg_at_50%_50%,#E861FF_0%,#EF315E_50%,#FF315E_75%,#E861FF_90%)] bg-clip-text text-transparent -rotate-[12.32deg] ${expandedCard==='left' ? '  text-[52vw]' : ' text-[45vw]'}`}>2</span>
+          <span className={`  bg-[linear-gradient(-12deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0)_50%),conic-gradient(from_90deg_at_50%_50%,#E861FF_0%,#EF315E_50%,#FF315E_75%,#E861FF_90%)] bg-clip-text text-transparent -rotate-[12.32deg] translate-y-[5vw] lg:translate-y-[5vh] ${expandedCard==='left' ? '  text-[52vw] ' : ' text-[45vw]'}`}>5</span>
+        </div>
+        </div> */}
 
         {/* Right Side - Two Components */}
   <div className={`w-96 flex flex-col gap-6 relative z-20${expandedCard && expandedCard === 'left' ? ' hidden' : ''}`}> 

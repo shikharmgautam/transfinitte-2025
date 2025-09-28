@@ -75,7 +75,7 @@ const Hero = () => {
           style={{ zIndex: 10, width: '95vw', height: 'auto' }}
         />
         {/* 25 display just below Hero One PNG (mobile) */}
-        <div className="flex sm:hidden items-center justify-center gap-1 absolute left-1/2 top-[15vh] -translate-x-1/2 z-20 font-neue-xxthin m-0 p-0 overflow-hidden">
+        <div className="flex sm:hidden items-center justify-center gap-1 absolute left-1/2 -translate-x-1/2 bottom-[0%] z-20 font-neue-xxthin m-0 p-0 overflow-hidden">
           <span className="text-[90vw] bg-[linear-gradient(-12deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0)_50%),conic-gradient(from_90deg_at_50%_50%,#E861FF_0%,#EF315E_50%,#FF315E_75%,#E861FF_90%)] bg-clip-text text-transparent -rotate-[12.32deg]">2</span>
           <span className="text-[90vw] bg-[linear-gradient(-12deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0)_50%),conic-gradient(from_90deg_at_50%_50%,#E861FF_0%,#EF315E_50%,#FF315E_75%,#E861FF_90%)] bg-clip-text text-transparent -rotate-[12.32deg] translate-y-[8vw]">5</span>
         </div>
