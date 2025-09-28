@@ -1,6 +1,7 @@
 import React, { memo, Suspense, useState } from "react";
 import { judges } from "../constants";
 import LiquidGlass from 'liquid-glass-react'
+import herobgj from '../assets/images/hero/hero-bg.png';
 
 
 import GlassWrapper from "./ui/glasswrapper.jsx";
@@ -71,7 +72,7 @@ const JudgesDesktop = memo(({ judges, hoveredJudge, setHoveredJudge }) => (
   <div
     className="hidden sm:block mx-auto max-w-[95%] py-8"
     style={{
-      backgroundImage: "url('/src/assets/images/hero/hero-bg.png')",
+      backgroundImage: `url(${herobgj})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundColor: 'black',
