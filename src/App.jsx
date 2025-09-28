@@ -22,9 +22,9 @@ function App() {
 
   return (
     <>
-      <Hero1 expandedCard={expandedCard} setExpandedCard={setExpandedCard} />
+      <Hero1 expandedCard={expandedCard} setExpandedCard={setExpandedCard} className="hidden sm:block" />
       {expandedCard === 'left' && (
-        <>
+        <div className="hidden sm:block">
           <MobileStickyNavbar className="block" />
           <TabStickyNavbar />
           <AboutUs />
@@ -33,8 +33,19 @@ function App() {
           <Judges />
           <Faq />
           <Footer />
-        </>
+        </div>
       )}
+       <div className="block sm:hidden">
+        <Hero />
+          <MobileStickyNavbar className="block" />
+          <TabStickyNavbar />
+          <AboutUs />
+          <Timeline />
+          <Sponsors />
+          <Judges />
+          <Faq />
+          <Footer />
+        </div>
     </>
   );
 }

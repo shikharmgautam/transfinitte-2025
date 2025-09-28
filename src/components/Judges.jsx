@@ -28,7 +28,7 @@ const JudgesList = memo(({ judges, hoveredJudge, setHoveredJudge }) => (
 
 const JudgesMobile = memo(({ judges }) => (
   <div className="block sm:hidden mx-auto bg-black max-w-[91.467%] z-10">
-    <div className="flex flex-col justify-center items-start gap-[0.625rem] flex-shrink-0 border-l border-r border-l-edge border-r-edge py-20 px-4 ">
+    <div className="flex flex-col justify-center items-start gap-[0.625rem] flex-shrink-0 py-20 px-4 ">
       <div className="flex h-fit items-start self-stretch">
         <div className="text-white font-instrument-sans text-[3rem] font-normal leading-[60px] tracking-[-2.56px] text-conic-gradient">
           Judges

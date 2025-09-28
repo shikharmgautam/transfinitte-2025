@@ -93,7 +93,7 @@ const Hero1 = ({ expandedCard, setExpandedCard }) => {
 //   }
 
   return (
-    <div className="min-h-screen bg-transparent relative z-10">
+    <div className="min-h-screen bg-transparent relative z-10 hidden sm:block">
       {/* StickyNavbar at top of hero section when left card expanded */}
       {expandedCard === 'left' && (
         <div className="w-full z-50 flex justify-center items-end absolute left-0 bottom-0">
