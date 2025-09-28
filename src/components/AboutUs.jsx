@@ -47,7 +47,7 @@ const FadeCarousel = ({ images }) => {
   }, [current, images.length]);
 
   return (
-    <div className="relative w-[60vw] h-[80vw] md:w-[300px] md:h-[410px] lg:w-[450px] lg:h-[400px] transform -translate-x-[30px] md:translate-x-[0px] -translate-y-[5px] overflow-visible">
+    <div className="relative w-[80vw] h-[70vw] md:w-[400px] md:h-[390px] lg:w-[450px] lg:h-[400px] transform md:translate-x-[40px] overflow-visible z-40">
       <div className="absolute w-full h-full flex items-center justify-center">
         <div className="p-[3px] rounded-2xl md:rounded-3xl bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 w-full h-full">
           <div className="w-full h-full rounded-2xl md:rounded-3xl bg-black flex items-center justify-center">
@@ -70,11 +70,11 @@ const AboutUs = () => {
         <div className="text-6xl md:text-6xl lg:8xl mb-8 text-left text-radial-gradient bg-clip-text text-transparent font-neue-roman">
           About Us
         </div>
-        <p className="text-white text-lg md:text-2xl mb-6 max-w-2xl leading-relaxed">
+        <p className="text-white text-lg md:text-xl mb-6 max-w-2xl leading-relaxed">
           Welcome to TransfiNITTe'25, NIT Trichy's premiere hackathon, hosted by the Technical Council and SCIENT. This
           is where innovation meets action.
         </p>
-        <p className="text-white text-lg md:text-l lg:text-xl max-w-2xl leading-relaxed">
+        <p className="text-white text-lg md:text-xl lg:text-2xl max-w-2xl leading-relaxed">
           Building on the success of TransfiNITTe'24, where 300+ participants pushed the limits in a 42-hour coding
           marathon, we're taking it up a notch. With 500+ participants and 100+ teams expected, TransfiNITTe'25 is set
           to redefine the hackathon experience.
