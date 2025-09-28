@@ -17,12 +17,47 @@ import MobileStickyNavbar from "./components/navmobile.jsx";
 import TabStickyNavbar from "./components/navTab.jsx";
 
 
+
 function App() {
   const [expandedCard, setExpandedCard] = useState(null);
+  const [showHero, setShowHero] = useState(false);
+
+  // Callback to show Hero and hide Hero1
+  const handleShowHero = () => {
+    setShowHero(true);
+  };
+
+  // Callback to go back to Hero1 (optional, e.g. if you want to allow toggling back)
+  const handleShowHero1 = () => {
+    setShowHero(false);
+  };
 
   return (
     <>
-      <Hero1 expandedCard={expandedCard} setExpandedCard={setExpandedCard} className="hidden sm:block" />
+      {/* Show Hero1 unless showHero is true */}
+      {!showHero && (
+        <Hero1
+          expandedCard={expandedCard}
+          setExpandedCard={setExpandedCard}
+          onMainCardClick={handleShowHero}
+          className="hidden sm:block"
+        />
+      )}
+      {/* Show Hero when showHero is true */}
+      {showHero && (
+        <div>
+        <Hero />
+        <MobileStickyNavbar className="block" />
+          <TabStickyNavbar />
+          <AboutUs />
+          <Timeline />
+          <Sponsors />
+          <Judges />
+          <Faq />
+          <Footer />
+        </div>
+      )}
+      {/* The rest of your app (unchanged) */}
       {expandedCard === 'left' && (
         <div className="hidden sm:block">
           <MobileStickyNavbar className="block" />
@@ -35,17 +70,16 @@ function App() {
           <Footer />
         </div>
       )}
-       <div className="block sm:hidden">
-        <Hero />
-          <MobileStickyNavbar className="block" />
-          <TabStickyNavbar />
-          <AboutUs />
-          <Timeline />
-          <Sponsors />
-          <Judges />
-          <Faq />
-          <Footer />
-        </div>
+      <div className="block sm:hidden">
+        <MobileStickyNavbar className="block" />
+        <TabStickyNavbar />
+        <AboutUs />
+        <Timeline />
+        <Sponsors />
+        <Judges />
+        <Faq />
+        <Footer />
+      </div>
     </>
   );
 }
