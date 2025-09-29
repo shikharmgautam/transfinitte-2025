@@ -1,31 +1,23 @@
 import React, { useState, useEffect } from "react";
 
 
-import aboutusImg from "../assets/images/aboutus.jpeg";
-import adwaithImg from "../assets/images/adwaith.jpeg";
-import anandImg from "../assets/images/Anand Kumar.jpg";
-import anirudhImg from "../assets/images/anirudh.jpg";
-import ayushImg from "../assets/images/ayush.jpeg";
-import kumarImg from "../assets/images/kumar.jpg";
-import muditImg from "../assets/images/mudit.jpeg";
-import ogImg from "../assets/images/og.png";
-import rakeshImg from "../assets/images/rakesh.jpeg";
-import ramImg from "../assets/images/ram.jpeg";
-import subashImg from "../assets/images/subash.jpg";
+import aboutus1 from '../assets/images/aboutus1.jpeg';
+import aboutus2 from '../assets/images/aboutus2.jpeg';
+import aboutus3 from '../assets/images/aboutus3.jpeg';
+import aboutus4 from '../assets/images/aboutus4.jpeg';
+import aboutus5 from '../assets/images/aboutus5.jpeg';
+
+
 import { shuffle } from '../assets';
 
 const images = [
-  aboutusImg,
-  adwaithImg,
-  anandImg,
-  anirudhImg,
-  ayushImg,
-  kumarImg,
-  muditImg,
-  ogImg,
-  rakeshImg,
-  ramImg,
-  subashImg
+  aboutus1,
+  aboutus2,
+  aboutus3,
+  aboutus4,
+  aboutus5
+  
+ 
 
 ];
 
