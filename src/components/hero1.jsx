@@ -49,6 +49,7 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
           className="rounded-2xl bg-black w-full mt-2 mb-4 p-5 relative overflow-hidden flex flex-col justify-between cursor-pointer"
           style={mobileMainExpanded ? {
             height: '70vh',
+            transition: 'height 1s ease'
           
           } : {
             height: '40vh',
