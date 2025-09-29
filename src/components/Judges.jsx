@@ -101,7 +101,7 @@ const JudgesDesktop = memo(({ judges, hoveredJudge, setHoveredJudge }) => (
                     <span className="font-neue-roman text-base text-white">{judge.name}</span>
                     <span className="text-xs text-[#dd63ff] font-mono font-bold">@{judge.name.replace(/\s/g, '').toLowerCase()}</span>
                   </div>
-                  <div className="text-xs text-gray-300 font-neue-roman mt-1">{judge.company}<br /><span className="text-gray-400">Design Lead</span></div>
+                  <div className="text-xs text-gray-300 font-neue-roman mt-1">{judge.company}<br /><span className="text-gray-400"></span></div>
                 </div>
               </div>
             
