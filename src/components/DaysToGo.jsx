@@ -11,7 +11,7 @@ function getDaysLeft() {
 const DaysToGo = () => {
   const days = getDaysLeft();
   return (
-    <div style={{ color: "white", fontFamily: 'Neue Haas Grotesk Display, sans-serif', fontWeight: 400, fontSize: 14, letterSpacing: 0.5, background: 'transparent' }}>
+    <div style={{ color: "white", fontFamily: 'Neue Haas Grotesk Display, sans-serif', fontWeight: 500, fontSize: 13, letterSpacing: 0.3, background: 'transparent' }}>
       {days} Days To Go
     </div>
   );
