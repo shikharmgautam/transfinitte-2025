@@ -46,7 +46,7 @@ const SponsorsMobile = memo(() => (
     <div className="flex flex-col justify-center items-start gap-[0.625rem] flex-shrink-0 py-6 px-4">
       <div className="flex h-fit items-start self-stretch">
         <div
-          className="text-radial-gradient font-neue-roman text-[2.2rem] font-extrabold not-italic leading-[2.7rem] mt-2 mb-2 text-center w-full"
+          className="text-radial-gradient font-neue-roman text-5xl md:text-4xl lg:8xl  not-italic leading-[2.7rem] mt-2 mb-2 text-start w-full"
         >
           Past Sponsors
         </div>

@@ -7,7 +7,7 @@ import headerSvg from "../assets/images/svg/header.svg";
 export default function MobileStickyNavbar() {
     return (
     
-    <div className="flex items-center gap-10 sticky top-2 z-50 sm:hidden">
+    <div className="flex items-center gap-10 sticky top-2 z-50 sm:hidden mx-2">
       <span className="relative inline-block overflow-hidden rounded-xl p-[1px] left-1/2 transform -translate-x-1/2">
         <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FF315E_0%,#E861FF_50%,#5e1fff_75%,#FF315E_90%)]" />
         <div className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-xl bg-gray-950 px-6 py-2 text-xs font-medium text-gray-50 backdrop-blur-3xl gap-x-12">
@@ -22,7 +22,7 @@ export default function MobileStickyNavbar() {
               <img
                 src={arrowWhite}
                 alt="arrow"
-                style={{ height: 16, marginLeft: 4 }}
+                style={{ height: 16, marginLeft: 2 }}
               />
             </span>
           </button>
