@@ -84,7 +84,7 @@ const JudgesDesktop = memo(({ judges, hoveredJudge, setHoveredJudge }) => (
       <div className="text-[2.5rem] md:text-[3.5rem] font-neue-roman font-normal leading-tight mb-8 px-[24px] text-left" style={{color: 'rgba(221, 99, 255, 1)'}}>
         Judges
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-4 gap-5 w-[100%] mr-10 px-[24px]">
+      <div className="grid grid-cols-1 sm:grid-cols-4 gap-5 w-[100%] mr-10 px-[40px]">
         {judges.map((judge) => (
           <div key={judge.id} className="w-full">
 
