@@ -73,7 +73,7 @@ const AboutUs = () => {
         </p>
       </div>
 
-      <div className="flex-1 flex flex-col items-end justify-center mt-12 md:mt-0 md:mr-0 lg:pr-2">
+      <div className="flex-1 flex flex-col items-end justify-center mt-8 md:mt-0 md:mr-0 lg:pr-2">
         <FadeCarousel images={images} />
       </div>
     </section>
