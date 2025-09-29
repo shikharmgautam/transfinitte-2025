@@ -25,7 +25,7 @@ const Faq = () => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <div className="mx-auto bg-black max-w-[91.467%] sm:max-w-[93.194%] select-none">
-        <div className="flex py-9 px-4 sm:px-[46px] justify-between items-end">
+        <div className="flex pb-9 pt-0 px-4 sm:px-[46px] justify-between items-end">
           <div className="flex w-full h-auto flex-col items-start gap-[37px] flex-shrink-0">
           <div className="text-4xl md:text-6xl mb-2 font-neue-roman text-radial-gradient text-start">Frequently Asked Questions</div>
             <div className="w-full text-[#A0A0A0] font-spacemono text-[1rem]">

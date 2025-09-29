@@ -47,7 +47,7 @@ function App() {
       {showHero && (
         <div>
         <Hero />
-        <MobileStickyNavbar className="block" />
+          <MobileStickyNavbar className="block" />
           <TabStickyNavbar />
           <AboutUs />
           <Timeline />
@@ -55,11 +55,12 @@ function App() {
           <Judges />
           <Faq />
           <Footer />
+      
         </div>
       )}
       {/* The rest of your app (unchanged) */}
-      {expandedCard === 'left' && (
-        <div className="hidden sm:block">
+      {expandedCard === 'left'&& !showHero && (
+        <div className="">
           <MobileStickyNavbar className="block" />
           <TabStickyNavbar />
           <AboutUs />

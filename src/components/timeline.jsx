@@ -90,7 +90,7 @@ const Timeline = () => {
       
       <div className="block sm:hidden w-full">
         <div>
-          <span className="App text-white relative bg-black h-[30vh] flex items-center justify-center text-[3rem] z-20 font-neue-roman text-radial-gradient mt-20 overflow-hidden">
+          <span className="App text-white relative bg-black h-[10vh] flex items-center justify-center text-[3rem] z-10 font-neue-roman text-radial-gradient mt-20 overflow-hidden">
             TIMELINE
           </span>
           {/* Grey and gradient lines, only show after 100vh scroll */}
@@ -98,7 +98,7 @@ const Timeline = () => {
             <div className="w-[3px] h-[50vh] bg-gradient-to-b from-[#ff7448] via-[#c04892] to-[#6348ff] fixed top-0 left-[9vw] -z-10"></div>
             <div className="w-[3px] h-full bg-gray-700 absolute left-[9vw] top-0 -z-20 "></div>
           </>}
-          <div className='h-[40vh] bg-black w-full transform -translate-y-[40vh] absolute z-2'></div>
+          <div className='h-[21vh] bg-black w-full transform -translate-y-[21vh] absolute z-2'></div>
           <div className="wrapper text-white flex flex-col align-center gap-30 relative min-h-screen">
             {/* Top gradient overlay, only show after 100vh scroll */}
             {showLines && (
@@ -135,6 +135,7 @@ const Timeline = () => {
               
               </div>
               <div className="flex flex-col gap-6 text-2xl font-bold flex-1 pl-8">
+                 <div className='text-3xl'>DAY-2</div>
                 <div>08:00 AM Breakfast</div>
                 <div>11:00 AM Speaker Session 1</div>
                 <div>12:30 PM Lunch</div>
@@ -151,6 +152,7 @@ const Timeline = () => {
                
               </div>
               <div className="flex flex-col gap-6 text-2xl font-bold flex-1 pl-8">
+                 <div className='text-3xl'>DAY-3</div>
                 <div>08:00 AM Breakfast</div>
                 <div>11:00 AM Speaker Session 1</div>
                 <div>12:30 PM Lunch</div>
