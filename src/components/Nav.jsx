@@ -51,7 +51,7 @@ export default function StickyNavbar() {
                 className={`inline-flex h-full w-full cursor-pointer items-center justify-center rounded-xl px-6 py-2 text-xs font-medium text-gray-50 backdrop-blur-3xl gap-x-6 sticky-bar-level-2 ${expanded ? "expanded-level-2" : "backdrop-blur-lg"}`}
                 style={!expanded ? { background: "rgba(0,0,0,0)", border: "1px solid #EF315E" } : { background: "#000", border: "none" }}
               >
-                <div className={`text-offwhite text-center font-spacemono text-sm font-bold uppercase tracking-wide sticky-bar-level-3 ${expanded ? "expanded-level-3" : ""}`}>
+                <div className={`text-offwhite text-center font-spacemono text-sm font-bold tracking-wide sticky-bar-level-3 ${expanded ? "expanded-level-3" : ""}`}>
                   <DaysToGo />
                 </div>
                 
@@ -66,13 +66,15 @@ export default function StickyNavbar() {
                 <button className="relative inline-flex h-12 overflow-hidden rounded-xl p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50">
                   <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FF315E_0%,#E861FF_50%,#5e1fff_75%,#FF315E_90%)]" />
                   <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-xl bg-gray-950 px-8 py-1 text-sm font-medium text-gray-50 backdrop-blur-3xl">
-                    Register
+                    <div className="m-2">Register</div>
                     <img
                       src={arrowWhite}
                       alt="arrow"
                       style={{ height: 16, marginLeft: 6 }}
                     />
+                    
                   </span>
+                  
                 </button>
               </div>
             </span>

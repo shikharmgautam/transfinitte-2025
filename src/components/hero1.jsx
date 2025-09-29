@@ -70,15 +70,13 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
               backgroundRepeat: 'no-repeat',
             }}
           />
-          <span className="absolute top-4 left-4 bg-white text-black rounded-full px-3 py-1 text-xs font-semibold z-10">
+          <span className="absolute top-4 left-4 flex items-center gap-3 bg-white text-black rounded-xl px-3 py-2 text-sm font-bold z-10 ">
             Registration opens soon
+             <img src={whitearrow} alt="arrow" className="w-4 h-4 filter brightness-0" />
           </span>
           <div className="mt-10 mb-2 z-10 relative">
             <h1 className="text-white text-4xl font-bold leading-tight mb-2">Ready to Hack?</h1>
-            <button className="flex items-center gap-2 text-white text-lg font-semibold mt-2">
-              Get Updates 
-              <span><img src={whitearrow} alt="" /></span>
-            </button>
+         
           </div>
           <div className="flex items-center justify-center gap-1 absolute -translate-x-1/2 z-0 font-neue-xxthin m-0 p-0 overflow-hidden -bottom-[30vw] -right-[44vw] sm:-bottom-[25vh] sm:-right-[40vh]">
             <span className="bg-[linear-gradient(-12deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0)_50%),conic-gradient(from_90deg_at_50%_50%,#E861FF_0%,#EF315E_50%,#FF315E_75%,#E861FF_90%)] bg-clip-text text-transparent -rotate-[12.32deg] text-[80vw] sm:text-[60vh]">2</span>
@@ -94,20 +92,29 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
               style={{height: '20vh', minHeight: 100}}>
               <div className="flex items-center justify-between mb-2">
                 <span className="text-white text-2xl font-bold">Play to win</span>
+                 <img src={tiltT} alt="tilted T logo" className="absolute -bottom-8 -right-8 h-[120%] w-auto pointer-events-none select-none z-0" style={{filter:'brightness(1.2)'}} />
                 <button
-                  className="text-white text-sm font-bold mb-4 bg-black border-none rounded-lg hover:underline focus:outline-none cursor-pointer text-left w-fit"
+                  className="text-white text-sm font-bold mb-4 bg-black border-none rounded-lg hover:underline focus:outline-none cursor-pointer absolute top-5 right-4 w-fit "
                   type="button"
                 >
                   COMING SOON
                 </button>
+
               </div>
             </div>
 
             {/* Merch Card: 20vh */}
-            <div className="rounded-2xl bg-black w-full mb-4 p-5 relative flex flex-col gap-2 overflow-hidden"
+            <div className="rounded-2xl bg-black w-full mb-4 p-5 relative flex  gap-2 overflow-hidden"
               style={{height: '20vh', minHeight: 100}}>
               <span className="text-white text-2xl font-bold mb-2 z-10">Get our Merch</span>
               <img src={tiltT} alt="tilted T logo" className="absolute -bottom-8 -right-8 h-[120%] w-auto pointer-events-none select-none z-0" style={{filter:'brightness(1.2)'}} />
+              <button
+                    className="text-white text-sm font-bold mb-4 bg-transparent border-none rounded-lg focus:outline-none text-left w-fit absolute right-4 top-5"
+                    type="button"
+                  >
+                    COMING SOON
+                  </button>
+                  
             </div>
           </>
         )}
@@ -183,13 +190,7 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
                 Ready to hack?
               </h1>
 
-              <button
-                className="text-white flex text-4xl font-bold mt-2 bg-transparent border-none p-0 m-0 hover:underline focus:outline-none cursor-pointer text-left w-fit ml-8"
-                type="button"
-              >
-                Get Updates
-                <img src={whitearrow} alt="arrow" className="w-10 h-6 ml-4 mt-3" />
-              </button>
+             
 
               {/* Large numbers background */}
               <div className={`hidden sm:flex items-center justify-center gap-1 absolute -translate-x-1/2 z-20 font-neue-xxthin m-0 p-0 overflow-hidden -bottom-[28.5vw] -right-[38.2vw] lg:-right-[24.2vw] lg:-bottom-[23.5vw]`}>

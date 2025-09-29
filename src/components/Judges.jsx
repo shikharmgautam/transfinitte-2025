@@ -28,7 +28,7 @@ const JudgesList = memo(({ judges, hoveredJudge, setHoveredJudge }) => (
 ));
 
 const JudgesMobile = memo(({ judges }) => (
-  <div className="block sm:hidden mx-auto bg-black max-w-[91.467%] z-10">
+  <div className="block sm:hidden mx-auto bg-black max-w-[100%] z-10">
     <div className="flex flex-col justify-center items-start gap-[0.625rem] flex-shrink-0 py-20 px-4 ">
       <div className="flex h-fit items-start self-stretch">
         <div className="text-white font-instrument-sans text-[3rem] font-normal leading-[60px] tracking-[-2.56px] text-conic-gradient">
@@ -70,7 +70,7 @@ const JudgesMobile = memo(({ judges }) => (
 
 const JudgesDesktop = memo(({ judges, hoveredJudge, setHoveredJudge }) => (
   <div
-    className="hidden sm:block mx-auto max-w-[95%] py-8"
+    className="hidden sm:block mx-auto max-w-[100%] py-8"
     style={{
       backgroundImage: `url(${herobgj})`,
       backgroundSize: 'cover',
@@ -81,10 +81,10 @@ const JudgesDesktop = memo(({ judges, hoveredJudge, setHoveredJudge }) => (
     }}
   >
     <div className="w-full">
-      <div className="text-[2.5rem] md:text-[3.5rem] font-neue-roman font-normal leading-tight mb-8 px-2 text-left" style={{color: 'rgba(221, 99, 255, 1)'}}>
+      <div className="text-[2.5rem] md:text-[3.5rem] font-neue-roman font-normal leading-tight mb-8 px-[24px] text-left" style={{color: 'rgba(221, 99, 255, 1)'}}>
         Judges
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-4 gap-5 w-[100%] mr-10">
+      <div className="grid grid-cols-1 sm:grid-cols-4 gap-5 w-[100%] mr-10 px-[24px]">
         {judges.map((judge) => (
           <div key={judge.id} className="w-full">
 

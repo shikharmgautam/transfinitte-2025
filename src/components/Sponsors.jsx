@@ -60,8 +60,8 @@ const SponsorsMobile = memo(() => (
 ));
 
 const SponsorsDesktop = memo(() => (
-  <div className="hidden sm:block mx-auto bg-black max-w-[93.194%]">
-    <div className="flex py-3 px-[2.875rem] flex-col items-start gap-[2.875rem] bg-black">
+  <div className="hidden sm:block mx-auto bg-black max-w-[100%]">
+    <div className="flex py-3 px-[24px] flex-col items-start gap-[2.875rem] bg-black">
       <div className="flex justify-center w-full">
               <div className="text-radial-gradient font-neue-roman text-[4rem] font-normal not-italic leading-[3.75rem] mt-1 mb-1 text-left w-full">
          Past Sponsors
