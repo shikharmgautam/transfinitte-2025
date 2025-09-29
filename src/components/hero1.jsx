@@ -106,7 +106,7 @@ const Hero1 = ({ expandedCard, setExpandedCard, onMainCardClick }) => {
         )}
         {/* Main Content */}
         <div className="h-screen">  
-          {expandedCard === null && (
+          {expandedCard !== 'left' && (
             <div className="h-[7vh] w-full flex items-center px-8 bg-transparent">
               <div className="flex items-center justify-between w-full h-full mt-9">
                 {/* Logo - T 25 */}
@@ -173,8 +173,8 @@ const Hero1 = ({ expandedCard, setExpandedCard, onMainCardClick }) => {
             <div className={`lg:w-96 w-70 flex flex-col gap-6 relative z-20${expandedCard && expandedCard === 'left' ? ' hidden' : ''}`}> 
               {/* Top Component - Play to win (Bigger) */}
               <div 
-                className={`flex-[3] bg-black rounded-2xl p-6 cursor-pointer transition-all duration-500 overflow-hidden ease-in-out${expandedCard && expandedCard !== 'play' ? ' hidden' : ''}`}
-                onClick={() => handleCardClick('play')}
+                className={`flex-[3] bg-black rounded-2xl p-6 transition-all duration-500 overflow-hidden ease-in-out${expandedCard && expandedCard !== 'play' ? ' hidden' : ''}`}
+                onClick={() => handleCardClick('')}
                 style={expandedCard==='play' ? {
                   position: 'fixed',
                   width: '100vw',
@@ -199,9 +199,9 @@ const Hero1 = ({ expandedCard, setExpandedCard, onMainCardClick }) => {
               </div>
               {/* Bottom Component - Get our Merch (Smaller) */}
               <div 
-                className={`flex-[1] bg-black relative rounded-2xl p-6 overflow-hidden cursor-pointer transition-all duration-500 overflow:hidden ease-in-out${expandedCard && expandedCard !== 'merch' ? ' hidden' : ''}`}
-                onClick={() => handleCardClick('merch')}
-                style={expandedCard==='merch' ? {
+                className={`flex-[1] bg-black relative rounded-2xl p-6 overflow-hidden transition-all duration-500 overflow:hidden ease-in-out${expandedCard && expandedCard !== 'xyz' ? ' hidden' : ''}`}
+                onClick={() => handleCardClick('')}
+                style={expandedCard==='xyz' ? {
                   position: 'fixed',
                   zIndex: 50,
                   borderRadius: '32px',
