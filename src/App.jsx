@@ -1,67 +1,38 @@
 ﻿import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import AboutUs from "./components/AboutUs";
 import Judges from "./components/Judges";
-import Hero from "./components/hero.jsx";
 import Hero1 from "./components/hero1.jsx";
 import Footer from "./components/Footer";
 import Faq from "./components/Faq";
-import Header from "./components/Header.jsx";
 import Sponsors from "./components/Sponsors.jsx";
 import Timeline from "./components/timeline.jsx";
-// import StickyNavbar from "./components/Navbar.jsx";
-import StickyNavbar from "./components/Nav.jsx";
 import MobileStickyNavbar from "./components/navmobile.jsx";
 import TabStickyNavbar from "./components/navTab.jsx";
 
-
-
 function App() {
   const [expandedCard, setExpandedCard] = useState(null);
-  const [showHero, setShowHero] = useState(false);
+  const [mobileMainExpanded, setMobileMainExpanded] = useState(false);
 
-  // Callback to show Hero and hide Hero1
-  const handleShowHero = () => {
-    setShowHero(true);
-  };
-
-  // Callback to go back to Hero1 (optional, e.g. if you want to allow toggling back)
-  const handleShowHero1 = () => {
-    setShowHero(false);
-  };
+  // Determine if we should show the rest of the content
+  // Desktop: when left card is expanded
+  // Mobile: when main card is expanded
+  const showRestOfContent = expandedCard === 'left' || mobileMainExpanded;
 
   return (
     <>
-      {/* Show Hero1 unless showHero is true */}
-      {!showHero && (
-        <Hero1
-          expandedCard={expandedCard}
-          setExpandedCard={setExpandedCard}
-          onMainCardClick={handleShowHero}
-          className="hidden sm:block"
-        />
-      )}
-      {/* Show Hero when showHero is true */}
-      {showHero && (
+      {/* Hero1 always renders */}
+      <Hero1
+        expandedCard={expandedCard}
+        setExpandedCard={setExpandedCard}
+        mobileMainExpanded={mobileMainExpanded}
+        setMobileMainExpanded={setMobileMainExpanded}
+      />
+
+      {/* Rest of the content appears AFTER Hero1 when expanded */}
+      {showRestOfContent && (
         <div>
-        <Hero />
-          <MobileStickyNavbar className="block" />
-          <TabStickyNavbar />
-          <AboutUs />
-          <Timeline />
-          <Sponsors />
-          <Judges />
-          <Faq />
-          <Footer />
-      
-        </div>
-      )}
-      {/* The rest of your app (unchanged) */}
-      {expandedCard === 'left'&& !showHero && (
-        <div className="">
-          <MobileStickyNavbar className="block" />
+          <MobileStickyNavbar />
           <TabStickyNavbar />
           <AboutUs />
           <Timeline />
@@ -71,9 +42,8 @@ function App() {
           <Footer />
         </div>
       )}
-     
     </>
   );
 }
 
-export default App
+export default App;
