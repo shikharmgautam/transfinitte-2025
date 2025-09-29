@@ -63,12 +63,12 @@ const AboutUs = () => {
           About Us
         </div>
         <p className="text-white text-lg md:text-xl mb-6 max-w-2xl leading-relaxed">
-          Welcome to TransfiNITTe'25, NIT Trichy's premiere hackathon, hosted by the Technical Council and SCIENT. This
+          Welcome to TransfiNITTe'25, NIT Trichy's premiere hackathon, hosted by the Technical Council. This
           is where innovation meets action.
         </p>
         <p className="text-white text-lg md:text-xl lg:text-2xl max-w-2xl leading-relaxed">
-          Building on the success of TransfiNITTe'24, where 300+ participants pushed the limits in a 42-hour coding
-          marathon, we're taking it up a notch. With 500+ participants and 100+ teams expected, TransfiNITTe'25 is set
+          Building on the success of TransfiNITTe'24, where 550+ participants pushed the limits in a 42-hour coding
+          marathon, we're taking it up a notch. With 600+ participants and 125+ teams expected, TransfiNITTe'25 is set
           to redefine the hackathon experience.
         </p>
       </div>
