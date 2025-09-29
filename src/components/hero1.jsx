@@ -36,9 +36,13 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
       >
         {/* Topbar: 7vh - only show when not expanded */}
         {!mobileMainExpanded && (
-          <div className="flex items-center justify-between w-full px-2" style={{height: '7vh', minHeight: 40}}>
-            <div className="flex items-center gap-2">
+          <div className="flex items-center w-full px-2" style={{height: '7vh', minHeight: 40}}>
+            <div className="flex items-center justify-between w-[100vw]">
               <img src={tfBadge} alt="TF 25 logo" className="h-8 w-auto" />
+                <button className="flex items-center  gap-2 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-300 transition-colors">
+                  <span className="text-sm font-medium">Register</span>
+                  <img src={whitearrow} alt="arrow" className="w-4 h-4 filter brightness-0" />
+                </button>
             </div>
             <div />
           </div>
