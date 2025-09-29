@@ -65,7 +65,7 @@ const FadeCarousel = ({ images }) => {
 
 const AboutUs = () => {
   return (
-    <section className="w-full min-h-[500px] bg-black flex flex-col md:flex-row items-center justify-center pb-16 pt-6 px-6 md:px-24">
+    <section className="w-full min-h-[500px] bg-black flex flex-col lg:flex-row items-center justify-center pb-16 pt-6 px-6 md:px-24">
       <div className="flex-1 text-left">
         <div className="text-6xl md:text-6xl lg:8xl mb-8 text-left text-radial-gradient bg-clip-text text-transparent font-neue-roman">
           About Us

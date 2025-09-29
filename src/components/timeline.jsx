@@ -82,7 +82,7 @@ const Timeline = () => {
               </div>
             )}
           </div>
-          <div className="App text-white relative bg-black h-[50vh] flex items-center justify-center text-[5rem]">
+          <div className="App text-white relative bg-black h-[10vh] flex items-center justify-center text-[5rem]">
           </div>
         </div>
       </div>
