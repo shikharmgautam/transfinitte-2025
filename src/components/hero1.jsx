@@ -76,17 +76,21 @@ const Hero1 = ({ expandedCard, setExpandedCard, onMainCardClick }) => {
           style={{height: '20vh', minHeight: 100}}>
           <div className="flex items-center justify-between mb-2">
             <span className="text-white text-2xl font-bold">Play to win</span>
-            <span className="text-radial-gradient text-sm font-semibold cursor-pointer">View Leaderboard</span>
+            <button
+                    className="text-white text-sm font-bold mb-4 bg-black border-none text-bold rounded-lg hover:underline focus:outline-none cursor-pointer text-left w-fit"
+                    type="button"
+                  >
+                    COMING SOON
+                  </button>
+                  
           </div>
-          <div className="flex items-center justify-center">
-            <img src={dino} alt="dino" className="h-[90%] w-auto top-3" />
-          </div>
+          
         </div>
         {/* Merch Card: 20vh */}
         <div className="rounded-2xl bg-black w-full mb-4 p-5 relative flex flex-col gap-2 overflow-hidden"
           style={{height: '20vh', minHeight: 100}}>
           <span className="text-white text-2xl font-bold mb-2 z-10">Get our Merch</span>
-          <button className="bg-white text-black rounded-lg px-4 py-2 text-sm font-semibold w-fit z-10 flex items-center">Register for merch  <img src={whitearrow} alt="arrow" className="w-4 h-4 filter brightness-0 top-[50%]" /></button>
+       
           <img src={tiltT} alt="tilted T logo" className="absolute -bottom-8 -right-8 h-[120%] w-auto pointer-events-none select-none z-0" style={{filter:'brightness(1.2)'}} />
         </div>
       </div>
@@ -169,7 +173,7 @@ const Hero1 = ({ expandedCard, setExpandedCard, onMainCardClick }) => {
             <div className={`lg:w-96 w-70 flex flex-col gap-6 relative z-20${expandedCard && expandedCard === 'left' ? ' hidden' : ''}`}> 
               {/* Top Component - Play to win (Bigger) */}
               <div 
-                className={`flex-[3] bg-black rounded-2xl p-6 cursor-pointer transition-all duration-500 ease-in-out${expandedCard && expandedCard !== 'play' ? ' hidden' : ''}`}
+                className={`flex-[3] bg-black rounded-2xl p-6 cursor-pointer transition-all duration-500 overflow-hidden ease-in-out${expandedCard && expandedCard !== 'play' ? ' hidden' : ''}`}
                 onClick={() => handleCardClick('play')}
                 style={expandedCard==='play' ? {
                   position: 'fixed',
@@ -183,8 +187,15 @@ const Hero1 = ({ expandedCard, setExpandedCard, onMainCardClick }) => {
                 <div className="flex items-center justify-between mb-4">
                   <h2 className="text-4xl font-bold text-white">Play to win</h2>
                 </div>
-                <p className="text-radial-gradient text-sm mb-4">View leaderboard</p>
-                <img src={dino} alt="dino" className={`relative  ${expandedCard && expandedCard === 'play' ? ' w-full h-auto bottom-0' : 'w-full h-auto top-40'}`} />
+                <button
+                    className="text-white text-sm font-bold mb-4 bg-transparent border-none text-bold rounded-lg hover:underline focus:outline-none cursor-pointer text-left w-fit"
+                    type="button"
+                  >
+                    COMING SOON
+                  </button>
+                      <img src={tiltT} alt="tilted T logo" className="relative w-[100%] h-auto mx-auto -bottom-12 -right-12 z-0 pointer-events-none select-none" style={{filter:'brightness(1.2)'}} />
+                  
+            
               </div>
               {/* Bottom Component - Get our Merch (Smaller) */}
               <div 
@@ -199,14 +210,14 @@ const Hero1 = ({ expandedCard, setExpandedCard, onMainCardClick }) => {
                 } : {}}
               >
                 {/* T logo behind content */}
-                <img src={tiltT} alt="tilted T logo" className="absolute w-[60%] h-auto mx-auto -bottom-12 -right-12 z-0 pointer-events-none select-none" style={{filter:'brightness(0.7)'}} />
+                <img src={tiltT} alt="tilted T logo" className="absolute w-[60%] h-auto mx-auto -bottom-12 -right-12 z-0 pointer-events-none select-none" style={{filter:'brightness(1.2)'}} />
                 <div className="relative z-10">
                   <h2 className="text-4xl font-bold text-white mb-4">Get our Merch</h2>
                   <button
-                    className="text-black text-sm mb-4 bg-white border-none p-3 mt-3 text-bold rounded-lg hover:underline focus:outline-none cursor-pointer text-left w-fit"
+                    className="text-white text-sm font-bold mb-4 bg-black border-none text-bold rounded-lg hover:underline focus:outline-none cursor-pointer text-left w-fit"
                     type="button"
                   >
-                    Register For Merch
+                    COMING SOON
                   </button>
                 </div>
               </div>
