@@ -20,29 +20,36 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
     <>
       {/* Mobile & md-down layout: visible below 1300px */}
       <div
-        className="custom-max1300:block hidden min-h-screen w-full px-2 py-2 relative"
-        style={{
-          backgroundImage: `url(${mobilehero})`,
+        className="custom-max1300:block hidden  w-full px-2 py-2 relative"
+        style={mobileMainExpanded ? {
+          height: '70vh',
+           
+          } : {
+             backgroundImage: `url(${mobilehero})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           backgroundColor: '#2a2a2a80',
-        }}
+          minHeight: '100vh'
+          }}
+       
       >
-        {/* Topbar: 7vh */}
-        <div className="flex items-center justify-between w-full px-2" style={{height: '7vh', minHeight: 40}}>
-          <div className="flex items-center gap-2">
-            <img src={tfBadge} alt="TF 25 logo" className="h-8 w-auto" />
+        {/* Topbar: 7vh - only show when not expanded */}
+        {!mobileMainExpanded && (
+          <div className="flex items-center justify-between w-full px-2" style={{height: '7vh', minHeight: 40}}>
+            <div className="flex items-center gap-2">
+              <img src={tfBadge} alt="TF 25 logo" className="h-8 w-auto" />
+            </div>
+            <div />
           </div>
-          <div />
-        </div>
+        )}
 
         {/* Main Card: 40vh, expands when clicked */}
         <div
           className="rounded-2xl bg-black w-full mt-2 mb-4 p-5 relative overflow-hidden flex flex-col justify-between cursor-pointer"
           style={mobileMainExpanded ? {
-            height: '80vh',
-            minHeight: '80vh'
+            height: '70vh',
+          
           } : {
             height: '40vh',
             minHeight: 220
@@ -68,7 +75,7 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
               <span><img src={whitearrow} alt="" /></span>
             </button>
           </div>
-          <div className="flex items-center justify-center gap-1 absolute -translate-x-1/2 z-0 font-neue-xxthin m-0 p-0 overflow-hidden -bottom-[40vw] -right-[44vw] sm:-bottom-[30vh] sm:-right-[40vh]">
+          <div className="flex items-center justify-center gap-1 absolute -translate-x-1/2 z-0 font-neue-xxthin m-0 p-0 overflow-hidden -bottom-[30vw] -right-[44vw] sm:-bottom-[25vh] sm:-right-[40vh]">
             <span className="bg-[linear-gradient(-12deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0)_50%),conic-gradient(from_90deg_at_50%_50%,#E861FF_0%,#EF315E_50%,#FF315E_75%,#E861FF_90%)] bg-clip-text text-transparent -rotate-[12.32deg] text-[80vw] sm:text-[60vh]">2</span>
             <span className="bg-[linear-gradient(-12deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0)_50%),conic-gradient(from_90deg_at_50%_50%,#E861FF_0%,#EF315E_50%,#FF315E_75%,#E861FF_90%)] bg-clip-text text-transparent -rotate-[12.32deg] translate-y-[5vw] lg:translate-y-[5vh] text-[80vw] sm:text-[60vh]">5</span>
           </div>
