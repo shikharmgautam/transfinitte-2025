@@ -14,7 +14,7 @@ const Timeline = () => {
       
       <div className="hidden sm:block w-full h-full">
         <div>
-          <div className="App text-white relative bg-black h-[20vh] flex justify-center items-center text-6xl md:text-6xl lg:8xl font-neue-roman text-radial-gradient overflow-hidden ">
+          <div className="App text-white relative bg-black h-[20vh] flex justify-center items-center text-4xl md:text-6xl lg:8xl font-neue-roman text-radial-gradient overflow-hidden">
             Timeline
           </div>
           {/* Grey and gradient lines, only show after 100vh scroll */}
@@ -90,15 +90,15 @@ const Timeline = () => {
       
       <div className="block sm:hidden w-full">
         <div>
-          <span className="App text-white relative bg-black h-[10vh] flex justify-center items-center text-6xl md:text-6xl lg:8xl z-10 font-neue-roman text-radial-gradient mt-20 overflow-hidden">
-           
+          <span className="App text-white relative bg-black h-[10vh] flex justify-center items-center text-5xl md:text-6xl lg:8xl z-10 font-neue-roman text-radial-gradient mt-20 overflow-hidden">
+             Timeline
           </span>
           {/* Grey and gradient lines, only show after 100vh scroll */}
           {showLines && <>
             <div className="w-[3px] h-[50vh] bg-gradient-to-b from-[#ff7448] via-[#c04892] to-[#6348ff] fixed top-0 left-[9vw] -z-10"></div>
             <div className="w-[3px] h-full bg-gray-700 absolute left-[9vw] top-0 -z-20 "></div>
           </>}
-          <div className='h-[21vh] bg-black w-full transform -translate-y-[21vh] absolute z-2'></div>
+          <div className='h-[22vh] bg-black w-full transform -translate-y-[22vh] absolute z-2'></div>
           <div className="wrapper text-white flex flex-col align-center gap-30 relative min-h-screen">
             {/* Top gradient overlay, only show after 100vh scroll */}
             {showLines && (
