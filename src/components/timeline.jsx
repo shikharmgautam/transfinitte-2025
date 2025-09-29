@@ -14,8 +14,8 @@ const Timeline = () => {
       
       <div className="hidden sm:block w-full h-full">
         <div>
-          <div className="App text-white relative bg-black h-[30vh] flex items-center justify-center text-[3.7rem] font-neue-roman text-radial-gradient overflow-hidden ">
-            TIMELINE
+          <div className="App text-white relative bg-black h-[20vh] flex justify-center items-center text-6xl md:text-6xl lg:8xl font-neue-roman text-radial-gradient overflow-hidden ">
+            Timeline
           </div>
           {/* Grey and gradient lines, only show after 100vh scroll */}
           {showLines && <>
@@ -90,8 +90,8 @@ const Timeline = () => {
       
       <div className="block sm:hidden w-full">
         <div>
-          <span className="App text-white relative bg-black h-[10vh] flex items-center justify-center text-[3rem] z-10 font-neue-roman text-radial-gradient mt-20 overflow-hidden">
-            TIMELINE
+          <span className="App text-white relative bg-black h-[10vh] flex justify-center items-center text-6xl md:text-6xl lg:8xl z-10 font-neue-roman text-radial-gradient mt-20 overflow-hidden">
+            Timeline
           </span>
           {/* Grey and gradient lines, only show after 100vh scroll */}
           {showLines && <>

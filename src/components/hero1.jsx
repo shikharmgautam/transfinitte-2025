@@ -70,12 +70,13 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
               backgroundRepeat: 'no-repeat',
             }}
           />
-          <span className="absolute top-4 left-4 flex items-center gap-3 bg-white text-black rounded-xl px-3 py-2 text-sm font-bold z-10 ">
+          
+          <div className="mt-10 mb-2 z-10 relative">
+            <h1 className="text-white text-4xl font-bold leading-tight mb-2 absolute -top-14">Ready to Hack?</h1>
+            <span className=" inline-flex items-center gap-3 bg-white text-black rounded-xl px-3 py-2 text-sm font-bold z-10 ">
             Registration opens soon
              <img src={whitearrow} alt="arrow" className="w-4 h-4 filter brightness-0" />
           </span>
-          <div className="mt-10 mb-2 z-10 relative">
-            <h1 className="text-white text-4xl font-bold leading-tight mb-2">Ready to Hack?</h1>
          
           </div>
           <div className="flex items-center justify-center gap-1 absolute -translate-x-1/2 z-0 font-neue-xxthin m-0 p-0 overflow-hidden -bottom-[30vw] -right-[44vw] sm:-bottom-[25vh] sm:-right-[40vh]">
@@ -179,16 +180,17 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
             >
               {/* Info Tag */}
               <div className="mb-0 mt-10 ml-6">
-                <span className="bg-white text-black rounded-lg font-bold px-5 py-2 inline-flex items-center gap-2 text-sm">
+                 <h1 className="lg:text-8xl text-6xl font-bold text-white leading-tight font-neue-display z-21">
+                Ready to hack?
+              </h1>
+                <span className="bg-white text-black rounded-lg font-bold px-2 py-2 mt-2 inline-flex items-center gap-2 transform translate-x-1 text-sm">
                   Registrations opens soon
                   <img src={whitearrow} alt="arrow" className="w-4 h-4 filter brightness-0 ml-2 align-middle" style={{marginTop: '-2px'}} />
                 </span>
               </div>
 
               {/* Main Heading */}
-              <h1 className="lg:text-8xl text-6xl font-bold text-white leading-tight ml-6 font-neue-display z-21">
-                Ready to hack?
-              </h1>
+             
 
              
 
