@@ -67,7 +67,7 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
             }}
           />
           <span className="absolute top-4 left-4 bg-white text-black rounded-full px-3 py-1 text-xs font-semibold z-10">
-            Registrations start in 10 days
+            Registration opens soon
           </span>
           <div className="mt-10 mb-2 z-10 relative">
             <h1 className="text-white text-4xl font-bold leading-tight mb-2">Ready to Hack?</h1>
@@ -154,7 +154,7 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
           <div className={`flex h-[93vh] relative z-20${expandedCard==='left' ? ' pr-0 py-0 gap-0' : ' p-8 gap-6'}`} style={expandedCard==='left' ? {marginLeft: 0, paddingLeft: 0} : {}}>
             {/* Left Hero Section */}
             <div 
-              className={`rounded-2xl flex flex-col justify-start overflow-hidden relative z-30 cursor-pointer bg-black${expandedCard && expandedCard !== 'left' ? ' hidden' : ''}${expandedCard==='left' ? ' animate-expandleft' : ' flex-1'}`}
+              className={`rounded-2xl flex flex-col justify-start overflow-hidden relative z-30 cursor-pointer bg-black${expandedCard && expandedCard !== 'left' ? ' ' : ''}${expandedCard==='left' ? ' animate-expandleft' : ' flex-1'}`}
               onClick={() => handleCardClick('left')}
               style={{
                 ...(expandedCard==='left' ? { margin: 0, marginLeft: 0, paddingLeft: 0 } : {}),
@@ -169,7 +169,7 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
               {/* Info Tag */}
               <div className="mb-0 mt-10 ml-6">
                 <span className="bg-white text-black rounded-lg font-bold px-5 py-2 inline-flex items-center gap-2 text-sm">
-                  Registrations opening in 10 days
+                  Registrations opens soon
                   <img src={whitearrow} alt="arrow" className="w-4 h-4 filter brightness-0 ml-2 align-middle" style={{marginTop: '-2px'}} />
                 </span>
               </div>

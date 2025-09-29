@@ -33,7 +33,7 @@ const Timeline = () => {
             )}
            
             <div className="content-1 flex flex-row items-center justify-center w-full py-5 gap-8 relative z-1 px-8">
-              <div className="text-3xl font-bold flex-1 flex justify-end pr-8 sticky top-[50vh] self-start">Day 1 — Oct 18</div>
+              <div className="text-3xl font-bold flex-1 flex justify-end pr-8 sticky top-[50vh] self-start">Oct 10</div>
               <div className="relative flex flex-col items-center h-full min-h-[340px] w-12 z-1">
                 <div className="bg-white border-8 p-2 border-black rounded-full w-6 h-6 -z-11 mb-[0px] sticky top-[50vh] block max-[890px]:hidden"></div>
               </div>
@@ -48,7 +48,7 @@ const Timeline = () => {
               </div>
             </div>
             <div className="content-2 flex flex-row items-center justify-center w-full py-5 gap-8 relative z-1 px-8">
-              <div className="text-3xl font-bold flex-1 flex justify-end pr-8 sticky top-[50vh] self-start">Day 1 — Oct 18</div>
+              <div className="text-3xl font-bold flex-1 flex justify-end pr-8 sticky top-[50vh] self-start">Oct 11</div>
               <div className="relative flex flex-col items-center h-full min-h-[340px] w-12 z-1">
                 <div className="bg-white border-8 p-2 border-black rounded-full w-6 h-6 -z-10 mb-[0px] sticky top-[50vh] block max-[890px]:hidden"></div>
               </div>
@@ -61,7 +61,7 @@ const Timeline = () => {
               </div>
             </div>
             <div className="content-3 flex flex-row items-center justify-center w-full py-5 gap-8 relative z-1 px-8">
-              <div className="text-3xl font-bold flex-1 flex justify-end pr-8 sticky top-[50vh] self-start">Day 1 — Oct 18</div>
+              <div className="text-3xl font-bold flex-1 flex justify-end pr-8 sticky top-[50vh] self-start">Oct 12</div>
               <div className="relative flex flex-col items-center h-full min-h-[340px] w-12 z-10">
                 <div className="bg-white border-8 p-2 border-black rounded-full w-6 h-6 -z-11 mb-[0px] sticky top-[50vh] block max-[890px]:hidden"></div>
               </div>
