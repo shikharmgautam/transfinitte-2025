@@ -35,42 +35,23 @@ export const judges = [
     imgurl: indresh,
     company: "Wells Fargo",
   },
+  
+ 
   {
     id: "2",
-    name: "Ayush Singh",
-    imgurl: ayush,
-    company: "MIcrosoft",
-  },
-  {
-    id: "3",
     name: "Kshitiz",
     imgurl: kshitiz,
     company: "Texas Instruments",
   },
   {
-    id: "4",
+    id: "3",
     name: "Aswin",
     imgurl: aswin,
     company: "Qualcomm",
   },
-  {
-    id: "5",
-    name: "Rayapalli Rakesh",
-    imgurl: rakesh,
-    company: "PWC",
-  },
-  {
-    id: "6",
-    name: "Adwaith D",
-    imgurl: adwaith,
-    company: "Google",
-  },
-  {
-    id: "7",
-    name: "Subash",
-    imgurl: subash,
-    company: "Goldman Sachs",
-  },
+  
+
+ 
 
 ];
 
