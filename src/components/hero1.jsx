@@ -40,7 +40,7 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
             <div className="flex items-center justify-between w-[100vw]">
               <img src={tfBadge} alt="TF 25 logo" className="h-8 w-auto" />
                 <button className="flex items-center  gap-2 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-300 transition-colors">
-                  <span className="text-sm font-medium">Register</span>
+                  <span className="text-sm font-medium cursor-pointer">Register</span>
                   <img src={whitearrow} alt="arrow" className="w-4 h-4 filter brightness-0" />
                 </button>
             </div>
@@ -93,9 +93,9 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
               style={{height: '20vh', minHeight: 100}}>
               <div className="flex items-center justify-between mb-2">
                 <span className="text-white text-2xl font-bold">Play to win</span>
-                 <img src={tiltT} alt="tilted T logo" className="absolute -bottom-8 -right-8 h-[120%] w-auto pointer-events-none select-none z-0" style={{filter:'brightness(1.2)'}} />
+                 <img src={tiltT} alt="tilted T logo" className="absolute -bottom-8 -right-8 h-[120%] w-auto  select-none z-0" style={{filter:'brightness(1.2)'}} />
                 <button
-                  className="text-white text-sm font-bold mb-4 bg-black border-none rounded-lg hover:underline focus:outline-none cursor-pointer absolute top-5 right-4 w-fit "
+                  className="text-white text-sm font-bold mb-4 bg-black border-none rounded-lg hover:underline focus:outline-none absolute top-5 right-4 w-fit "
                   type="button"
                 >
                   COMING SOON
@@ -108,7 +108,7 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
             <div className="rounded-2xl bg-black w-full mb-4 p-5 relative flex  gap-2 overflow-hidden"
               style={{height: '20vh', minHeight: 100}}>
               <span className="text-white text-2xl font-bold mb-2 z-10">Get our Merch</span>
-              <img src={tiltT} alt="tilted T logo" className="absolute -bottom-8 -right-8 h-[120%] w-auto pointer-events-none select-none z-0" style={{filter:'brightness(1.2)'}} />
+              <img src={tiltT} alt="tilted T logo" className="absolute -bottom-8 -right-8 h-[120%] w-auto select-none z-0" style={{filter:'brightness(1.2)'}} />
               <button
                     className="text-white text-sm font-bold mb-4 bg-transparent border-none rounded-lg focus:outline-none text-left w-fit absolute right-4 top-5"
                     type="button"
@@ -156,7 +156,7 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
 
                 {/* Register Button */}
                 <button className="flex items-center gap-2 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-300 transition-colors">
-                  <span className="text-sm font-medium">Register</span>
+                  <span className="text-sm font-medium cursor-pointer">Register</span>
                   <img src={whitearrow} alt="arrow" className="w-4 h-4 filter brightness-0" />
                 </button>
               </div>
@@ -206,7 +206,7 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
               <div className="lg:w-96 w-70 flex flex-col gap-6 relative z-20"> 
                 {/* Top Component - Play to win */}
                 <div 
-                  className="flex-[3] bg-black rounded-2xl p-6 transition-all duration-500 overflow-hidden ease-in-out cursor-pointer"
+                  className="flex-[3] bg-black rounded-2xl p-6 transition-all duration-500 overflow-hidden ease-in-out "
                   onClick={() => handleCardClick('play')}
                 >
                   <div className="flex items-center justify-between mb-4">
@@ -218,15 +218,15 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
                   >
                     COMING SOON
                   </button>
-                  <img src={tiltT} alt="tilted T logo" className="relative w-[100%] h-auto mx-auto -bottom-12 -right-12 z-0 pointer-events-none select-none" style={{filter:'brightness(1.2)'}} />
+                  <img src={tiltT} alt="tilted T logo" className="relative w-[100%] h-auto mx-auto -bottom-12 -right-12 z-0 select-none" style={{filter:'brightness(1.2)'}} />
                 </div>
 
                 {/* Bottom Component - Get our Merch */}
                 <div 
-                  className="flex-[1] bg-black relative rounded-2xl p-6 overflow-hidden transition-all duration-500 ease-in-out cursor-pointer"
+                  className="flex-[1] bg-black relative rounded-2xl p-6 overflow-hidden transition-all duration-500 ease-in-out "
                   onClick={() => handleCardClick('merch')}
                 >
-                  <img src={tiltT} alt="tilted T logo" className="absolute w-[60%] h-auto mx-auto -bottom-12 -right-12 z-0 pointer-events-none select-none" style={{filter:'brightness(1.2)'}} />
+                  <img src={tiltT} alt="tilted T logo" className="absolute w-[60%] h-auto mx-auto -bottom-12 -right-12 z-0 select-none" style={{filter:'brightness(1.2)'}} />
                   <div className="relative z-10">
                     <h2 className="text-4xl font-bold text-white mb-4">Get our Merch</h2>
                     <button

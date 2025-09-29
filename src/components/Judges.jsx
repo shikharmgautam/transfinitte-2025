@@ -31,7 +31,7 @@ const JudgesMobile = memo(({ judges }) => (
   <div className="block sm:hidden mx-auto bg-black max-w-[100%] z-10">
     <div className="flex flex-col justify-center items-start gap-[0.625rem] flex-shrink-0 py-20 px-4 ">
       <div className="flex h-fit items-start self-stretch">
-        <div className="text-white font-instrument-sans text-[3rem] font-normal leading-[60px] tracking-[-2.56px] text-conic-gradient">
+        <div className="text-white font-instrument-sans text-6xl md:text-6xl lg:8xl font-normal leading-[60px] tracking-[-2.56px] transform -translate-y-4 text-radial-gradient">
           Judges
         </div>
         
