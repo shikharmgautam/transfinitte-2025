@@ -1,3 +1,7 @@
+/* Make sponsor SVGs white */
+.sponsor-svg-white {
+  filter: brightness(0) invert(1) grayscale(1);
+}
 /* Animation for mobile main card expand */
 .mobile-main-card {
   transition: 1s all ease;

@@ -60,7 +60,12 @@ import tfhero from './images/svg/tf-hero.svg';
 import tfherosm from './images/svg/tf-text-ph.svg';
 import shuffle from './images/svg/shuffle.svg';
 import email from './images/svg/email.svg';
- 
+import sponser1 from './images/svg/sponser1.svg';
+import sponser2 from './images/svg/sponser2.svg';
+import sponser3 from './images/svg/sponser3.svg';
+import sponser4 from './images/svg/sponser4.svg';
+import sponser5 from './images/svg/sponser5.svg';
+import sponser6 from './images/svg/sponser6.svg';
 
 export {
 	// Judges
@@ -69,6 +74,9 @@ export {
 	aboutus, og, pattern, group67,
 	// Hero section
 	 herobg, herobgsvg, herobg1, heroOne, heroTwo, herox, mobilehero, mobileone,
+
+	// svg
+	sponser1, sponser2, sponser3, sponser4, sponser5, sponser6,
 	// SVGs
 	numbersvg, abhibus, adminblock, arrowblack, arrowwhite, bharatX, boeing, bubble, crewsphere, gfg, groups, icon, instagram, instagramwh, linkedin, linkedinwh, netcon, pathway, prizes, ps, tezos, tfbadge, tffooter, tffootersm, tfgridsm, tfhero, tfherosm, shuffle, email
 };

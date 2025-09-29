@@ -19,6 +19,13 @@ import {
   indresh,
   kshitiz,
   aswin,
+  sponser1,
+  sponser2,
+  sponser3,
+  sponser4,
+  sponser5,
+  sponser6,
+
 
 } from "../assets";
 
@@ -62,41 +69,37 @@ export const sponsors = [
     data: [
       {
         id: "0",
-        name: "Netcon",
-        imgurl: netcon,
+        name: "",
+        imgurl: sponser1,
       },
       {
         id: "1",
-        name: "Boeing",
-        imgurl: boeing,
+        name: "",
+        imgurl: sponser2,
       },
       {
         id: "2",
-        name: "tezos",
-        imgurl: tezos,
+        name: "",
+        imgurl: sponser3,
       },
       ,
       {
         id: "3",
-        name: "Geeks For Geeks",
-        imgurl: gfg,
+        name: "",
+        imgurl: sponser4,
       },
       ,
       {
         id: "4",
-        name: "Crewsphere",
-        imgurl: crewsphere,
+        name: "",
+        imgurl: sponser5,
       },
       {
         id: "5",
-        name: "BharatX",
-        imgurl: bharatX,
+        name: "",
+        imgurl: sponser6,
       },
-      {
-        id: "6",
-        name: "Pathway",
-        imgurl: pathway,
-      },
+     
     ],
   },
 ];
