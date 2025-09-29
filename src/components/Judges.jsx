@@ -42,9 +42,9 @@ const JudgesMobile = memo(({ judges }) => (
         {judges.map((judge) => (
           <div
             key={judge.id}
-            className="flex content-center items-center w-[45%] aspect-square object-cover relative border border-dashed border-[#454545] cursor-default gap-[5px] p-[5px]"
+            className="flex content-center items-center w-[45%] aspect-square object-cover relative border border-dashed border-[#454545] cursor-default gap-[5px] p-[5px] min-h-[60vw] overflow-hidden"
           >
-            <div className="flex flex-col justify-start items-start">
+            <div className="flex flex-col justify-start items-start ">
               <div>
                 <img
                   src={judge.imgurl}
@@ -55,7 +55,7 @@ const JudgesMobile = memo(({ judges }) => (
                 />
               </div>
               <div className="text-white font-neue-roman text-[0.813rem] font-normal uppercase text-left bg-transparent select-none cursor-default p-1">
-                <div className="flex flex-col gap-[0.3125rem]">
+                <div className="flex flex-col gap-[0.3125rem] ">
                   <div>{judge.name}</div>
                   <div>{judge.company}</div>
                 </div>
@@ -81,7 +81,7 @@ const JudgesDesktop = memo(({ judges, hoveredJudge, setHoveredJudge }) => (
     }}
   >
     <div className="w-full">
-      <div className="text-6xl md:text-6xl lg:8xl font-neue-roman font-normal leading-tight mb-8 px-[24px] text-left text-radial-gradient">
+      <div className="text-6xl md:text-6xl lg:8xl font-neue-roman leading-tight mb-8 px-[24px] text-left text-radial-gradient">
         Judges
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-4 gap-5 w-[100%] mr-10 px-[40px]">

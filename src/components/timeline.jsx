@@ -91,7 +91,7 @@ const Timeline = () => {
       <div className="block sm:hidden w-full">
         <div>
           <span className="App text-white relative bg-black h-[10vh] flex justify-center items-center text-6xl md:text-6xl lg:8xl z-10 font-neue-roman text-radial-gradient mt-20 overflow-hidden">
-            Timeline
+           
           </span>
           {/* Grey and gradient lines, only show after 100vh scroll */}
           {showLines && <>
