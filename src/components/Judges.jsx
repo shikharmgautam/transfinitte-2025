@@ -77,7 +77,7 @@ const JudgesDesktop = memo(({ judges, hoveredJudge, setHoveredJudge }) => (
       backgroundPosition: 'center',
       backgroundColor: 'black',
       backgroundRepeat: 'no-repeat',
-      minHeight: '100vh',
+    
     }}
   >
     <div className="w-full">
