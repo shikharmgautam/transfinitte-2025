@@ -59,7 +59,7 @@ const AboutUs = () => {
   return (
     <section className="w-full min-h-[500px] bg-black flex flex-col lg:flex-row items-center justify-center pb-16 pt-6 px-6 md:pl-[24px] md:pr-[56px]">
       <div className="flex-1 text-left">
-        <div className="text-6xl md:text-6xl lg:8xl mb-2 text-left text-radial-gradient bg-clip-text text-transparent font-neue-roman">
+        <div className="text-6xl md:text-6xl lg:8xl mb-4 text-left text-radial-gradient bg-clip-text text-transparent font-neue-roman">
           About Us
         </div>
         <p className="text-white text-lg md:text-xl mb-6 max-w-2xl leading-relaxed">
