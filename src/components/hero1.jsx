@@ -10,7 +10,7 @@ import herobg from "../assets/images/hero/hero-bg.png";
 import { heroOne, heroTwo, mobilehero, mobileone } from '../assets';
 
 
-const Hero1 = ({ expandedCard, setExpandedCard, onMainCardClick }) => {
+const Hero1 = ({ expandedCard, setExpandedCard, onMainCardClick, onMobileMainExpand, mobileMainExpanded }) => {
   // Unified handler for both button and card clicks
   const handleCardClick = (cardType) => {
     setExpandedCard(cardType);
@@ -18,82 +18,118 @@ const Hero1 = ({ expandedCard, setExpandedCard, onMainCardClick }) => {
   const handleClose = () => {
     setExpandedCard(null);
   };
+  const handleMobileMainClick = () => {
+    if (onMobileMainExpand) onMobileMainExpand();
+  };
 
 
 
   return (
     <>
       {/* Mobile & md-down layout: visible below md */}
-      <div
-        className="custom-max1300:block hidden min-h-screen w-full px-2 py-2 relative"
-// Add this to your global CSS (e.g., index.css or App.css):
-// @media (max-width: 1300px) {
-//   .custom-max1300\:hidden { display: none !important; }
-//   .custom-max1300\:block { display: block !important; }
-// }
-        style={{
-          backgroundImage: `url(${mobilehero})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          backgroundColor: '#2a2a2a80',
-        }}
-      >
-        {/* Topbar: 7vh */}
-        <div className="flex items-center justify-between w-full px-2" style={{height: '7vh', minHeight: 40}}>
-          <div className="flex items-center gap-2">
-            <img src={tfBadge} alt="TF 25 logo" className="h-8 w-auto" />
-          </div>
-          <div />
-        </div>
-        {/* Main Card: 40vh */}
+
+
+      {/* MOBILE HERO CARD: Only show when not expanded */}
+      {!mobileMainExpanded ? (
         <div
-          className="rounded-2xl bg-black w-full mt-2 mb-4 p-5 relative overflow-hidden flex flex-col justify-between"
-          style={{ height: '40vh', minHeight: 220 }}
-          onClick={onMainCardClick}
+          className={`custom-max1300:block hidden min-h-screen w-full px-2 py-2 relative ${mobileMainExpanded ? 'hidden' : 'block'}`}
+          style={{
+            backgroundImage: `url(${mobilehero})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundColor: '#2a2a2a80',
+          }}
         >
+          {/* Topbar: 7vh */}
+          <div className="flex items-center justify-between w-full px-2" style={{height: '7vh', minHeight: 40}}>
+            <div className="flex items-center gap-2">
+              <img src={tfBadge} alt="TF 25 logo" className="h-8 w-auto" />
+            </div>
+            <div />
+          </div>
+          {/* Main Card: 40vh, expands to 100vw/vh and hides others when clicked */}
           <div
-            className="absolute inset-0 z-0 pointer-events-none select-none"
-            style={{
-              backgroundImage: `url(${mobilehero})`,
-              backgroundSize: '550% 550%',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat',
-            }}
-          />
-          <span className="absolute top-4 left-4 bg-white text-black rounded-full px-3 py-1 text-xs font-semibold z-10">Registrations start in 10 days</span>
-          <div className="mt-10 mb-2 z-10 relative">
-            <h1 className="text-white text-4xl font-bold leading-tight mb-2">Ready to Hack?</h1>
-            <button className="flex items-center gap-2 text-white text-lg font-semibold mt-2">Get Updates <span><img src={whitearrow} alt="" /></span></button>
+            className={`rounded-2xl bg-black w-full mt-2 mb-4 p-5 relative overflow-hidden flex flex-col justify-between mobile-main-card`}
+            style={{ height: '40vh', minHeight: 220  }}
+            onClick={handleMobileMainClick}
+          >
+            <div
+              className="absolute inset-0 z-0 pointer-events-none select-none"
+              style={{
+                backgroundImage: `url(${mobilehero})`,
+                backgroundSize: '550% 550%',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+              }}
+            />
+            <span className="absolute top-4 left-4 bg-white text-black rounded-full px-3 py-1 text-xs font-semibold z-10">Registrations start in 10 days</span>
+            <div className="mt-10 mb-2 z-10 relative">
+              <h1 className="text-white text-4xl font-bold leading-tight mb-2">Ready to Hack?</h1>
+              <button className="flex items-center gap-2 text-white text-lg font-semibold mt-2">Get Updates <span><img src={whitearrow} alt="" /></span></button>
+            </div>
+            <div className={`flex items-center justify-center gap-1 absolute  -translate-x-1/2 z-0 font-neue-xxthin m-0 p-0 overflow-hidden -bottom-[40vw] -right-[44vw] sm:-bottom-[30vh] sm:-right-[40vh]`}>
+              <span className={`   bg-[linear-gradient(-12deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0)_50%),conic-gradient(from_90deg_at_50%_50%,#E861FF_0%,#EF315E_50%,#FF315E_75%,#E861FF_90%)] bg-clip-text text-transparent -rotate-[12.32deg] text-[80vw] sm:text-[60vh]`}>2</span>
+              <span className={`  bg-[linear-gradient(-12deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0)_50%),conic-gradient(from_90deg_at_50%_50%,#E861FF_0%,#EF315E_50%,#FF315E_75%,#E861FF_90%)] bg-clip-text text-transparent -rotate-[12.32deg] translate-y-[5vw] lg:translate-y-[5vh] text-[80vw] sm:text-[60vh]`}>5</span>
+            </div>
           </div>
-        <div className={`flex items-center justify-center gap-1 absolute  -translate-x-1/2 z-0 font-neue-xxthin m-0 p-0 overflow-hidden -bottom-[40vw] -right-[44vw] sm:-bottom-[30vh] sm:-right-[40vh]`}>
-                <span className={`   bg-[linear-gradient(-12deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0)_50%),conic-gradient(from_90deg_at_50%_50%,#E861FF_0%,#EF315E_50%,#FF315E_75%,#E861FF_90%)] bg-clip-text text-transparent -rotate-[12.32deg] text-[80vw] sm:text-[60vh]`}>2</span>
-                <span className={`  bg-[linear-gradient(-12deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0)_50%),conic-gradient(from_90deg_at_50%_50%,#E861FF_0%,#EF315E_50%,#FF315E_75%,#E861FF_90%)] bg-clip-text text-transparent -rotate-[12.32deg] translate-y-[5vw] lg:translate-y-[5vh] text-[80vw] sm:text-[60vh]`}>5</span>
-              </div>
-        </div>
-        {/* Play to win Card: 20vh */}
-        <div className="rounded-2xl bg-black w-full mb-4 p-5 relative flex flex-col overflow-hidden"
-          style={{height: '20vh', minHeight: 100}}>
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-white text-2xl font-bold">Play to win</span>
-            <button
-                    className="text-white text-sm font-bold mb-4 bg-black border-none text-bold rounded-lg hover:underline focus:outline-none cursor-pointer text-left w-fit"
-                    type="button"
-                  >
-                    COMING SOON
-                  </button>
-                  
+          {/* Play to win Card: 20vh */}
+          <div className="rounded-2xl bg-black w-full mb-4 p-5 relative flex flex-col overflow-hidden"
+            style={{height: '20vh', minHeight: 100}}>
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-white text-2xl font-bold">Play to win</span>
+              <button
+                      className="text-white text-sm font-bold mb-4 bg-black border-none text-bold rounded-lg hover:underline focus:outline-none cursor-pointer text-left w-fit"
+                      type="button"
+                    >
+                      COMING SOON
+                    </button>
+            </div>
           </div>
-          
+          {/* Merch Card: 20vh */}
+          <div className="rounded-2xl bg-black w-full mb-4 p-5 relative flex flex-col gap-2 overflow-hidden"
+            style={{height: '20vh', minHeight: 100}}>
+            <span className="text-white text-2xl font-bold mb-2 z-10">Get our Merch</span>
+            <img src={tiltT} alt="tilted T logo" className="absolute -bottom-8 -right-8 h-[120%] w-auto pointer-events-none select-none z-0" style={{filter:'brightness(1.2)'}} />
+          </div>
         </div>
-        {/* Merch Card: 20vh */}
-        <div className="rounded-2xl bg-black w-full mb-4 p-5 relative flex flex-col gap-2 overflow-hidden"
-          style={{height: '20vh', minHeight: 100}}>
-          <span className="text-white text-2xl font-bold mb-2 z-10">Get our Merch</span>
-       
-          <img src={tiltT} alt="tilted T logo" className="absolute -bottom-8 -right-8 h-[120%] w-auto pointer-events-none select-none z-0" style={{filter:'brightness(1.2)'}} />
+      ) : (
+        <div
+          className="custom-max1300:block hidden min-h-screen w-full relative"
+          style={{
+            backgroundImage: `url(${mobilehero})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundColor: '#2a2a2a80',
+          }}
+        >
+          {/* Expanded state: you can add animation or expanded content here if needed */}
+          <div
+            className={`rounded-2xl bg-black w-full mt-2 mb-4 p-5 relative overflow-hidden flex flex-col justify-between mobile-main-card expanded`}
+            style={{ height: '80vh', width: '100vw' }}
+          >
+            <div
+              className="absolute inset-0 z-0 pointer-events-none select-none"
+              style={{
+                backgroundImage: `url(${mobilehero})`,
+                backgroundSize: '550% 550%',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+              }}
+            />
+            <span className="absolute top-4 left-4 bg-white text-black rounded-full px-3 py-1 text-xs font-semibold z-10">Registrations start in 10 days</span>
+            <div className="mt-10 mb-2 z-10 relative">
+              <h1 className="text-white text-4xl font-bold leading-tight mb-2">Ready to Hack?</h1>
+              <button className="flex items-center gap-2 text-white text-lg font-semibold mt-2">Get Updates <span><img src={whitearrow} alt="" /></span></button>
+            </div>
+            <div className={`flex items-center justify-center gap-1 absolute  -translate-x-1/2 z-0 font-neue-xxthin m-0 p-0 overflow-hidden -bottom-[40vw] -right-[44vw] sm:-bottom-[30vh] sm:-right-[40vh]`}>
+              <span className={`   bg-[linear-gradient(-12deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0)_50%),conic-gradient(from_90deg_at_50%_50%,#E861FF_0%,#EF315E_50%,#FF315E_75%,#E861FF_90%)] bg-clip-text text-transparent -rotate-[12.32deg] text-[80vw] sm:text-[60vh]`}>2</span>
+              <span className={`  bg-[linear-gradient(-12deg,rgba(0,0,0,1)_0%,rgba(0,0,0,0)_50%),conic-gradient(from_90deg_at_50%_50%,#E861FF_0%,#EF315E_50%,#FF315E_75%,#E861FF_90%)] bg-clip-text text-transparent -rotate-[12.32deg] translate-y-[5vw] lg:translate-y-[5vh] text-[80vw] sm:text-[60vh]`}>5</span>
+            </div>
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Desktop layout: visible md and up */}
   <div className="min-h-screen hero1-bg relative z-10 custom-max1300:hidden block">

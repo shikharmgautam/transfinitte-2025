@@ -4,7 +4,7 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import AboutUs from "./components/AboutUs";
 import Judges from "./components/Judges";
-import Hero from "./components/hero.jsx";
+
 import Hero1 from "./components/hero1.jsx";
 import Footer from "./components/Footer";
 import Faq from "./components/Faq";
@@ -21,6 +21,7 @@ import TabStickyNavbar from "./components/navTab.jsx";
 function App() {
   const [expandedCard, setExpandedCard] = useState(null);
   const [showHero, setShowHero] = useState(false);
+  const [mobileMainExpanded, setMobileMainExpanded] = useState(false);
 
   // Callback to show Hero and hide Hero1
   const handleShowHero = () => {
@@ -32,6 +33,11 @@ function App() {
     setShowHero(false);
   };
 
+  // Callback for mobile main card expand
+  const handleMobileMainExpand = () => {
+    setMobileMainExpanded(true);
+  };
+
   return (
     <>
       {/* Show Hero1 unless showHero is true */}
@@ -40,27 +46,29 @@ function App() {
           expandedCard={expandedCard}
           setExpandedCard={setExpandedCard}
           onMainCardClick={handleShowHero}
-          className="hidden sm:block"
+          onMobileMainExpand={handleMobileMainExpand}
+          mobileMainExpanded={mobileMainExpanded}
+          className="hidden custom-max1300:block"
         />
       )}
-      {/* Show Hero when showHero is true */}
-      {showHero && (
-        <div>
-        <Hero />
-          <MobileStickyNavbar className="block" />
-          <TabStickyNavbar />
-          <AboutUs />
-          <Timeline />
-          <Sponsors />
-          <Judges />
-          <Faq />
-          <Footer />
+      {mobileMainExpanded && !showHero && (
+        <div className="pt-[20vw]">
       
+          <MobileStickyNavbar />
+          <TabStickyNavbar />
+          <AboutUs />
+          <Timeline />
+          <Sponsors />
+          <Judges />
+          <Faq />
+          <Footer />
         </div>
       )}
+      {/* Show Hero when showHero is true */}
+     
       {/* The rest of your app (unchanged) */}
-      {expandedCard === 'left'&& !showHero && (
-        <div className="">
+      {expandedCard === 'left' && (
+        <div className="hidden custom-max1300:block">
           <MobileStickyNavbar className="block" />
           <TabStickyNavbar />
           <AboutUs />
@@ -71,7 +79,6 @@ function App() {
           <Footer />
         </div>
       )}
-     
     </>
   );
 }
