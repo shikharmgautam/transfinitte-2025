@@ -188,7 +188,7 @@ const Hero1 = ({ expandedCard, setExpandedCard, onMainCardClick }) => {
                   <h2 className="text-4xl font-bold text-white">Play to win</h2>
                 </div>
                 <button
-                    className="text-white text-sm font-bold mb-4 bg-transparent border-none text-bold rounded-lg hover:underline focus:outline-none cursor-pointer text-left w-fit"
+                    className="text-white text-sm font-bold mb-4 bg-transparent border-none text-bold rounded-lg focus:outline-none text-left w-fit"
                     type="button"
                   >
                     COMING SOON
@@ -214,7 +214,7 @@ const Hero1 = ({ expandedCard, setExpandedCard, onMainCardClick }) => {
                 <div className="relative z-10">
                   <h2 className="text-4xl font-bold text-white mb-4">Get our Merch</h2>
                   <button
-                    className="text-white text-sm font-bold mb-4 bg-black border-none text-bold rounded-lg hover:underline focus:outline-none cursor-pointer text-left w-fit"
+                    className="text-white text-sm font-bold mb-4 bg-black border-none text-bold rounded-lg focus:outline-none text-left w-fit"
                     type="button"
                   >
                     COMING SOON
