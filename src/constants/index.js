@@ -32,9 +32,10 @@ import {
 export const judges = [
   {
     id: "0",
-    name: "Rajan Pandey",
-    imgurl: rajan,
-    company: "IIFL group",
+    
+    name: "Kshitiz",
+    imgurl: kshitiz,
+    company: "Texas Instruments",
   },
   {
     id: "1",
@@ -46,15 +47,16 @@ export const judges = [
  
   {
     id: "2",
-    name: "Kshitiz",
-    imgurl: kshitiz,
-    company: "Texas Instruments",
-  },
-  {
-    id: "3",
     name: "Aswin",
     imgurl: aswin,
     company: "Qualcomm",
+    
+  },
+  {
+    id: "3",
+    name: "Rajan Pandey",
+    imgurl: rajan,
+    company: "IIFL group",
   },
   
 

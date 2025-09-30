@@ -44,18 +44,18 @@ const JudgesMobile = memo(({ judges }) => (
             key={judge.id}
             className="flex content-center items-center w-[45%] aspect-square object-cover relative border border-dashed border-[#454545] cursor-default gap-[5px] p-[5px] min-h-[60vw] overflow-hidden"
           >
-            <div className="flex flex-col justify-start items-start ">
+            <div className="flex relative flex-col justify-start items-start overflow-hidden ">
               <div>
                 <img
                   src={judge.imgurl}
                   alt={judge.name}
                   width="100%"
                   height="100%"
-                  className={`object-cover w-full h-full transition-transform duration-300  }`}
+                  className={` w-full h-full transition duration-300 object-top`}
                 />
               </div>
-              <div className="text-white font-neue-roman text-[0.813rem] font-normal uppercase text-left bg-transparent select-none cursor-default p-1">
-                <div className="flex flex-col gap-[0.3125rem] ">
+              <div className="text-white font-neue-roman text-[3vw] font-normal uppercase text-left bg-transparent select-none cursor-default p-1">
+                <div className="flex flex-col gap-[0.25rem] ">
                   <div>{judge.name}</div>
                   <div>{judge.company}</div>
                 </div>
