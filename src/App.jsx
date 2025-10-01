@@ -9,6 +9,7 @@ import Sponsors from "./components/Sponsors.jsx";
 import Timeline from "./components/timeline.jsx";
 import MobileStickyNavbar from "./components/navmobile.jsx";
 import TabStickyNavbar from "./components/navTab.jsx";
+import { Toaster } from "./components/ui/sonner";
 
 function App() {
   const [expandedCard, setExpandedCard] = useState(null);
@@ -42,6 +43,7 @@ function App() {
           <Footer />
         </div>
       )}
+      <Toaster />
     </>
   );
 }
