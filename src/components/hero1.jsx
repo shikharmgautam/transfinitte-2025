@@ -18,10 +18,11 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
   };
 
   const handleRegisterClick = () => {
-    toast("Registrations opening soon", {
-      description: "Stay tuned for updates!",
-      duration: 3000,
-    });
+    window.location.href="https://register.transfinitte.com";
+    // toast("Registrations opening soon", {
+    //   description: "Stay tuned for updates!",
+    //   duration: 3000,
+    // });
   };
 
   return (
@@ -95,7 +96,7 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
           <div className="mt-10 mb-2 z-10 relative">
             <h1 className="text-white text-4xl font-bold leading-tight mb-2 absolute -top-14">Ready to Hack?</h1>
             <span className=" inline-flex items-center gap-3 bg-white text-black rounded-xl px-3 py-2 text-sm font-bold z-10 ">
-            Registration opens soon
+            Registrations are live
              <img src={whitearrow} alt="arrow" className="w-4 h-4 filter brightness-0" />
           </span>
          
@@ -218,7 +219,7 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
                 Ready to hack?
               </h1>
                 <span className="bg-white text-black rounded-lg font-bold px-2 py-2 mt-2 inline-flex items-center gap-2 transform translate-x-1 text-sm">
-                  Registrations opens soon
+                  Registrations are live
                   <img src={whitearrow} alt="arrow" className="w-4 h-4 filter brightness-0 ml-2 align-middle" style={{marginTop: '-2px'}} />
                 </span>
               </div>
