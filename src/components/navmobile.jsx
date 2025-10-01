@@ -7,10 +7,11 @@ import headerSvg from "../assets/images/svg/header.svg";
 
 export default function MobileStickyNavbar() {
     const handleRegisterClick = () => {
-        toast("Registrations opening soon", {
-            description: "Stay tuned for updates!",
-            duration: 3000,
-        });
+        // toast("Registrations opening soon", 
+    window.location.href="https://register.transfinitte.com";{
+        //     description: "Stay tuned for updates!",
+        //     duration: 3000,
+        // });
     };
 
     return (

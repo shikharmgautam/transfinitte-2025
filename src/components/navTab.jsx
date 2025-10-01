@@ -11,10 +11,11 @@ export default function tabStickyNavbar() {
   const [originalTop, setOriginalTop] = useState(0);
 
   const handleRegisterClick = () => {
-    toast("Registrations opening soon", {
-      description: "Stay tuned for updates!",
-      duration: 3000,
-    });
+    window.location.href="https://register.transfinitte.com";
+    // toast("Registrations opening soon", {
+    //   description: "Stay tuned for updates!",
+    //   duration: 3000,
+    // });
   };
 
   useEffect(() => {
