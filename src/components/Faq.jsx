@@ -25,11 +25,11 @@ const Faq = () => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <div className="mx-auto bg-black max-w-[100%] sm:w-[100%] select-none">
-        <div className="flex pb-9 pt-0 px-4 sm:px-[24px] justify-between items-end">
+        <div className="flex pb-9 pt-0 px-[24px] sm:px-[24px] justify-between items-end">
           <div className="flex w-full h-auto flex-col items-start gap-[37px] flex-shrink-0">
            
-          <div className="text-6xl md:text-6xl lg:8xl mb-2 font-neue-roman text-radial-gradient text-start transform translate-y-5 hidden custom-max1300:block ">FAQs</div>
-          <div className="text-6xl md:text-6xl lg:8xl mb-2 font-neue-roman text-radial-gradient text-start transform translate-y-5 block custom-max1300:hidden ">Frequently Asked Questions</div>
+          <div className="text-5xl md:text-6xl lg:8xl  font-neue-roman text-radial-gradient text-start transform translate-y-5 hidden custom-max1300:block ">FAQs</div>
+          <div className="text-5xl md:text-6xl lg:8xl font-neue-roman text-radial-gradient text-start transform translate-y-5 block custom-max1300:hidden ">Frequently Asked Questions</div>
             <div className="w-full text-[#A0A0A0] font-spacemono text-[1rem]">
               <FaqAccordion />
             </div>

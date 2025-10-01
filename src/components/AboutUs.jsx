@@ -57,23 +57,23 @@ const FadeCarousel = ({ images }) => {
 
 const AboutUs = () => {
   return (
-    <section className="w-full min-h-[500px] bg-black flex flex-col lg:flex-row items-center justify-center pb-16 pt-6 px-6 md:pl-[24px] md:pr-[56px]">
+    <section className="w-full min-h-[500px] bg-black flex flex-col lg:flex-row items-center justify-center pb-12 pt-6 px-6 md:pl-[24px] md:pr-[56px]">
       <div className="flex-1 text-left">
-        <div className="text-6xl md:text-6xl lg:8xl mb-2 text-left text-radial-gradient bg-clip-text text-transparent font-neue-roman">
+        <div className="text-5xl md:text-6xl lg:8xl mb-4 text-left text-radial-gradient bg-clip-text text-transparent font-neue-roman">
           About Us
         </div>
-        <p className="text-white text-lg md:text-xl mb-6 max-w-2xl leading-relaxed">
+        <p className="text-white text-lg md:text-xl mb-6 max-w-2xl leading-relaxed ml-[15px]">
           Welcome to TransfiNITTe'25, NIT Trichy's premiere hackathon, hosted by the Technical Council. This
           is where innovation meets action.
         </p>
-        <p className="text-white text-lg md:text-xl lg:text-2xl max-w-2xl leading-relaxed">
+        <p className="text-white text-lg md:text-xl lg:text-2xl max-w-2xl leading-relaxed ml-[15px]">
           Building on the success of TransfiNITTe'24, where 550+ participants pushed the limits in a 42-hour coding
           marathon, we're taking it up a notch. With 600+ participants and 125+ teams expected, TransfiNITTe'25 is set
           to redefine the hackathon experience.
         </p>
       </div>
 
-      <div className="flex-1 flex flex-col items-end justify-center mt-12 md:mt-0 md:mr-0 lg:pr-2">
+      <div className="flex-1 flex flex-col items-end justify-center mt-8 md:mt-0 md:mr-0 lg:pr-2">
         <FadeCarousel images={images} />
       </div>
     </section>

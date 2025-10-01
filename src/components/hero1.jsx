@@ -65,13 +65,23 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
           style={mobileMainExpanded ? {
             height: '70vh',
             transition: 'height 1s ease'
-          
           } : {
             height: '40vh',
             minHeight: 220
           }}
           onClick={!mobileMainExpanded ? handleMobileMainClick : undefined}
         >
+          {/* Back button for mobile expanded state */}
+          {mobileMainExpanded && (
+            <button
+              className="absolute top-4 right-4 inline-flex justify-center items-center z-20 bg-white text-black px-3 py-1 rounded-lg shadow hover:bg-gray-200 transition-colors"
+              onClick={e => { e.stopPropagation(); setMobileMainExpanded(false); }}
+            >
+              Back
+              <img src={whitearrow} alt="arrow" className="w-4 h-4 filter brightness-0" />
+            </button>
+           
+          )}
           <div
             className="absolute inset-0 z-0 pointer-events-none select-none"
             style={{
@@ -175,6 +185,16 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
                 </button>
               </div>
             </div>
+          )}
+          {/* Back button for desktop expanded state */}
+          {expandedCard === 'left' && (
+            <button
+              className="absolute inline-flex top-8 justify-center items-center right-8 z-50 bg-white text-black px-6 py-2 rounded-lg shadow font-bold hover:bg-gray-200 transition-colors"
+              onClick={() => setExpandedCard(null)}
+            >
+              Back
+              <img src={whitearrow} alt="arrow" className="w-4 h-4 filter brightness-0" />
+            </button>
           )}
 
           <div className={`flex h-[93vh] relative z-20${expandedCard==='left' ? ' pr-0 py-0 gap-0' : ' p-8 gap-6'}`} style={expandedCard==='left' ? {marginLeft: 0, paddingLeft: 0} : {}}>
