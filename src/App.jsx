@@ -9,6 +9,7 @@ import Sponsors from "./components/Sponsors.jsx";
 import Timeline from "./components/timeline.jsx";
 import MobileStickyNavbar from "./components/navmobile.jsx";
 import TabStickyNavbar from "./components/navTab.jsx";
+import Id from "./components/Id";
 
 function App() {
   const [expandedCard, setExpandedCard] = useState(null);
@@ -28,6 +29,7 @@ function App() {
         mobileMainExpanded={mobileMainExpanded}
         setMobileMainExpanded={setMobileMainExpanded}
       />
+      <Id />
 
       {/* Rest of the content appears AFTER Hero1 when expanded */}
       {showRestOfContent && (
