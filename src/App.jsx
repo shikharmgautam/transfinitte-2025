@@ -9,6 +9,11 @@ import Sponsors from "./components/Sponsors.jsx";
 import Timeline from "./components/timeline.jsx";
 import MobileStickyNavbar from "./components/navmobile.jsx";
 import TabStickyNavbar from "./components/navTab.jsx";
+
+import Id from "./components/Id";
+
+
+
 import Id from "./components/Id";
 
 function App() {
@@ -44,6 +49,7 @@ function App() {
           <Footer />
         </div>
       )}
+      <Toaster />
     </>
   );
 }
