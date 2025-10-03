@@ -1,0 +1,32 @@
+/* Animation for Id component sliding from top */
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Ensure the overlay is above everything */
+.id-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  transform: translateY(-100vh);
+  opacity: 0;
+}
+
+.id-overlay.animating {
+  animation: slideInFromTop 1s ease-out forwards;
+}
+
+.id-overlay.visible {
+  transform: translateY(0);
+  opacity: 1;
+}

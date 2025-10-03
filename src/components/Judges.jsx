@@ -1,10 +1,10 @@
 import React, { memo, Suspense, useState } from "react";
 import { judges } from "../constants";
-import LiquidGlass from 'liquid-glass-react'
+
 import herobgj from '../assets/images/hero/hero-bg.png';
 
 
-import GlassWrapper from "./ui/glasswrapper.jsx";
+
 
 import { herobg } from '../assets';
 

@@ -36,8 +36,9 @@ export default function Band({ maxSpeed = 10, minSpeed = 3 }) {
   const [dragged, drag] = useState(false);
   const [hovered, hover] = useState(false);
 
-  const { nodes, materials } = useGLTF("/src/assets/card.glb");
-  const texture = useTexture("https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/SOT1hmCesOHxEYxL7vkoZ/c57b29c85912047c414311723320c16b/band.jpg");
+  const { nodes, materials } = useGLTF("src/assets/card.glb");
+  const texture = useTexture("src/assets/images/tag_texture.png");
+
 
   const [curve] = useState(
     () =>

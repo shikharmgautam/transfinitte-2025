@@ -1,6 +1,6 @@
 
 
-const Rsvp = () => {
+const Hero = () => {
     return (
         <section
             id='hero'
@@ -10,14 +10,14 @@ const Rsvp = () => {
                 {/* Left: Text */}
                
                     <div className="flex-1 flex flex-col items-start justify-center text-left lg:mr-[16vw]">
-                        <h1 className="text-[14vw] sm:text-7xl md:text-[7vw] lg:text-[5.7vw] font-bold text-white leading-none m-0">
-                            innovate.
+                        <h1 className="text-[14vw] sm:text-7xl md:text-[7vw] lg:text-[5.7vw] font-bold text-white leading-none m-0 py-2">
+                            Get Your
                         </h1>
-                        <h1 className="text-[14vw] sm:text-7xl md:text-[7vw] lg:text-[5.7vw] font-bold text-white leading-none m-0">
-                            collaborate.
+                        <h1 className="text-[14vw] sm:text-7xl md:text-[7vw] lg:text-[5.7vw] font-bold text-white leading-none m-0 py-2">
+                            Own
                         </h1>
-                        <h1 className="text-[14vw] sm:text-7xl md:text-[7vw] lg:text-[5.7vw] font-bold text-white leading-none m-0">
-                            elevate.
+                        <h1 className="text-[14vw] sm:text-7xl md:text-[7vw] lg:text-[5.7vw] font-bold text-white leading-none m-0 py-2">
+                            Rsvp
                         </h1>
                         <p className="mt-2 text-l sm:text-xl text-white" style={{ fontFamily: 'Neue Haas Grotesk Roman, Inter, system-ui, sans-serif' }}>
                             The Flagship Hackathon of NIT Trichy
@@ -34,4 +34,4 @@ const Rsvp = () => {
     );
 };
 
-export default Rsvp;
+export default Hero;
