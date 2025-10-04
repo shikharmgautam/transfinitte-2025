@@ -44,7 +44,7 @@ console.log(result);
   };
 extend({ MeshLineGeometry, MeshLineMaterial });
 useGLTF.preload('/assets/card.glb');
-useTexture.preload('src/assets/images/tag_texture.png');
+useTexture.preload('/assets/images/tag_texture.png');
 
 // Chrome-compatible Physics wrapper with proper WASM initialization
 function SafePhysics({ children }) {

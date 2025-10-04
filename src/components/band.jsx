@@ -37,7 +37,7 @@ export default function Band({ maxSpeed = 10, minSpeed = 3 }) {
   const [hovered, hover] = useState(false);
 
   const { nodes, materials } = useGLTF("/assets/card.glb");
-  const texture = useTexture("src/assets/images/tag_texture.png");
+  const texture = useTexture("/assets/images/tag_texture.png");
 
   const [curve] = useState(
     () =>
