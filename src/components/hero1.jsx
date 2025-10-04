@@ -3,6 +3,10 @@ import { toast } from "sonner";
 import tiltT from "../assets/images/svg/tiltT.svg";
 import StickyNavbar from './Nav.jsx';
 import tfBadge from "../assets/images/svg/tf-badge.svg";
+import tcBadge from "../assets/images/svg/tcbulb.png";
+import d2dBadge from "../assets/images/svg/d2dbadge.svg";
+import jcbBadge from "../assets/images/svg/jcbbadge.svg";
+import rvcBadge from "../assets/images/svg/rvcbadge.svg";
 import TabStickyNavbar from "./navTab";
 import whitearrow from "../assets/images/svg/whitearrow.svg";
 import herobg from "../assets/images/hero/hero-bg.png";
@@ -62,16 +66,26 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
         {!mobileMainExpanded && (
           <div className="flex items-center w-full px-2" style={{height: '7vh', minHeight: 40}}>
             <div className="flex items-center justify-between w-[100vw]">
-              <img src={tfBadge} alt="TF 25 logo" className="h-8 w-auto" />
+              <div className="flex items-center h-full"> 
+              <img src={tcBadge} alt="TF 25 logo" className="h-12 w-auto pb-1" />
+              <img src={tfBadge} alt="TF 25 logo" className="h-6 w-auto" />
+              </div>
 
-                <button 
+                {/* <button 
                   onClick={handleRegisterClick}
                   className="flex items-center  gap-2 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-300 transition-colors"
                 >
 
                   <span className="text-sm font-medium cursor-pointer">Register</span>
                   <img src={whitearrow} alt="arrow" className="w-4 h-4 filter brightness-0" />
-                </button>
+                </button> */}
+                  <div className="flex items-center">
+                  <img src={rvcBadge} alt="RVC logo" className="h-6 w-auto" />
+                  
+                  <img src={d2dBadge} alt="D2D logo" className="h-6 w-auto" />
+                  <img src={jcbBadge} alt="JCB logo" className="h-6 w-auto" />
+                  </div>
+
             </div>
             <div />
           </div>
@@ -96,7 +110,7 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
               onClick={e => { e.stopPropagation(); setMobileMainExpanded(false); }}
             >
               Back
-              <img src={whitearrow} alt="arrow" className="w-4 h-4 filter brightness-0" />
+              <img src={whitearrow} alt="arrow" className="w-4 h-4 ml-1 filter brightness-0" />
             </button>
            
           )}
@@ -148,6 +162,7 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
             >
                <span className="text-white text-2xl font-bold mb-2 z-10">Get Your RSVP</span>
               <img src={tiltT} alt="tilted T logo" className="absolute -bottom-8 -right-8 h-[120%] w-auto select-none z-0" style={{filter:'brightness(1.2)'}} />
+              {/* <img src={tiltT} alt="tilted T logo" className="absolute -bottom-8 -right-40 h-[120%] w-auto select-none z-0" style={{filter:'brightness(1.2)'}} /> */}
             
               {/* Close button for mobile expanded play card */}
               {expandedCard === 'play' && (
@@ -197,7 +212,7 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
                   }}
             >
               Back
-              <img src={whitearrow} alt="arrow" className="w-4 h-4 filter brightness-0" />
+              <img src={whitearrow} alt="arrow" className="w-4 h-4 ml-1 filter brightness-0" />
             </button>
           )}
         {/* StickyNavbar at top of hero section when left card expanded - exclude from slide animation */}
@@ -215,32 +230,45 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
               <div className="flex items-center justify-between w-full h-full mt-9">
                 {/* Logo */}
                 <div className="flex items-center h-full">
+                  <img src={tcBadge} alt="TF 25 logo" className="h-14 w-auto pb-1" />
                   <img src={tfBadge} alt="TF 25 logo" className="h-8 w-auto" />
                 </div>
 
                 {/* Navigation Links */}
                 <div className="hidden md:flex items-center gap-8 h-full">
-                  <button type="button" className="text-white hover:text-gray-300 transition-colors flex items-center h-full bg-transparent border-none p-0 m-0 cursor-pointer" onClick={() => handleCardClick('left')}>
+                  <button type="button" className="text-white hover:text-gray-300 transition-colors flex items-center h-full bg-transparent border-none p-0 m-0 cursor-pointer" 
+                  //onClick={() => handleCardClick('left')}
+                  >
                     Website
                   </button>
-                  <button type="button" className="text-white hover:text-gray-300 transition-colors flex items-center h-full bg-transparent border-none p-0 m-0 cursor-pointer" onClick={() => handleCardClick('play')}>
-                    Get Your RSVP
+                  <button type="button" className="text-white hover:text-gray-300 transition-colors flex items-center h-full bg-transparent border-none p-0 m-0 cursor-pointer" 
+                  //onClick={() => handleCardClick('play')}
+                  >
+                    Get Your RSVP Soon
                   </button>
-                  <button type="button" className="text-white hover:text-gray-300 transition-colors flex items-center h-full bg-transparent border-none p-0 m-0 cursor-pointer" onClick={() => handleCardClick('merch')}>
+                  <button type="button" className="text-white hover:text-gray-300 transition-colors flex items-center h-full bg-transparent border-none p-0 m-0 cursor-pointer" 
+                  //onClick={() => handleCardClick('merch')}
+                  >
                     Goodies & Merch
                   </button>
                 </div>
 
                 {/* Register Button */}
 
-                <button 
+                {/* <button 
                   onClick={handleRegisterClick}
                   className="flex items-center gap-2 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-300 transition-colors"
                 >
                   <span className="text-sm font-medium cursor-pointer">Register</span>
 
                   <img src={whitearrow} alt="arrow" className="w-4 h-4 filter brightness-0" />
-                </button>
+                </button> */}
+                <div className="flex items-center">
+                  <img src={rvcBadge} alt="RVC logo" className="h-13.5 w-auto" />
+                  
+                  <img src={d2dBadge} alt="D2D logo" className="h-16 w-auto" />
+                  <img src={jcbBadge} alt="JCB logo" className="h-15 w-auto" />
+                  </div>
               </div>
             </div>
           )}
