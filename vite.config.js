@@ -10,5 +10,31 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, './src')
     }
+  },
+  server: {
+    headers: {
+      'Cross-Origin-Opener-Policy': 'same-origin',
+      'Cross-Origin-Embedder-Policy': 'require-corp'
+    }
+  },
+  optimizeDeps: {
+    exclude: ['@dimforge/rapier3d-compat'],
+    esbuildOptions: {
+      target: 'es2022'
+    }
+  },
+  build: {
+    target: 'es2022',
+    rollupOptions: {
+      external: [],
+      output: {
+        manualChunks: {
+          'rapier': ['@react-three/rapier', '@dimforge/rapier3d-compat']
+        }
+      }
+    }
+  },
+  worker: {
+    format: 'es'
   }
 })

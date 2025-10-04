@@ -17,6 +17,7 @@
   left: 0;
   top: 0;
 }
+
 @media (max-width: 1000px) {
   .custom-max1300\:hidden { display: none !important; }
   .custom-max1300\:block { display: block !important; }

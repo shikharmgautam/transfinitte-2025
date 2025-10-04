@@ -1,0 +1,70 @@
+/* No slide animation - components are stationary */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Black div slide animation from top to bottom */
+@keyframes slideDownBlackDiv {
+  0% {
+    transform: translateY(0vh);
+    background: linear-gradient(to bottom, 
+      rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+  }
+  100% {
+    transform: translateY(100vh);
+      background: linear-gradient(to bottom, 
+      rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+  }
+}
+
+/* Animation class for the black div */
+.animate-slideDownBlackDiv {
+  animation: slideDownBlackDiv 3s ease-in-out forwards;
+}
+
+/* Ultra-smooth progressive filling animation from top to bottom */
+@keyframes progressiveFill {
+
+}
+
+/* Both components present at top - no sliding */
+.id-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  transform: translateY(0);
+  opacity: 0;
+}
+
+.id-overlay.animating {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.id-overlay.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Black overlay with progressive filling animation */
+.id-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  pointer-events: none;
+  z-index: 1;
+  animation: progressiveFill 2s ease-in-out forwards;
+}
+
+/* Gradient overlay effect - full opacity at top, 50% at bottom */
