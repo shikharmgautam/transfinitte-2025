@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { toast } from "sonner";
 import DaysToGo from "./DaysToGo";
 import icon from "../assets/images/svg/tf-badge.svg";
 import arrowWhite from "../assets/images/svg/arrowwhite.svg";
@@ -9,6 +10,15 @@ export default function StickyNavbar() {
   const stickyRef = useRef(null);
   const [expanded, setExpanded] = useState(false);
   const [originalTop, setOriginalTop] = useState(0);
+
+
+  const handleRegisterClick = () => {
+    window.location.href="https://register.transfinitte.com";
+    // toast("Registrations opening soon", {
+    //   description: "Stay tuned for updates!",
+    //   duration: 3000,
+    // });
+  };
 
   useEffect(() => {
     if (stickyRef.current) {
@@ -45,8 +55,8 @@ export default function StickyNavbar() {
       >
         <div className={`flex relative items-center gap-6 justify-center sticky-bar-0 ${expanded ? "expanded-level-0 z-[60]" : ""} mx-auto`}>
             <span className={`relative inline-block overflow-hidden rounded-xl p-[1px] sticky-bar ${expanded ? "expanded z-[60]" : ""} mx-auto`}>
-              <span className={`absolute inset-[-1000%] sticky-bar-level-1 ${expanded ? "expanded-level-1 z-[60]" : ""}`} />
-              <div className={`relative width-[100%] height-[100%] rounded-xl bg-white pointer-events-none`} />
+              <span className={`absolute sticky-bar-level-1 ${expanded ? "expanded-level-1 z-[60]" : ""}`} />
+              <div className={`relative width-[100%] height-[100%] rounded-xl bg-white `} />
               <div
                 className={`inline-flex h-full w-full cursor-pointer items-center justify-center rounded-xl px-6 py-2 text-xs font-medium text-gray-50 backdrop-blur-3xl gap-x-6 sticky-bar-level-2 ${expanded ? "expanded-level-2" : "backdrop-blur-lg"}`}
                 style={!expanded ? { background: "rgba(0,0,0,0)", border: "1px solid #EF315E" } : { background: "#000", border: "none" }}
@@ -54,7 +64,7 @@ export default function StickyNavbar() {
                 <div className={`text-offwhite text-center font-spacemono text-sm font-bold tracking-wide sticky-bar-level-3 ${expanded ? "expanded-level-3" : ""}`}>
                   <DaysToGo />
                 </div>
-                
+                 
                 <span className={`inline-block align-middle ${expanded ? 'md:hidden' : ''}`}>
                   <img src={icon} alt="icon" style={{ height: 24 }} />
                 </span>
@@ -63,22 +73,20 @@ export default function StickyNavbar() {
                     <img src={headerSvg} alt="header" style={{ height: 24 }} />
                   </span>
                 )}
-                <button className="relative inline-flex h-12 overflow-hidden rounded-xl p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50">
-                  <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FF315E_0%,#E861FF_50%,#5e1fff_75%,#FF315E_90%)]" />
-                  <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-xl bg-gray-950 px-8 py-1 text-sm font-medium text-gray-50 backdrop-blur-3xl">
-                    <button
-                      type="button"
-                      className="flex items-center m-2 gap-2 text-white font-bold focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 cursor-pointer"
-                       onClick={() => { window.location.href = 'https://register.transfinitte.com'; }}
-                    >
-                      Register
-                      <img
-                        src={arrowWhite}
-                        alt="arrow"
-                        style={{ height: 16, marginLeft: 6 }}
-                      />
-                    </button>
-                                      </span>
+                <button 
+                  onClick={handleRegisterClick}
+                  className="relative inline-flex h-12 overflow-hidden rounded-xl p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50"
+                >
+                  <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FF315E_0%,#E861FF_50%,#5e1fff_75%,#FF315E_90%)] pointer-events-none" />
+                  <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-xl bg-gray-950 px-8 py-1 text-sm font-medium text-gray-50 backdrop-blur-3xl ">
+                    <div className="m-2">Register</div>
+                    <img
+                      src={arrowWhite}
+                      alt="arrow"
+                      style={{ height: 16, marginLeft: 6 }}
+                    />
+                    
+                  </span>
                   
                 </button>
               </div>

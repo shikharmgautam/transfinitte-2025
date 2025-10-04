@@ -6,6 +6,14 @@ import TabStickyNavbar from "./navTab";
 import whitearrow from "../assets/images/svg/whitearrow.svg";
 import herobg from "../assets/images/hero/hero-bg.png";
 import { mobilehero } from '../assets';
+import Id from "./Id"
+  const handleRegisterClick = () => {
+    window.location.href="https://register.transfinitte.com";
+    // toast("Registrations opening soon", {
+    //   description: "Stay tuned for updates!",
+    //   duration: 3000,
+    // });
+  };
 
 
 
@@ -46,7 +54,7 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
           <div className="flex items-center w-full px-2" style={{height: '7vh', minHeight: 40}}>
             <div className="flex items-center justify-between w-[100vw]">
               <img src={tfBadge} alt="TF 25 logo" className="h-8 w-auto" />
-                <button className="flex items-center  gap-2 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-300 transition-colors">
+                <button className="flex items-center  gap-2 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-300 transition-colors"  onClick={handleRegisterClick}>
                   <span className="text-sm font-medium cursor-pointer">Register</span>
                   <img src={whitearrow} alt="arrow" className="w-4 h-4 filter brightness-0" />
                 </button>
@@ -95,7 +103,7 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
               className="inline-flex items-center gap-3 bg-white text-black rounded-xl px-3 py-2 text-sm font-bold z-10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 cursor-pointer"
               // onClick={...} // Add your registration link or handler here
             >
-              Registration opens soon
+              Registrations are live
               <img src={whitearrow} alt="arrow" className="w-4 h-4 filter brightness-0" />
             </button>
          
@@ -111,42 +119,35 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
           <>
             {/* Play to win Card: 20vh */}
             <div 
-              className={`rounded-2xl bg-black w-full mb-4 p-5 relative flex flex-col justify-center items-center overflow-hidden cursor-pointer hover:bg-gray-900 transition-all duration-500 ${
-                expandedCard === 'play' ? 'fixed inset-0 z-40 h-full' : ''
+              className={`rounded-2xl bg-black w-full mb-4 p-5 relative flex flex-col overflow-hidden cursor-pointer transition-all duration-500 ${
+                expandedCard === 'play' ? '' : ''
               }`}
-              style={expandedCard === 'play' ? {} : {height: '20vh', minHeight: 100}}
+              style={expandedCard === 'play' ? {height: '20vh', minHeight: 100} : {height: '20vh', minHeight: 100}}
               onClick={expandedCard === 'play' ? undefined : () => handleCardClick('play')}
             >
+               <span className="text-white text-2xl font-bold mb-2 z-10">Get Your RSVP</span>
+              <img src={tiltT} alt="tilted T logo" className="absolute -bottom-8 -right-8 h-[120%] w-auto select-none z-0" style={{filter:'brightness(1.2)'}} />
+            
               {/* Close button for mobile expanded play card */}
               {expandedCard === 'play' && (
                 <button
-                  className="absolute top-4 right-4 z-50 bg-white text-black px-3 py-1 rounded-lg shadow hover:bg-gray-200 transition-colors"
+                
                   onClick={(e) => { 
                     e.stopPropagation(); 
                     setExpandedCard(null); 
                   }}
                 >
-                  Back
-                  <img src={whitearrow} alt="arrow" className="w-4 h-4 filter brightness-0 inline ml-1" />
+                 
+                 
+                 
                 </button>
               )}
+               
               
-              <h2 className={`text-white font-bold mb-2 z-10 text-center ${expandedCard === 'play' ? 'text-4xl' : 'text-2xl'}`}>
-                Play & Win
-              </h2>
-              <p className={`text-gray-300 mb-3 z-10 text-center ${expandedCard === 'play' ? 'text-lg' : 'text-sm'}`}>
-                Interactive 3D Experience
-              </p>
-              <button 
-                className={`bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-bold z-10 ${
-                  expandedCard === 'play' ? 'px-6 py-3 text-base' : 'px-4 py-2 text-sm'
-                }`}
-                onClick={expandedCard === 'play' ? (e) => e.stopPropagation() : undefined}
-              >
-                {expandedCard === 'play' ? 'Loading 3D Experience...' : 'Start Playing'}
-              </button>
+             
+              
             </div>
-           
+
             {/* Merch Card: 20vh */}
             <div className="rounded-2xl bg-black w-full mb-4 p-5 relative flex  gap-2 overflow-hidden "
               style={{height: '20vh', minHeight: 100}}>
@@ -165,17 +166,29 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
       </div>
 
       {/* Desktop layout: visible at 1300px and up */}
-      <div className={`min-h-screen hero1-bg relative z-10 custom-max1300:hidden block transition-all duration-1000 ${showIdComponent ? 'opacity-0 -translate-y-full' : 'opacity-100 translate-y-0'}`}>
-        {/* StickyNavbar at top of hero section when left card expanded */}
+      <div className={`min-h-screen relative z-10 custom-max1300:hidden block ${expandedCard === 'play' ? 'bg-black' : 'hero1-bg'}`}>
         {expandedCard === 'left' && (
-          <div className="w-full z-50 flex justify-center items-end absolute left-0 bottom-0">
+            <button
+              className="absolute inline-flex top-8 justify-center items-center right-8 z-[999] bg-white text-black px-6 py-2 rounded-lg shadow font-bold hover:bg-gray-200 transition-colors"
+               onClick={(e) => { 
+                    e.stopPropagation(); 
+                    setExpandedCard(null); 
+                  }}
+            >
+              Back
+              <img src={whitearrow} alt="arrow" className="w-4 h-4 filter brightness-0" />
+            </button>
+          )}
+        {/* StickyNavbar at top of hero section when left card expanded - exclude from slide animation */}
+        {expandedCard === 'left' && !showIdComponent && (
+          <div className="w-full z-50 flex justify-center items-start absolute left-0 top-0">
             <StickyNavbar />
             <TabStickyNavbar />
           </div>
         )}
-
-        {/* Main Content */}
-        <div className="h-screen">  
+        
+        {/* Main content container with slide animation */}
+        <div className={`h-screen transition-all duration-1000 ${showIdComponent ? 'opacity-0 -translate-y-full' : 'opacity-100 translate-y-0'}`}>
           {expandedCard !== 'left' && (
             <div className="h-[7vh] w-full flex items-center px-8 bg-transparent">
               <div className="flex items-center justify-between w-full h-full mt-9">
@@ -190,7 +203,7 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
                     Website
                   </button>
                   <button type="button" className="text-white hover:text-gray-300 transition-colors flex items-center h-full bg-transparent border-none p-0 m-0 cursor-pointer" onClick={() => handleCardClick('play')}>
-                    Play & Win
+                    Get Your RSVP
                   </button>
                   <button type="button" className="text-white hover:text-gray-300 transition-colors flex items-center h-full bg-transparent border-none p-0 m-0 cursor-pointer" onClick={() => handleCardClick('merch')}>
                     Goodies & Merch
@@ -198,23 +211,15 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
                 </div>
 
                 {/* Register Button */}
-                <button className="flex items-center gap-2 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-300 transition-colors">
-                  <span className="text-sm font-medium cursor-pointer">Register</span>
+                <button className="flex items-center gap-2 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-300 transition-colors"  onClick={handleRegisterClick}>
+                  <span className="text-sm font-medium cursor-pointer" >Register</span>
                   <img src={whitearrow} alt="arrow" className="w-4 h-4 filter brightness-0" />
                 </button>
               </div>
             </div>
           )}
           {/* Back button for desktop expanded state */}
-          {expandedCard === 'left' && (
-            <button
-              className="absolute inline-flex top-8 justify-center items-center right-8 z-50 bg-white text-black px-6 py-2 rounded-lg shadow font-bold hover:bg-gray-200 transition-colors"
-              onClick={() => setExpandedCard(null)}
-            >
-              Back
-              <img src={whitearrow} alt="arrow" className="w-4 h-4 filter brightness-0" />
-            </button>
-          )}
+          
 
           <div className={`flex h-[93vh] relative z-20${expandedCard==='left' ? ' pr-0 py-0 gap-0' : ' p-8 gap-6'}`} style={expandedCard==='left' ? {marginLeft: 0, paddingLeft: 0} : {}}>
             {/* Left Hero Section */}
@@ -241,8 +246,8 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
                   className="inline-flex items-center gap-3 bg-white text-black rounded-xl px-3 py-2 text-sm font-bold z-10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 mt-2 transform translate-x-1 cursor-pointer"
                   onClick={() => {/* TODO: Add registration link or handler here */}}
                 >
-                  Registration opens soon
-                  <img src={whitearrow} alt="arrow" className="w-4 h-4 filter brightness-0 ml-2 align-middle" style={{marginTop: '-2px'}} />
+                  Registrations are live
+                  <img src={whitearrow} alt="arrow" className="w-4 h-4 filter brightness-0 ml-0 align-middle transform translate-y-1/8" style={{marginTop: '-2px'}} />
                 </button>
               </div>
 
@@ -263,7 +268,7 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
               <div className="lg:w-96 w-70 flex flex-col gap-6 relative z-20"> 
                 {/* Top Component - Play to win */}
                 <div 
-                  className={`bg-black rounded-2xl p-6 transition-all duration-500 overflow-hidden ease-in-out cursor-pointer hover:bg-gray-900 ${
+                  className={`bg-black rounded-2xl p-6 transition-all duration-500 overflow-hidden ease-in-out cursor-pointer ${
                     expandedCard === 'play' ? 'fixed inset-0 z-40 flex-1 w-full h-full' : 'flex-[3]'
                   }`}
                   onClick={expandedCard === 'play' ? undefined : () => handleCardClick('play')}
@@ -282,22 +287,34 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
                     </button>
                   )}
                   
-                  <div className="flex flex-col justify-center items-center h-full text-center">
-                    <h2 className={`font-bold text-white mb-4 ${expandedCard === 'play' ? 'text-6xl' : 'text-4xl'}`}>
-                      Play & Win
-                    </h2>
-                    <p className={`text-gray-300 mb-4 ${expandedCard === 'play' ? 'text-2xl' : 'text-lg'}`}>
-                      Interactive 3D Experience
-                    </p>
-                    <button 
-                      className={`bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-bold hover:from-purple-600 hover:to-pink-600 transition-all ${
-                        expandedCard === 'play' ? 'px-8 py-4 text-xl' : 'px-6 py-3'
-                      }`}
-                      onClick={expandedCard === 'play' ? (e) => e.stopPropagation() : undefined}
-                    >
-                      {expandedCard === 'play' ? 'Loading 3D Experience...' : 'Start Playing'}
-                    </button>
-                  </div>
+                  {/* Expanded state content */}
+                  {expandedCard === 'play' ? (
+                    <div className="flex flex-col justify-center items-center h-full text-center">
+                      <h2 className="font-bold text-white mb-4 text-6xl">
+                        Play & Win
+                      </h2>
+                      <p className="text-gray-300 mb-4 text-2xl">
+                        Interactive 3D Experience
+                      </p>
+                      <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-bold hover:from-purple-600 hover:to-pink-600 transition-all cursor-pointer px-8 py-4 text-xl">
+                        Loading 3D Experience...
+                      </div>
+                    </div>
+                  ) : (
+                    /* Non-expanded state content */
+                    <>
+                      <div className="flex items-center justify-between mb-4">
+                        <h2 className="text-4xl font-bold text-white">Get Your RSVP</h2>
+                      </div>
+                      <button
+                        className="text-white text-sm font-bold mb-4 bg-transparent border-none rounded-lg focus:outline-none text-left w-fit cursor-pointer"
+                        type="button"
+                      >
+                        Share Your Digital SWAG!!
+                      </button>
+                      <img src={tiltT} alt="tilted T logo" className="relative w-[100%] h-auto mx-auto -bottom-12 -right-12 z-0 select-none" style={{filter:'brightness(1.2)'}} />
+                    </>
+                  )}
                 </div>
 
                 {/* Bottom Component - Get our Merch */}

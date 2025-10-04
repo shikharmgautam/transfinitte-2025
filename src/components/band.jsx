@@ -39,7 +39,6 @@ export default function Band({ maxSpeed = 10, minSpeed = 3 }) {
   const { nodes, materials } = useGLTF("src/assets/card.glb");
   const texture = useTexture("src/assets/images/tag_texture.png");
 
-
   const [curve] = useState(
     () =>
       new THREE.CatmullRomCurve3([
@@ -59,12 +58,44 @@ export default function Band({ maxSpeed = 10, minSpeed = 3 }) {
     [0, 1.45, 0],
   ]);
 
+  // Responsive group position
+  const [groupPosition, setGroupPosition] = useState([2.55, 4.6, 0]);
+  const [size, setSize] = useState(3);
+  const [bandPosition, setBandPosition] = useState([0, 0, 0]);
+  const [bandWidth, setBandWidth] = useState(1);
+
+  useEffect(() => {
+    function updatePosition() {
+      const width = window.innerWidth;
+      if (width < 640) {
+        setSize(3);
+
+        setGroupPosition([0, 5.6, 0]);
+        setBandPosition([-2.46, 1, 0]);
+      
+        // Mobile
+        
+      } else if (width < 1024) {
+        // Tablet
+        setGroupPosition([1, 4.6, 0]);
+         setBandPosition([-1.55, 0, 0])
+      } else {
+        // Desktop
+        setGroupPosition([2.55, 4.6, 0]);
+         setBandPosition([0, 0, 0]);
+      }
+    }
+    updatePosition();
+    window.addEventListener("resize", updatePosition);
+    return () => window.removeEventListener("resize", updatePosition);
+  }, []);
+
   useEffect(() => {
     if (hovered) {
       // dragged.x = Math.max(dragged.x,3);
       // dragged.x = Math.max(dragged.x,3);
       // dragged.x = Math.max(dragged.x,3);
-      
+
       document.body.style.cursor = dragged ? "grabbing" : "grab";
       return () => void (document.body.style.cursor = "auto");
     }
@@ -88,7 +119,7 @@ export default function Band({ maxSpeed = 10, minSpeed = 3 }) {
       vec.add(dir.multiplyScalar(state.camera.position.length()));
       [card, j1, j2, j3, fixed].forEach((ref) => ref.current?.wakeUp());
       card.current?.setNextKinematicTranslation({
-        x: vec.x - dragged.x ,
+        x: vec.x - dragged.x,
         y: vec.y - dragged.y,
         z: vec.z - dragged.z,
       });
@@ -131,7 +162,7 @@ export default function Band({ maxSpeed = 10, minSpeed = 3 }) {
 
   return (
     <>
-      <group position={[2.55, 4.6, 0]}>
+      <group position={groupPosition}>
         <RigidBody ref={fixed} {...segmentProps} type="fixed" />
         <RigidBody position={[0.5, 0, 0]} ref={j1} {...segmentProps}>
           <BallCollider args={[0.1]} />
@@ -151,7 +182,7 @@ export default function Band({ maxSpeed = 10, minSpeed = 3 }) {
         >
           <CuboidCollider args={[0.8, 1.125, 0.01]} />
           <group
-            scale={3}
+            scale={size}
             position={[0, -2.18, -0.05]}
             onPointerOver={() => hover(true)}
             onPointerOut={() => hover(false)}
@@ -188,7 +219,7 @@ export default function Band({ maxSpeed = 10, minSpeed = 3 }) {
           </group>
         </RigidBody>
       </group>
-      <mesh ref={band}>
+      <mesh ref={band} position={bandPosition} >
         <meshLineGeometry />
         <meshLineMaterial
           color="white"
@@ -197,7 +228,7 @@ export default function Band({ maxSpeed = 10, minSpeed = 3 }) {
           useMap={1}
           map={texture}
           repeat={new THREE.Vector2(-3, 1)}
-          lineWidth={1}
+          lineWidth={bandWidth}
         />
       </mesh>
     </>
