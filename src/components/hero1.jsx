@@ -264,18 +264,18 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
             >
               {/* Info Tag */}
               <div className="mb-0 mt-10 ml-6">
-
-                //<h1 className="lg:text-8xl text-6xl font-bold text-white leading-tight font-neue-display z-21">
-                  //Ready to hack?
-                //</h1>
-                //<button
-                  //type="button"
-                  //className="inline-flex items-center gap-3 bg-white text-black rounded-xl px-3 py-2 text-sm font-bold z-10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 mt-2 transform translate-x-1 cursor-pointer"
-                  //onClick={() => {/* TODO: Add registration link or handler here */}}
-                //>
-                  //Registrations are live
-                  //<img src={whitearrow} alt="arrow" className="w-4 h-4 filter brightness-0 ml-0 align-middle transform translate-y-1/8" style={{marginTop: '-2px'}} />
-                //</button>
+{/* 
+                <h1 className="lg:text-8xl text-6xl font-bold text-white leading-tight font-neue-display z-21">
+                  Ready to hack?
+                </h1>
+                <button
+                  type="button"
+                  className="inline-flex items-center gap-3 bg-white text-black rounded-xl px-3 py-2 text-sm font-bold z-10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 mt-2 transform translate-x-1 cursor-pointer"
+                  onClick={() => {/* TODO: Add registration link or handler here */}
+                {/* > */}
+                  {/* Registrations are live
+                  <img src={whitearrow} alt="arrow" className="w-4 h-4 filter brightness-0 ml-0 align-middle transform translate-y-1/8" style={{marginTop: '-2px'}} />
+                </button> */}
 
                  <h1 className="lg:text-8xl text-6xl font-bold text-white leading-tight font-neue-display z-21">
                 Ready to hack?
@@ -322,7 +322,7 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
                     </button>
                   )}
                   
-                  {/* Expanded state content */}
+                  {/* Expanded state content */}  
                   {expandedCard === 'play' ? (
                     <div className="flex flex-col justify-center items-center h-full text-center">
                       <h2 className="font-bold text-white mb-4 text-6xl">
