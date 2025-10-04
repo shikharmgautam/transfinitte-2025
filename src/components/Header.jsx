@@ -6,10 +6,11 @@ import arrowWhite from "../assets/images/svg/arrowwhite.svg";
 
 const Header = () => {
   const handleRegisterClick = () => {
-    toast("Registrations opening soon", {
-      description: "Stay tuned for updates!",
-      duration: 3000,
-    });
+    window.location.href="https://register.transfinitte.com";
+    // toast("Registrations opening soon", {
+    //   description: "Stay tuned for updates!",
+    //   duration: 3000,
+    // });
   };
 
   return (

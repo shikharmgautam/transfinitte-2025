@@ -1,4 +1,5 @@
 ﻿import React from "react";
+import { toast } from "sonner";
 import tiltT from "../assets/images/svg/tiltT.svg";
 import StickyNavbar from './Nav.jsx';
 import tfBadge from "../assets/images/svg/tf-badge.svg";
@@ -31,6 +32,14 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
     setMobileMainExpanded(true);
   };
 
+  const handleRegisterClick = () => {
+    window.location.href="https://register.transfinitte.com";
+    // toast("Registrations opening soon", {
+    //   description: "Stay tuned for updates!",
+    //   duration: 3000,
+    // });
+  };
+
   return (
     <>
       {/* Mobile & md-down layout: visible below 1300px */}
@@ -54,7 +63,12 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
           <div className="flex items-center w-full px-2" style={{height: '7vh', minHeight: 40}}>
             <div className="flex items-center justify-between w-[100vw]">
               <img src={tfBadge} alt="TF 25 logo" className="h-8 w-auto" />
-                <button className="flex items-center  gap-2 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-300 transition-colors"  onClick={handleRegisterClick}>
+
+                <button 
+                  onClick={handleRegisterClick}
+                  className="flex items-center  gap-2 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-300 transition-colors"
+                >
+
                   <span className="text-sm font-medium cursor-pointer">Register</span>
                   <img src={whitearrow} alt="arrow" className="w-4 h-4 filter brightness-0" />
                 </button>
@@ -98,14 +112,21 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
           
           <div className="mt-10 mb-2 z-10 relative">
             <h1 className="text-white text-4xl font-bold leading-tight mb-2 absolute -top-14">Ready to Hack?</h1>
-            <button
-              type="button"
-              className="inline-flex items-center gap-3 bg-white text-black rounded-xl px-3 py-2 text-sm font-bold z-10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 cursor-pointer"
+
+           // <button
+             // type="button"
+              //className="inline-flex items-center gap-3 bg-white text-black rounded-xl px-3 py-2 text-sm font-bold z-10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 cursor-pointer"
               // onClick={...} // Add your registration link or handler here
             >
-              Registrations are live
-              <img src={whitearrow} alt="arrow" className="w-4 h-4 filter brightness-0" />
-            </button>
+              //Registrations are live
+              //<img src={whitearrow} alt="arrow" className="w-4 h-4 filter brightness-0" />
+            //</button>
+
+            <span className=" inline-flex items-center gap-3 bg-white text-black rounded-xl px-3 py-2 text-sm font-bold z-10 ">
+            Registrations are live
+             <img src={whitearrow} alt="arrow" className="w-4 h-4 filter brightness-0" />
+          </span>
+
          
           </div>
           <div className="flex items-center justify-center gap-1 absolute -translate-x-1/2 z-0 font-neue-xxthin m-0 p-0 overflow-hidden -bottom-[30vw] -right-[44vw] sm:-bottom-[25vh] sm:-right-[40vh]">
@@ -211,8 +232,13 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
                 </div>
 
                 {/* Register Button */}
-                <button className="flex items-center gap-2 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-300 transition-colors"  onClick={handleRegisterClick}>
-                  <span className="text-sm font-medium cursor-pointer" >Register</span>
+
+                <button 
+                  onClick={handleRegisterClick}
+                  className="flex items-center gap-2 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-300 transition-colors"
+                >
+                  <span className="text-sm font-medium cursor-pointer">Register</span>
+
                   <img src={whitearrow} alt="arrow" className="w-4 h-4 filter brightness-0" />
                 </button>
               </div>
@@ -238,17 +264,26 @@ const Hero1 = ({ expandedCard, setExpandedCard, mobileMainExpanded, setMobileMai
             >
               {/* Info Tag */}
               <div className="mb-0 mt-10 ml-6">
-                <h1 className="lg:text-8xl text-6xl font-bold text-white leading-tight font-neue-display z-21">
-                  Ready to hack?
-                </h1>
-                <button
-                  type="button"
-                  className="inline-flex items-center gap-3 bg-white text-black rounded-xl px-3 py-2 text-sm font-bold z-10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 mt-2 transform translate-x-1 cursor-pointer"
-                  onClick={() => {/* TODO: Add registration link or handler here */}}
-                >
+
+                //<h1 className="lg:text-8xl text-6xl font-bold text-white leading-tight font-neue-display z-21">
+                  //Ready to hack?
+                //</h1>
+                //<button
+                  //type="button"
+                  //className="inline-flex items-center gap-3 bg-white text-black rounded-xl px-3 py-2 text-sm font-bold z-10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 mt-2 transform translate-x-1 cursor-pointer"
+                  //onClick={() => {/* TODO: Add registration link or handler here */}}
+                //>
+                  //Registrations are live
+                  //<img src={whitearrow} alt="arrow" className="w-4 h-4 filter brightness-0 ml-0 align-middle transform translate-y-1/8" style={{marginTop: '-2px'}} />
+                //</button>
+
+                 <h1 className="lg:text-8xl text-6xl font-bold text-white leading-tight font-neue-display z-21">
+                Ready to hack?
+              </h1>
+                <span className="bg-white text-black rounded-lg font-bold px-2 py-2 mt-2 inline-flex items-center gap-2 transform translate-x-1 text-sm">
                   Registrations are live
-                  <img src={whitearrow} alt="arrow" className="w-4 h-4 filter brightness-0 ml-0 align-middle transform translate-y-1/8" style={{marginTop: '-2px'}} />
-                </button>
+                  <img src={whitearrow} alt="arrow" className="w-4 h-4 filter brightness-0 ml-2 align-middle" style={{marginTop: '-2px'}} />
+                </span>
               </div>
 
               {/* Main Heading */}
