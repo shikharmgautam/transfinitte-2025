@@ -120,11 +120,11 @@ const Hero1 = ({
                 setMobileMainExpanded(false);
               }}
             >
-              Back
+              <span className="text-sm font-medium cursor-pointer">Back</span>
               <img
                 src={whitearrow}
                 alt="arrow"
-                className="w-4 h-4 filter brightness-0"
+                className="w-4 h-4 filter brightness-0 ml-1"
               />
             </button>
           )}
@@ -248,7 +248,7 @@ const Hero1 = ({
             <img
               src={whitearrow}
               alt="arrow"
-              className="w-4 h-4 filter brightness-0"
+              className="w-4 h-4 filter brightness-0 ml-1"
             />
           </button>
         )}
@@ -391,12 +391,14 @@ const Hero1 = ({
                         setExpandedCard(null);
                       }}
                     >
-                      Back
-                      <img
-                        src={whitearrow}
-                        alt="arrow"
-                        className="w-4 h-4 filter brightness-0 inline ml-2"
-                      />
+                      <span className="bg-white text-black rounded-lg font-bold px-2 py-2 mt-2 inline-flex items-center gap-2 transform translate-x-1 text-sm">
+                        Back
+                        <img
+                          src={whitearrow}
+                          alt="arrow"
+                          className="w-4 h-4 filter brightness-0 inline ml-2"
+                        />
+                      </span>
                     </button>
                   )}
                   {expandedCard === "play" ? (
