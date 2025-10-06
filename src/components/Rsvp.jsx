@@ -22,7 +22,7 @@ const result = await supabase.auth.getSession()
 console.log(result);
 
 }
-    const handleRegisterClick = () => {
+    const handleRegisterClick = () => {  
         window.location.href="https://register.transfinitte.com/rsvp";
     };
 
