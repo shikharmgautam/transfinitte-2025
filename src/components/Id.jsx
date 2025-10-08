@@ -121,8 +121,10 @@ export default function Id({ onClose }) {
                 <button className="cursor-pointer hover:underline hidden sm:block" onClick={handleRegisterClick}>Register</button>
                 <button className="cursor-pointer hover:underline hidden sm:block" onClick={() => window.open("http://wa.me/+919969647124", "_blank")}>Contact Us</button>
               </div>
-                <button className=" items-center hidden sm:flex  gap-2  bg-gray-200 text-gray-800 px-5 py-3 rounded-lg border border-gray-300 hover:bg-gray-300 transition-colors" onClick={handleRegisterClick}>
-                  <span className="text-sm font-medium cursor-pointer  ">RSVP</span>
+                <button className=" items-center hidden sm:flex  gap-2  bg-gray-200 text-gray-800 px-5 py-3 rounded-lg border border-gray-300 hover:bg-gray-300 transition-colors" 
+                //onClick={handleRegisterClick}
+                >
+                  <span className="text-sm font-medium cursor-pointer  ">RSVP Soon</span>
                 
                 </button>
             </div>

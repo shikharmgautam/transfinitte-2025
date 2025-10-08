@@ -51,9 +51,9 @@ const Hero = () => {
                         </p>
                                                 <button
                                                     className="flex items-center  gap-2 bg-gray-200 text-gray-800 px-7 py-4 rounded-lg border hover:bg-gray-300 transition-colors backdrop-blur-3xl mt-6"
-                                                    onClick={handleRegisterClick}
+                                                    //onClick={handleRegisterClick}
                                                 >
-                                                    <span className="text-sm font-medium cursor-pointer">Get Your RSVP</span>
+                                                    <span className="text-sm font-medium cursor-pointer">RSVP Soon</span>
                                                     <img src={whitearrow} alt="arrow" className="w-4 h-4 filter brightness-0" />
                                                 </button>
                         
