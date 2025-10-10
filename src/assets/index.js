@@ -68,7 +68,7 @@ import sponser3 from './images/svg/sponser3.svg';
 import sponser4 from './images/svg/sponser4.svg';
 import sponser5 from './images/svg/sponser5.svg';
 import sponser6 from './images/svg/sponser6.svg';
-import d2d from './images/D2D.jpg';
+import d2d from './images/d2d.png';
 import rvc from './images/rvc.png';
 import zerowings from './images/zerowings.png';
 
