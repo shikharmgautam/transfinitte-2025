@@ -66,6 +66,9 @@ import sponser3 from './images/svg/sponser3.svg';
 import sponser4 from './images/svg/sponser4.svg';
 import sponser5 from './images/svg/sponser5.svg';
 import sponser6 from './images/svg/sponser6.svg';
+import rvc from './images/rvc.png';
+import d2d from './images/d2d.png';
+import zerowings from './images/zerowings.png';
 
 export {
 	// Judges
@@ -76,7 +79,7 @@ export {
 	 herobg, herobgsvg, herobg1, heroOne, heroTwo, herox, mobilehero, mobileone,
 
 	// svg
-	sponser1, sponser2, sponser3, sponser4, sponser5, sponser6,
+	sponser1, sponser2, sponser3, sponser4, sponser5, sponser6,d2d, rvc, zerowings,
 	// SVGs
 	numbersvg, abhibus, adminblock, arrowblack, arrowwhite, bharatX, boeing, bubble, crewsphere, gfg, groups, icon, instagram, instagramwh, linkedin, linkedinwh, netcon, pathway, prizes, ps, tezos, tfbadge, tffooter, tffootersm, tfgridsm, tfhero, tfherosm, shuffle, email
 };
