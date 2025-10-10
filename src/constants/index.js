@@ -25,6 +25,9 @@ import {
   sponser4,
   sponser5,
   sponser6,
+  d2d,
+  rvc,
+  zerowings,
 
 
 } from "../assets";
@@ -70,35 +73,48 @@ export const sponsors = [
     name: "Past Sponsors",
     data: [
       {
+        id: "6",
+        name: "d2d",
+        imgurl: d2d,
+      },
+      {
+        id: "7",
+        name: "rvc",
+        imgurl: rvc,
+      },
+      {
+        id: "8",
+        name: "zerowings",
+        imgurl: zerowings,
+      },
+      {
         id: "0",
-        name: "",
+        name: "sponser1",
         imgurl: sponser1,
       },
       {
         id: "1",
-        name: "",
+        name: "sponser2",
         imgurl: sponser2,
       },
       {
         id: "2",
-        name: "",
+        name: "sponser3",
         imgurl: sponser3,
       },
-      ,
       {
         id: "3",
-        name: "",
+        name: "sponser4",
         imgurl: sponser4,
       },
-      ,
       {
         id: "4",
-        name: "",
+        name: "sponser5",
         imgurl: sponser5,
       },
       {
         id: "5",
-        name: "",
+        name: "sponser6",
         imgurl: sponser6,
       },
      

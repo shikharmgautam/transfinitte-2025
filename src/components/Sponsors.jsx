@@ -18,7 +18,7 @@ const SponsorCategory = memo(({ category }) => (
           <img
             src={sponsor.imgurl}
             alt={sponsor.name}
-            className="max-w-[120px] sponsor-svg-white"
+            className={`max-w-[120px] ${sponsor.name === "d2d" ? "grayscale" : "sponsor-svg-white"}`}
           />
         </div>
       ))}
@@ -33,7 +33,7 @@ const SponsorCategory = memo(({ category }) => (
           <img
             src={sponsor.imgurl}
             alt={sponsor.name}
-            className="max-w-[120px] sponsor-svg-white"
+            className={`max-w-[120px] ${sponsor.name === "d2d" ? "grayscale" : "sponsor-svg-white"}`}
           />
         </div>
       ))}
