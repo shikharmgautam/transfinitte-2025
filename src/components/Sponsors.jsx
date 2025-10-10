@@ -48,7 +48,7 @@ const SponsorsMobile = memo(() => (
         <div
           className="text-radial-gradient font-neue-roman text-5xl md:text-6xl lg:8xl  not-italic mt-2 text-start w-full transform translate-y-6"
         >
-          Past Sponsors
+          Sponsors
         </div>
        
       </div>
